@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="10px" viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Подписка" transform="translate(-59.000000, -304.000000)" fill="#FFFFFF">
+            <g id="follow">
+                <g id="Group-44" transform="translate(55.000000, 44.000000)">
+                    <g id="Group-15" transform="translate(0.000000, 255.000000)">
+                        <path d="M16.0830009,6.0111444 C16.2638959,5.7107972 16.296734,5.23829493 15.9184109,5.05038598 C15.5400879,4.86247704 15.0564427,5.24949671 14.9019629,5.40387613 L9.31894936,10.8599854 C7.58121064,9.48589239 6.52106389,8.6864734 6.13850909,8.4617284 C5.5646769,8.12461088 4.35221352,8.2917277 4.0327962,8.83138021 C3.71337888,9.37103271 5.80251056,10.4567141 7.02555336,12.0380656 C7.84091523,13.0922999 8.46712373,14.0024024 8.90417886,14.7683729 C9.05874567,14.9228682 9.24656451,15 9.46749029,15 C9.68832903,15 9.87614787,14.9226654 10.0308017,14.7683729 L16.0830009,6.0111444 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
