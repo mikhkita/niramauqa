@@ -1,4 +1,9 @@
-$(document).ready(function(){	
+$(document).ready(function(){
+
+    var isDesktop = false,
+        isTablet = false,
+        isMobile = false;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -11,6 +16,34 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+
+        if( myWidth > 1020 ){
+            isDesktop = true;
+            isTablet = false;
+            isMobile = false;
+            rowCountry = 4;
+        }else if( myWidth > 767 ){
+            isDesktop = false;
+            isTablet = true;
+            isMobile = false;
+            rowCountry = 4;
+        }else{
+            isDesktop = false;
+            isTablet = false;
+            isMobile = true;
+            rowCountry = 2;
+        }
+
+        var rowCountry = 4,
+            nextRow = 0;
+        $(".no-margin").removeClass("no-margin");
+        $(".b-country-list .b-country-item").each(function() {
+            nextRow += ($(this).hasClass("wide")) ? 2 : 1;
+            if(nextRow >= rowCountry){
+                $(this).addClass("no-margin");
+                nextRow = 0;
+            }
+        });
     }
     $(window).resize(resize);
     resize();
@@ -42,12 +75,17 @@ $(document).ready(function(){
     $.fn.placeholder();
 
     $(window).scroll(function (){
-        if ($(this).scrollTop() > 65){
+        if ($(this).scrollTop() > 70){
             $('.b-menu').addClass("transform");
+            $('.b-head .b-logo').addClass("hide-logo");
         } else{
             $('.b-menu').removeClass("transform");
+            $('.b-head .b-logo').removeClass("hide-logo");
         }
     });
+
+    var scene = document.getElementById('coin-parallax');
+    var parallax = new Parallax(scene);
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
