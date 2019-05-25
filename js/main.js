@@ -87,6 +87,29 @@ $(document).ready(function(){
     var scene = document.getElementById('coin-parallax');
     var parallax = new Parallax(scene);
 
+    function randomNumber() {
+        var rand = 1 + Math.random() * 6;
+        rand = Math.floor(rand);
+        return rand;
+    }
+
+    var countCards = $(".b-operators-list .b-operators-item").length;
+    function randomCard() {
+        var rand = 1 + Math.random() * countCards;
+        rand = Math.floor(rand);
+        return rand;
+    }
+
+    var cardNumber = 1;
+    var cardTimer = setInterval(function() {
+        cardNumber = randomNumber();
+        nextCard = randomCard();
+        var $currentCard = $(".b-card:eq("+(cardNumber-1)+")");
+        $currentCard.toggleClass("flipped");
+        //заменить в ней back на nextCard
+
+    }, 1000);
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 

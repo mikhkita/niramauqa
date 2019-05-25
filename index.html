@@ -39,17 +39,15 @@
 	</div>
 
 	<div class="b b-head" style="background-image: url('i/head.jpg')">
-		<div class="b-head-top">
-			<div class="b-block">
+		<div class="b-block">
+			<div class="b-head-top">
 				<a href="/" class="b-logo"></a>
 				<div class="b-head-feedback">
 					<a href="tel:+74722400200" class="b-head-phone">+7 (4722) 400-200</a><br>
 					<a href="#" class="dashed">Заказать звонок</a>
 				</div>
 			</div>
-		</div>
-		<div class="b-head-content">
-			<div class="b-block">
+			<div class="b-head-content">
 				<h1>Туры из Белгорода<br>по цене туроператора</h1>
 				<p class="b-head-text">Стоимость тура у нас равна стоимости тура у туропреатора.<br>Вы не платите нам за подбор и оформление.</p>
 				<div class="center">
@@ -68,24 +66,24 @@
 		<div class="b-block clearfix">
 			<div class="b-statistics-item statistics-1">
 				<div class="b-statistics-item-top">
-					<img src="i/count-country.png">
-					<span>стран</span>
+					<img class="anim fadeLeft delay100" data-cont=".b-statistics" src="i/count-country.png">
+					<span class="anim fadeRight delay400" data-cont=".b-statistics">стран</span>
 				</div>
-				<p>в которых мы бывали сами</p>
+				<p class="anim fadeDown delay700" data-cont=".b-statistics">в которых мы бывали сами</p>
 			</div>
 			<div class="b-statistics-item statistics-2">
 				<div class="b-statistics-item-top">
-					<img src="i/count-hotel.png">
-					<span>отелей</span>
+					<img class="anim fadeLeft delay100" src="i/count-hotel.png">
+					<span class="anim fadeRight delay400">отелей</span>
 				</div>
-				<p>мы посетили и проверили лично</p>
+				<p class="anim fadeDown delay700">мы посетили и проверили лично</p>
 			</div>
 			<div class="b-statistics-item statistics-3">
 				<div class="b-statistics-item-top">
-					<img src="i/count-tourist.png">
-					<span>туристов</span>
+					<img class="anim fadeLeft delay100" src="i/count-tourist.png">
+					<span class="anim fadeRight delay400">туристов</span>
 				</div>
-				<p>в год доверяют нам свой отдых</p>
+				<p class="anim fadeDown delay700">в год доверяют нам свой отдых</p>
 			</div>
 		</div>
 	</div>
@@ -379,6 +377,8 @@
 		</div>
 	</div>
 
+	<div class="tv-search-form tv-moduleid-189840"></div>
+
 	<div class="b b-mailing">
 		<div class="b-block">
 			<div class="b-mailing-cont">
@@ -388,7 +388,7 @@
 					<p class="mailing-text">Будьте в курсе о новых акциях, клёвых отелях, горящих турах и лучших предложениях недели!</p>
 					<form class="b-mailing-form">
 						<input type="text" name="email" placeholder="Ваш e-mail" required>
-						<a href="#" class="b-btn one-line b-btn-submit">
+						<a href="#" class="b-btn b-btn-orange one-line b-btn-submit">
 							<p class="btn-bold">Подписаться</p>
 						</a>
 						<div class="b-checkbox">
@@ -456,21 +456,107 @@
 		<div class="b-head-gradient"></div>
 		<div class="b-block gradient-after">
 			<h2 class="b-title white">Туры от официальных туроператоров</h2>
-			<div class="b-operators-list clearfix">
+			<div class="b-card-list clearfix">
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-card flip-card">
+					<div class="flip-card-inner">
+						<div class="flip-card-front">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+							</div>
+						</div>
+						<div class="flip-card-back">
+							<div class="b-operators-item">
+								<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="b-operators-list hide">
 				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
 				</div>
 				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
 				</div>
 				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-3.jpg')"></div>
+					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
 				</div>
 				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-4.jpg')"></div>
+					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
 				</div>
 				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-5.jpg')"></div>
+					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
 				</div>
 				<div class="b-operators-item">
 					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
@@ -551,8 +637,8 @@
 			<div class="b-footer-bottom">
 				<div class="b-copyright">© 2008-2019 Аквамарин. Все права защищены</div>
 				<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
-				<img src="i/visa-master.jpg">
-				<a href="#" class="b-redder">Разработка стайта: REDDER.pro</a>
+				<div class="visa-master"></div>
+				<div class="b-redder">Разработка стайта:<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a></div>
 			</div>
 		</div>
 	</div>
@@ -601,6 +687,7 @@
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/parallax.min.js"></script>
+	<script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
