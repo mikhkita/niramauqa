@@ -87,27 +87,94 @@ $(document).ready(function(){
     var scene = document.getElementById('coin-parallax');
     var parallax = new Parallax(scene);
 
-    function randomNumber() {
-        var rand = 1 + Math.random() * 6;
-        rand = Math.floor(rand);
-        return rand;
+    var arrCards = [],
+        arrOperators = [],
+        arrActiveCards = [],
+        countCards = 6,
+        countOperators = $(".b-operators-list .b-operators-item").length;
+
+    function randomCards() {
+        var rand = Math.floor(Math.random() * countCards);
+        arrCards.push(rand);
+        for (var i = 0; i < 20; i++) {
+            do{
+                rand = Math.floor(Math.random() * countCards);
+            }while(arrCards[arrCards.length - 1] == rand);
+            arrCards.push(rand);
+        };
+    }
+    function randomOperators() {
+        for (var i = countOperators, j = 0; i > 0; i--, j++) {
+            arrOperators.push(j);
+        }
+        shuffleArray(arrOperators);
+    }
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
     }
 
-    var countCards = $(".b-operators-list .b-operators-item").length;
-    function randomCard() {
-        var rand = 1 + Math.random() * countCards;
-        rand = Math.floor(rand);
-        return rand;
+    function getNextCard() {
+        var next = arrCards[0];
+        arrCards.splice(0, 1);
+        arrCards.push(next);
+        return next;
+    }
+    function getNextOperator() {
+        var next = arrOperators[0];
+        arrOperators.splice(0, 1);
+        arrOperators.push(next);
+        return next;
     }
 
-    var cardNumber = 1;
+    function initCards() {
+        randomCards();
+        randomOperators();
+        $(".b-card").each(function(){
+            var nextOperator = getNextOperator();
+            var $cont = $(this).find(".flip-card-front");
+            var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+            $nextOperator.clone().appendTo($cont);
+            arrActiveCards.push(nextOperator);
+
+            nextOperator = getNextOperator();
+            $cont = $(this).find(".flip-card-back");
+            $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+            $nextOperator.clone().appendTo($cont);
+        });
+    }
+
+    initCards();
     var cardTimer = setInterval(function() {
-        cardNumber = randomNumber();
-        nextCard = randomCard();
-        var $currentCard = $(".b-card:eq("+(cardNumber-1)+")");
-        $currentCard.toggleClass("flipped");
-        //заменить в ней back на nextCard
-
+        var nextCard = getNextCard(),
+            nextOperator = getNextOperator();
+        while(arrActiveCards.indexOf(nextOperator) != -1){
+            nextOperator = getNextOperator();
+        }
+        var $nextCard = $(".b-card:eq("+nextCard+")");
+        var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+        if($nextCard.hasClass("flipped")){
+            //заменить front
+            var $cont = $nextCard.find(".flip-card-front");
+            $cont.find(".b-operators-item").remove();
+            $nextOperator.clone().appendTo($cont);
+            setTimeout(function() {
+                $nextCard.removeClass("flipped");
+            }, 800);
+        }else{
+            //заменить back
+            var $cont = $nextCard.find(".flip-card-back");
+            $cont.find(".b-operators-item").remove();
+            $nextOperator.clone().appendTo($cont);
+            setTimeout(function() {
+                $nextCard.addClass("flipped");
+            }, 800);
+        }
+        arrActiveCards[nextCard] = nextOperator;
     }, 1000);
 
     // // Первая анимация элементов в слайде
