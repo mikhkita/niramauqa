@@ -558,6 +558,7 @@ b{
 
 .b-statistics{
 	margin-bottom: 96px;
+	overflow: hidden;
 }
 	.b-statistics-item{
 		float: left;
