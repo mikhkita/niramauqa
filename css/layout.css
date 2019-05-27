@@ -67,7 +67,8 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"],
+div.TVTheme2 .TVHotelStar:before{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -652,7 +653,7 @@ b{
 		}
 
 .b-country-slider .slick-dots {
-	width: 50%;
+	width: auto;
 	text-align: right;
     bottom: 26px;
     right: 26px;
@@ -1022,7 +1023,7 @@ b{
 	    background-image: url(../i/b-5-woman.jpg);
 	    background-size: cover;
 	    position: absolute;
-	    top: -18px;
+	    top: -24px;
     	right: 148px;
 	}
 		.b-5-name{
@@ -1042,6 +1043,18 @@ b{
 				font-size: 16px;
 				line-height: 16px;
 			}
+
+.b-tourvisor{
+	padding: 68px 0 74px 0;
+	margin-bottom: 62px;
+	background-image: url(../i/head.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+	.b-tourvisor h2.b-title{
+		margin-bottom: 38px;
+	}
 
 .b-reviews{
 	margin-bottom: 90px;
@@ -1685,4 +1698,181 @@ input{
 		background-image: url(../i/visa-master@2x.jpg);
 	}
 
+}
+
+/*=======Турвизор=======*/
+
+div.TVWideForm.TVTheme2 {
+    width: 100%;
+}
+div.TVMainForm{
+	background-color: transparent;
+}
+div.TVWideForm .TVMainForm {
+    padding: 0;
+}
+div.TVMainFilter {
+    border-radius: 6px;
+}
+div.TVlocation{
+	font-family: 'Gilroy-Regular';
+	font-size: 20px;
+	line-height: 20px;
+	margin-bottom: 22px;
+}
+div.TVlocation:after{
+	margin-top: 1px;
+	margin-left: 10px;
+}
+div.TVMainFilterLable{
+	text-transform: none;
+	font-family: 'Gilroy-Medium';
+	font-size: 14px;
+	line-height: 18px;
+	color: #A4A4A4;
+	top: 14px;
+}
+div.TVCountry .TVMainFilterLable:after {
+    content: "Страна";
+    padding-left: 19px;
+}
+div.TVDates .TVMainFilterLable:after {
+    content: "Даты вылета";
+    padding-left: 22px;
+}
+div.TVNights .TVMainFilterLable:after {
+    content: "Ночей";
+    padding-left: 22px;
+}
+div.TVTourists .TVMainFilterLable:after {
+    content: "Туристы";
+    padding-left: 22px;
+}
+div.TVMainFilterLable:before {
+    font-size: 14px;
+    top: 0px;
+}
+div.TVMainFilterButton{
+	position: relative;
+	padding: 31px 18px 17px;
+	border-right: 0;
+}
+div.TVMainFilterButton:after{
+	content: " ";
+	position: absolute;
+	top: 16px;
+	right: 0;
+	width: 1px;
+	height: 39px;
+	background-color: #D8D8D8;
+}
+.TVMainFilterButton.TVTourists:after{
+	display: none;
+}
+/*div.TVMainFilterButton:hover{
+	background-color: #fff;
+}*/
+.b-tourvisor div.TVSearchButton{
+	display: none;
+}
+div.TVWideForm.TVTheme2 .TVCountry {
+    width: calc(25% - 36px);
+}
+div.TVWideForm.TVTheme2 .TVDates {
+    width: calc(25% - 36px);
+}
+div.TVWideForm.TVTheme2 .TVNights {
+    width: calc(25% - 36px);
+}
+div.TVWideForm.TVTheme2 .TVTourists {
+    width: calc(25% - 36px);
+}
+
+div.TVFilterForm {
+    background-color: transparent;
+}
+div.TVWideForm .TVFilterForm{
+    padding: 22px 0;
+    margin-bottom: 34px;
+}
+div.TVOptionLable {
+	font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none;
+    color: #FFF;
+    margin-bottom: 8px;
+}
+div.TVStars .TVOptionLable:before {
+    content: "Класс отеля";
+}
+div.TVRegionHotel .TVOptionLable:before {
+    content: "Курорт/отель";
+}
+div.TVMeal .TVOptionLable:before {
+    content: "Питание от";
+}
+div.TVRating .TVOptionLable:before {
+    content: "Рейтинг";
+}
+div.TVHoteltype .TVOptionLable:before {
+    content: "Тип отеля";
+}
+
+div.TVTheme2 .TVHotelStar:before {
+    content: "\e90a";
+    color: #FFF;
+    font-size: 26px;
+}
+div.TVTheme2 .TVHotelStar.TVImageActive:before{
+	content: "\e90b";
+    color: #FFF;
+    font-size: 26px;
+}
+div.TVHotelStar {
+    width: 26px;
+    height: 26px;
+    margin-right: 16px;
+}
+div.TVOptionStars .TVHotelStar:last-child{
+	margin-right: 0;
+}
+div.TVWideForm.TVTheme2 .TVStars {
+    width: 17%;
+    margin-right: 2%;
+}
+div.TVOptionSelector {
+	position: relative;
+    padding: 8px 38px 8px 24px;
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 6px;
+    background-color: transparent;
+}
+div.TVOptionSelector:after {
+    top: 11px;
+    right: 16px;
+    font-size: 22px;
+}
+
+div.TVTheme2 .TVOptionStars{
+	padding-top: 9px;
+}
+div.TVWideForm.TVTheme2 .TVRegionHotel {
+    width: 19%;
+    margin-right: 1.66%;
+}
+div.TVWideForm.TVTheme2 .TVMeal {
+    width: 19%;
+    margin-right: 1.66%;
+}
+div.TVWideForm.TVTheme2 .TVRating {
+    width: 19%;
+   margin-right: 1.66%;
+}
+div.TVWideForm.TVTheme2 .TVHoteltype {
+    width: 19%;
 }
