@@ -177,6 +177,17 @@ $(document).ready(function(){
         arrActiveCards[nextCard] = nextOperator;
     }, 1000);
 
+    $('.b-country-slider').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 600,
+        fade: true,
+        cssEase: 'linear'
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
