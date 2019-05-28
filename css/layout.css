@@ -68,7 +68,8 @@
 }
 
 [class^="icon-"], [class*=" icon-"],
-div.TVTheme2 .TVHotelStar:before{
+div.TVTheme2 .TVHotelStar:before,
+div.TVOptionCheckBox:before, div.TVOptionListItem:before{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -1795,13 +1796,19 @@ div.TVWideForm .TVFilterForm{
     padding: 22px 0;
     margin-bottom: 34px;
 }
-div.TVOptionLable {
+div.TVFilterForm .TVOptionLable {
 	font-family: 'Gilroy-Medium';
     font-size: 16px;
     line-height: 24px;
     text-transform: none;
     color: #FFF;
     margin-bottom: 8px;
+}
+div.TVSearchCmbPanel .TVOptionLable{
+	font-family: 'Gilroy-Medium';
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: none;
 }
 div.TVStars .TVOptionLable:before {
     content: "Класс отеля";
@@ -1817,6 +1824,9 @@ div.TVRating .TVOptionLable:before {
 }
 div.TVHoteltype .TVOptionLable:before {
     content: "Тип отеля";
+}
+.TVRegion .TVOptionLable:before{
+	content: "Курорт/отель";
 }
 
 div.TVTheme2 .TVHotelStar:before {
@@ -1875,4 +1885,107 @@ div.TVWideForm.TVTheme2 .TVRating {
 }
 div.TVWideForm.TVTheme2 .TVHoteltype {
     width: 19%;
+}
+div.tv_drop_panel{
+	margin-top: 18px;
+	background: #FFF;
+	-webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+	border-radius: 6px;
+}
+div.tv_drop_panel:after{
+	content: " ";
+    position: absolute;
+    top: -19px;
+    right: 24px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #FFF;
+}
+div.TVListBoxItem:hover {
+    background-color: #FFF;
+    border-radius: 0;
+    color: #006FFB;
+}
+div.tv_drop_panel .tv_content {
+    margin: 22px 24px 19px 24px;
+}
+div.TVItemSelected{
+	background-color: #FFF;
+    border-radius: 0;
+    color: #ED7408;
+}
+div.TVListBox span {
+    font-family: 'Gilroy-Bold';
+}
+div.TVListBoxItem {
+    padding: 6px 0;
+}
+div.TVListBox{
+	min-width: 198px;
+	padding-top: 0;
+	font-family: 'Gilroy-Regular';
+	font-size: 16px;
+	line-height: 19px;
+}
+div.TVOptionCheckBox {
+    margin-bottom: 10px;
+}
+div.TVOptionCheckBox:before, div.TVOptionListItem:before {
+    padding: 3px 0 0 2px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #C1CEDF;
+    border-radius: 3px;
+    content: "\e905";
+    margin-right: 14px;
+    font-size: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+div.TVChecked.TVOptionCheckBox:before, div.TVChecked.TVOptionListItem:before {
+	border: 2px solid #ED7408;
+    color: #ED7408;
+}
+div.TVOptionCheckBox:hover:before{
+	border: 2px solid #ED7408;
+    color: rgba(237,116,8,0.3);
+}
+div.TVChecked.TVOptionCheckBox:hover:before, div.TVChecked.TVOptionListItem:hover:before{
+	border: 2px solid #ED7408;
+    color: #ED7408;
+}
+div.TVTheme2Button {
+    background-color: #FFF;
+    border: 2px solid #ED7408;
+    color: #ED7408;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 0 12px 0;
+    margin-top: 22px;
+    margin-bottom: 28px;
+    text-transform: none;
+    font-family: 'Gilroy-Bold';
+}
+div.TVTheme2Button:hover {
+    color: #ED7408;
+}
+
+div.TVSearchCmbPanel .TVOptionCheckBox:before,
+div.TVSearchCmbPanel .TVOptionListItem:before{
+	margin-right: 8px;
+}
+div.TVSearchCmbPanel .TVOptionListItem{
+	margin-bottom: 3px;
+}
+div.TVSearchCmbPanel .TVDetailPanel .TVTheme2Button{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.TVDetailPanel .TVRegion .TVOptionList {
+    height: 368px;
+}
+div.TVDetailPanel .TVOptionCheckBox {
+    margin-bottom: 9px;
 }
