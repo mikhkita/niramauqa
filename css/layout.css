@@ -165,7 +165,7 @@ h2.b-title{
 	font-size: 45px;
 	line-height: 55px;
 	margin-bottom: 55px;
-	color: #434343;
+	color: #282828;
 	text-align: center;
 }
 .b-title.white{
@@ -413,9 +413,6 @@ b{
 		width: 731px;
 		margin: 0 auto;
 	}
-		.b-head-content .b-block{
-
-		}
 		.b-head-text{
 			font-size: 20px;
 			line-height: 28px;
@@ -705,11 +702,11 @@ b{
 				background-image: -webkit-linear-gradient(rgba(0,0,0,0) 0%, #000000 100%);
 				background-image: -o-linear-gradient(rgba(0,0,0,0) 0%, #000000 100%);
 				background-image: linear-gradient(rgba(0,0,0,0) 0%, #000000 100%);
-				-webkit-transition: opacity 500ms ease-out, visibility 500ms ease-out;
-				-moz-transition: opacity 500ms ease-out, visibility 500ms ease-out;
-				-ms-transition: opacity 500ms ease-out, visibility 500ms ease-out;
-				-o-transition: opacity 500ms ease-out, visibility 500ms ease-out;
-				transition: opacity 500ms ease-out, visibility 500ms ease-out;
+				-webkit-transition: opacity 200ms ease-out, visibility 200ms ease-out;
+				-moz-transition: opacity 200ms ease-out, visibility 200ms ease-out;
+				-ms-transition: opacity 200ms ease-out, visibility 200ms ease-out;
+				-o-transition: opacity 200ms ease-out, visibility 200ms ease-out;
+				transition: opacity 200ms ease-out, visibility 200ms ease-out;
 			}
 			.b-country-item .blackout-full{
 				z-index: 2;
@@ -725,7 +722,7 @@ b{
 				opacity: 0.8;
 				visibility: visible;
 			}
-			.b-country-item:hover .b-country-info .b-btn-tr{
+			.b-country-item:hover .b-country-cont .b-btn-tr{
 				opacity: 1;
 				visibility: visible;
 			}
@@ -738,21 +735,24 @@ b{
 			.b-country-item.wide .content{
 				padding: 40px 32px;
 			}
+			.b-country-cont{
+				position: absolute;
+			    bottom: 20px;
+			    left: 22px;
+			    width: calc(100% - 44px);
+			}
 				.b-country-info{
-					position: absolute;
-				    bottom: 20px;
-				    left: 22px;
-				    width: calc(100% - 44px);
+					width: 100%;
 				    -webkit-transform: translateY(68px);
 					   -moz-transform: translateY(68px);
 				    	-ms-transform: translateY(68px);
 				    	 -o-transform: translateY(68px); 
 				    		transform: translateY(68px);
-				    -webkit-transition: transform 500ms ease-out;
-					   -moz-transition: transform 500ms ease-out;
-					    -ms-transition: transform 500ms ease-out;
-					   	 -o-transition: transform 500ms ease-out;
-							transition: transform 500ms ease-out;
+				    -webkit-transition: transform 200ms ease-out;
+					   -moz-transition: transform 200ms ease-out;
+					    -ms-transition: transform 200ms ease-out;
+					   	 -o-transition: transform 200ms ease-out;
+							transition: transform 200ms ease-out;
 				}
 				.b-country-item:hover .b-country-info{
 					-webkit-transform: translateY(0px);
@@ -768,21 +768,45 @@ b{
 				    	 -o-transform: translateY(20px); 
 				    		transform: translateY(20px);
 				}
-				.b-country-item.wide .b-country-info{
+				.b-country-item.wide .b-country-cont{
 					bottom: 40px;
 				    left: 32px;
 				    width: calc(100% - 64px);
 				}
-				.b-country-info .b-btn-tr{
+				.b-country-cont .b-btn-tr{
 					opacity: 0;
 					visibility: hidden;
 					margin-top: 14px;
 					margin-bottom: 6px;
-					-webkit-transition: opacity 250ms ease-out, visibility 250ms ease-out;
-					-moz-transition: opacity 250ms ease-out, visibility 250ms ease-out;
-					-ms-transition: opacity 250ms ease-out, visibility 250ms ease-out;
-					-o-transition: opacity 250ms ease-out, visibility 250ms ease-out;
-					transition: opacity 250ms ease-out, visibility 250ms ease-out;
+					-webkit-transform: translateY(68px);
+					   -moz-transform: translateY(68px);
+				    	-ms-transform: translateY(68px);
+				    	 -o-transform: translateY(68px); 
+				    		transform: translateY(68px);
+					-webkit-transition: opacity 200ms ease-out, visibility 200ms ease-out, transform 200ms ease-out;
+					-moz-transition: opacity 200ms ease-out, visibility 200ms ease-out, transform 200ms ease-out;
+					-ms-transition: opacity 200ms ease-out, visibility 200ms ease-out, transform 200ms ease-out;
+					-o-transition: opacity 200ms ease-out, visibility 200ms ease-out, transform 200ms ease-out;
+					transition: opacity 200ms ease-out, visibility 200ms ease-out, transform 200ms ease-out;
+				}
+				.b-country-item:hover .b-country-cont .b-btn-tr{
+					-webkit-transform: translateY(0px);
+					   -moz-transform: translateY(0px);
+				    	-ms-transform: translateY(0px);
+				    	 -o-transform: translateY(0px); 
+				    		transform: translateY(0px);
+				    -webkit-transition: opacity 200ms 60ms ease-out, visibility 200ms 60ms ease-out, transform 200ms 60ms ease-out;
+					-moz-transition: opacity 200ms 60ms ease-out, visibility 200ms 60ms ease-out, transform 200ms 60ms ease-out;
+					-ms-transition: opacity 200ms 60ms ease-out, visibility 200ms 60ms ease-out, transform 200ms 60ms ease-out;
+					-o-transition: opacity 200ms 60ms ease-out, visibility 200ms 60ms ease-out, transform 200ms 60ms ease-out;
+					transition: opacity 200ms 60ms ease-out, visibility 200ms 60ms ease-out, transform 200ms 60ms ease-out;
+				}
+				.b-country-item.wide:hover .b-country-cont .b-btn-tr{
+					-webkit-transform: translateY(20px);
+					   -moz-transform: translateY(20px);
+				    	-ms-transform: translateY(20px);
+				    	 -o-transform: translateY(20px); 
+				    		transform: translateY(20px);
 				}
 					.info-left{
 						display: inline-block;
@@ -871,7 +895,7 @@ b{
 		height: 1158px;
 		background-position: 50% 50%;
 	    background-image: url(../i/b-3-back.svg);
-    	background-size: cover;
+    	background-size: 1920px;
     	background-repeat: no-repeat;
 	}
 		.b-3-content{
@@ -928,6 +952,7 @@ b{
 }
 	.b-4 h2{
 		text-align: center;
+		color: #282828;
 		font-family: 'Gilroy-Bold';
 		font-size: 80px;
 		line-height: 80px;
@@ -945,12 +970,15 @@ b{
 		.b-4-item:nth-child(3n){
 			margin-right: 0;
 		}
+		.b-4-item:nth-child(3n) p{
+			padding: 0 22px;
+		}
 			.b-4-icon{
 				height: 150px;
 				margin-bottom: 24px;
 			}
 			.b-4-item h3{
-				max-width: 282px;
+				max-width: 275px;
 				margin: 0 auto;
 				font-family: 'Gilroy-Bold';
 				font-size: 32px;
@@ -1005,6 +1033,7 @@ b{
 		margin-bottom: 150px;
 	}
 		.b-5-text h2{
+			color: #282828;
 			font-family: 'Gilroy-Bold';
 			font-size: 50px;
 			line-height: 60px;
@@ -1347,6 +1376,7 @@ b{
 		}
 
 		.b-seo h2{
+			color: #282828;
 			font-family: 'Gilroy-Bold';
 			font-size: 24px;
 			line-height: 34px;
@@ -1509,6 +1539,7 @@ b{
 			}
 
 			.b-footer-item h2{
+				color: #282828;
 				font-family: 'Gilroy-Bold';
 				font-size: 20px;
 				line-height: 28px;
@@ -1590,6 +1621,56 @@ b{
 			    background-size: 98px;
 			}
 
+/*=======Поиск туров=======*/
+
+.b-head-inner .b-head-top{
+	margin-bottom: 12px;
+}
+.b-head-inner .b-head-text{
+	margin-bottom: 25px;
+}
+
+ul.b-breadcrumbs {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+	ul.b-breadcrumbs li {
+		vertical-align: top;
+	    display: inline-block;
+	}
+		ul.b-breadcrumbs li a,
+		ul.b-breadcrumbs li span{
+			font-family: 'Gilroy-Regular';
+		    font-size: 20px;
+		    line-height: 22px;
+		    color: #FFF;
+		    padding-top: 5px;
+		    display: block;
+		    float: left;
+		}
+		ul.b-breadcrumbs li a:hover{
+			border-bottom: 1px solid #FFF;
+		}
+
+	ul.b-breadcrumbs li:after {
+	    position: relative;
+	    content: "/";
+	    font-size: 20px;
+		line-height: 28px;
+	    padding: 3px 0px;
+	    display: block;
+	    float: left;
+	    font-family: 'Gilroy-Regular';
+	    color: #FFF;
+	    margin-left: 10px;
+	    margin-right: 8px;
+	}
+
+	ul.b-breadcrumbs li:last-child:after {
+	    display: none;
+	}
 
 /*===========================*/
 
@@ -1776,16 +1857,16 @@ div.TVMainFilterButton:after{
 .b-tourvisor div.TVSearchButton{
 	display: none;
 }
-div.TVWideForm.TVTheme2 .TVCountry {
+.b-tourvisor div.TVWideForm.TVTheme2 .TVCountry {
     width: calc(25% - 36px);
 }
-div.TVWideForm.TVTheme2 .TVDates {
+.b-tourvisor div.TVWideForm.TVTheme2 .TVDates {
     width: calc(25% - 36px);
 }
-div.TVWideForm.TVTheme2 .TVNights {
+.b-tourvisor div.TVWideForm.TVTheme2 .TVNights {
     width: calc(25% - 36px);
 }
-div.TVWideForm.TVTheme2 .TVTourists {
+.b-tourvisor div.TVWideForm.TVTheme2 .TVTourists {
     width: calc(25% - 36px);
 }
 
@@ -1901,6 +1982,9 @@ div.tv_drop_panel:after{
     border: 10px solid transparent;
     border-bottom: 10px solid #FFF;
 }
+.TVSearchCmbPanel.tv_drop_panel:after{
+	right: 406px;
+}
 div.TVListBoxItem:hover {
     background-color: #FFF;
     border-radius: 0;
@@ -1988,4 +2072,44 @@ div.TVDetailPanel .TVRegion .TVOptionList {
 }
 div.TVDetailPanel .TVOptionCheckBox {
     margin-bottom: 9px;
+}
+
+.b-tourvisor-header div.TVFilterForm{
+	display: none;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry {
+	border-radius: 5px 0px 0px 5px;
+    width: calc(20.75% - 36px);
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates {
+    width: calc(20.75% - 36px);
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVNights {
+    width: calc(20.75% - 36px);
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists {
+    width: calc(20.75% - 36px);
+}
+.b-tourvisor-header div.TVMainFilter{
+	border: 5px solid #EFF2F6;
+	background-color: #FFF;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVSearchButton {
+    width: 207px;
+    margin-top: 7px;
+}
+div.TVSearchButton{
+	text-transform: none;
+	font-family: 'Gilroy-Bold';
+	font-size: 20px;
+	line-height: 24px;
+	text-shadow: none;
+	background-image: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
+	border-radius: 6px;
+}
+div.TVSearchButton:hover{
+	background-image: linear-gradient(180deg, #FFBD73 0%, #d26707 100%);
+}
+div.TVSearchButton:after {
+    content: "Найти тур";
 }
