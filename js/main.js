@@ -85,7 +85,9 @@ $(document).ready(function(){
     });
 
     var scene = document.getElementById('coin-parallax');
-    var parallax = new Parallax(scene);
+    if(scene){
+        var parallax = new Parallax(scene);
+    }
 
     var arrCards = [],
         arrOperators = [],

@@ -115,6 +115,25 @@ div.TVOptionCheckBox:before, div.TVOptionListItem:before{
   content: "\e909";
 }
 
+.icon-planet:before {
+  content: "\e90c";
+}
+.icon-palm:before {
+  content: "\e90d";
+}
+.icon-family:before {
+  content: "\e90e";
+}
+.icon-active:before {
+  content: "\e90f";
+}
+.icon-ski:before {
+  content: "\e910";
+}
+.icon-shop:before {
+  content: "\e911";
+}
+
 html,
 body {
 	position: relative;
@@ -132,12 +151,12 @@ a{
 	text-decoration: none;
 }
 
-label.error{
+label.error,span.error{
 	display: none !important;
 }
 input.error,textarea.error{
-	border: 1px solid #F00 !important;
-	box-shadow: 0 0px 0px 1px #F00;
+	border: 2px solid #F00 !important;
+	/*box-shadow: 0 0px 0px 1px #F00;*/
 }
 input::-webkit-input-placeholder {
 	color: #FFF;
@@ -367,6 +386,9 @@ b{
     background-position: 50% 50%;
 	padding-top: 76px;
 	padding-bottom: 125px;
+}
+.b-head .b-block{
+	z-index: 5;
 }
 	.b-head-top{
 		position: relative;
@@ -612,7 +634,7 @@ b{
 			}
 
 .b-popular{
-	z-index: 1;
+	z-index: 5;
 }
 	.b-country-list{
 		margin-bottom: 44px;
@@ -1027,6 +1049,8 @@ b{
 
 }
 	.b-5-text{
+		position: relative;
+		z-index: 2;
 		padding-top: 123px;
     	padding-left: 85px;
 		max-width: 576px;
@@ -1055,6 +1079,7 @@ b{
 	    position: absolute;
 	    top: -24px;
     	right: 148px;
+    	z-index: 1;
 	}
 		.b-5-name{
 			position: absolute;
@@ -1273,6 +1298,7 @@ b{
 	background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 60px;
 }
 	.b-card-list{
 
@@ -1350,7 +1376,6 @@ b{
 }
 
 .b-seo{
-	padding-top: 60px;
 	margin-bottom: 80px;
 }
 	.b-seo-content{
@@ -1623,17 +1648,22 @@ b{
 
 /*=======Поиск туров=======*/
 
-.b-head-inner .b-head-top{
-	margin-bottom: 12px;
+.b-head-inner{
+	padding-bottom: 136px;
 }
-.b-head-inner .b-head-text{
-	margin-bottom: 25px;
-}
+	/*.b-head-inner .b-head-white{
+		bottom: -60px;
+	}*/
+	.b-head-inner .b-head-top{
+		margin-bottom: 12px;
+	}
+	.b-head-inner .b-head-text{
+		margin-bottom: 18px;
+	}
 
 ul.b-breadcrumbs {
     display: inline-block;
     text-align: center;
-    margin-bottom: 5px;
 }
 
 	ul.b-breadcrumbs li {
@@ -1672,6 +1702,133 @@ ul.b-breadcrumbs {
 	    display: none;
 	}
 
+ .b-popular-inner{
+ 	position: relative;
+ 	z-index: 5;
+ 	margin-bottom: 95px;
+ }
+ 	 .b-popular-inner h2{
+ 		position: absolute;
+    	width: 100%;
+    	top: -64px;
+ 	}
+	.b-categories-list{
+		padding-top: 40px;
+		margin-bottom: 53px;
+	}
+		.b-categories-item{
+			float: left;
+			width: calc(100%/6 - 20px);
+			margin-right: 24px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.b-categories-item:last-child{
+			margin-right: 0;
+		}
+		.b-categories-item:hover .icon:before,
+		.b-categories-item:hover p{
+			color: #006FFB;
+		}
+			.b-categories-item .icon{
+				height: 50px;
+			}
+			.b-categories-item .icon:before{
+				font-size: 50px;
+			}
+			.b-categories-item p{
+				font-family: 'Gilroy-Medium';
+				font-size: 20px;
+				line-height: 24px;
+				color: #282828;
+				margin-top: 14px;
+			}
+
+		.b-popular-inner .b-country-list{
+			margin-bottom: 34px;
+		}
+		.b-popular-inner .b-country-item{
+			height: 302px;
+		}
+
+.b-feedback{
+	margin-bottom: 120px;
+}
+	.b-feedback-back{
+		position: absolute;
+	    bottom: 0px;
+	    left: 0;
+	    width: 100%;
+	    height: 797px;
+	    background-position: 50% 50%;
+	    background-image: url(../i/b-feedback-back.svg);
+	    background-size: 1920px;
+	    background-repeat: no-repeat;
+	}
+	.b-feedback-text{
+		position: relative;
+		z-index: 2;
+		max-width: 612px;
+		padding-top: 92px;
+    	padding-left: 174px;
+	    box-sizing: content-box;	
+	}
+		.b-feedback-text h2{
+			color: #282828;
+			font-family: 'Gilroy-Bold';
+			font-size: 50px;
+			line-height: 60px;
+			margin-bottom: 38px;
+		}
+		.b-feedback-text > p{
+			max-width: 495px;
+			font-size: 20px;
+			line-height: 30px;
+			margin-bottom: 42px;
+		}
+		.b-feedback .b-5-manager{
+			background-image: url(../i/b-feedback-manager.png);
+			top: -29px;
+    		right: 59px;
+		}
+		.b-feedback-form{
+			max-width: 400px;
+		}
+			.b-feedback-form input{
+				width: 100%;
+				border: 2px solid #BCC1C7;
+				margin-bottom: 24px;
+				color: #434343;
+			}
+			.b-feedback-form input::-webkit-input-placeholder {
+				color: #BCC1C7;
+			}
+			.b-feedback-form input:-moz-placeholder {
+				color: #BCC1C7;
+			}
+			.b-feedback-form .b-checkbox{
+				padding-left: 25px;
+				color: #434343;
+			}
+				.b-feedback-form .b-checkbox .b-checked {
+				    border: 2px solid #BCC1C7;
+				}
+				.b-feedback-form .b-checkbox .icon-checked:before{
+				    color: #434343;
+				}
+				.b-feedback-form .b-checkbox a{
+					text-decoration: none;
+					color: #434343;
+				}
+			.b-feedback-form .b-btn{
+				padding: 20px 40px 21px 40px;
+				margin-top: 14px;
+				margin-bottom: 26px;
+			}
+			.b-feedback-form .b-btn .btn-regular{
+				font-size: 18px;
+			}
+
 /*===========================*/
 
 input[type=text],
@@ -1700,7 +1857,7 @@ input{
 /*=====checkbox=====*/
 
 .icon-checked:before{
-	font-size: 11px;
+	font-size: 10px;
     color: #FFF;
 }
 .b-checkbox{
@@ -1739,7 +1896,7 @@ input{
 		.b-checkbox .b-checked:before{
 			position: absolute;
 			left: 2px;
-			top: 2px;
+			top: 3px;
 			display: none;
 		}
 		.b-checkbox label:hover .b-checked:before{
@@ -1838,6 +1995,8 @@ div.TVMainFilterButton{
 	position: relative;
 	padding: 31px 18px 17px;
 	border-right: 0;
+	font-family: 'Gilroy-Bold';
+    font-size: 20px;
 }
 div.TVMainFilterButton:after{
 	content: " ";
@@ -2078,17 +2237,17 @@ div.TVDetailPanel .TVOptionCheckBox {
 	display: none;
 }
 .b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry {
-	border-radius: 5px 0px 0px 5px;
-    width: calc(20.75% - 36px);
+	/*border-radius: 5px 0px 0px 5px;*/
+    width: calc(23.75% - 36px);
 }
 .b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates {
-    width: calc(20.75% - 36px);
+    width: calc(23.75% - 36px);
 }
 .b-tourvisor-header div.TVWideForm.TVTheme2 .TVNights {
-    width: calc(20.75% - 36px);
+    width: calc(17.75% - 36px);
 }
 .b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists {
-    width: calc(20.75% - 36px);
+    width: calc(17.75% - 36px);
 }
 .b-tourvisor-header div.TVMainFilter{
 	border: 5px solid #EFF2F6;

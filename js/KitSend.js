@@ -55,7 +55,8 @@ $(document).ready(function(){
 			rules: {
 				email: 'email',
 				phone: 'customPhone'
-			}
+			},
+			errorElement : "span"
 		});
 		if( $(this).find("input[name=phone]").length ){
 			$(this).find("input[name=phone]").each(function(){
