@@ -1702,12 +1702,12 @@ ul.b-breadcrumbs {
 	    display: none;
 	}
 
- .b-popular-inner{
+ .b-categories{
  	position: relative;
  	z-index: 5;
  	margin-bottom: 95px;
  }
- 	 .b-popular-inner h2{
+ 	 .b-categories h2{
  		position: absolute;
     	width: 100%;
     	top: -64px;
@@ -1744,12 +1744,16 @@ ul.b-breadcrumbs {
 				margin-top: 14px;
 			}
 
-		.b-popular-inner .b-country-list{
+		.b-categories .b-country-list{
 			margin-bottom: 34px;
 		}
-		.b-popular-inner .b-country-item{
+		.b-categories .b-country-item{
 			height: 302px;
 		}
+
+.b-country-item.hidden{
+	display: none;
+}
 
 .b-feedback{
 	margin-bottom: 120px;

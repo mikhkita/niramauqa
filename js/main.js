@@ -38,7 +38,11 @@ $(document).ready(function(){
             nextRow = 0;
         $(".no-margin").removeClass("no-margin");
         $(".b-country-list .b-country-item").each(function() {
-            nextRow += ($(this).hasClass("wide")) ? 2 : 1;
+            if($(this).parents(".b-country-slider").length){
+                nextRow = 2;
+            }else{
+                nextRow++;
+            }
             if(nextRow >= rowCountry){
                 $(this).addClass("no-margin");
                 nextRow = 0;
@@ -189,6 +193,49 @@ $(document).ready(function(){
         fade: true,
         cssEase: 'linear'
     });
+
+    var grid = $('.b-categories .b-country-list').isotope({
+        itemSelector: '.b-country-item',
+        layoutMode: 'fitRows'
+    });
+
+    var step = 4,
+        nowShow = 0,
+        activeCategory = "";
+
+    $(".b-categories-item").click(function () {
+        nowShow = 0;
+        activeCategory = $(this).attr("data-class");
+        reinitGrid();
+        var iso = Isotope.data('.b-categories .b-country-list');
+        console.log(iso);
+    })
+
+    $(".b-categories .show-more").click(function () {
+        nowShow += step;
+        reinitGrid();
+        return false;
+    });
+
+    function reinitGrid () {
+        var count = nowShow;
+        grid.isotope({ filter: 
+            function() {
+                var validClass = true;
+                if(activeCategory){
+                    validClass = $(this).hasClass(activeCategory);
+                }
+                if(validClass){
+                    count++;
+                }
+                var validCount = true;
+                if(count >= nowShow + step){
+                    validCount = false;
+                }
+                return validClass && validCount;
+            } 
+        });
+    }
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
