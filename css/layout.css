@@ -69,7 +69,9 @@
 
 [class^="icon-"], [class*=" icon-"],
 div.TVTheme2 .TVHotelStar:before,
-div.TVOptionCheckBox:before, div.TVOptionListItem:before{
+div.TVOptionCheckBox:before, div.TVOptionListItem:before,
+div.TVCalendarAir:before, div.TVCalendarWater:before,
+div.TVCalDirectOnly .TVChecked:after{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -1728,7 +1730,11 @@ ul.b-breadcrumbs {
 		}
 		.b-categories-item:hover .icon:before,
 		.b-categories-item:hover p{
-			color: #006FFB;
+			color: rgba(0,111,251,0.6);
+		}
+		.b-categories-item.active .icon:before,
+		.b-categories-item.active p{
+			color: rgba(0,111,251,1);
 		}
 			.b-categories-item .icon{
 				height: 50px;
@@ -1832,6 +1838,15 @@ ul.b-breadcrumbs {
 			.b-feedback-form .b-btn .btn-regular{
 				font-size: 18px;
 			}
+.b-calendar{
+	margin-bottom: 83px;
+}
+	.b-calendar h2.b-title{
+		margin-bottom: 40px;
+	}
+	.b-calendar .b-btn{
+		margin-top: 30px;
+	}
 
 /*===========================*/
 
@@ -2275,4 +2290,148 @@ div.TVSearchButton:hover{
 }
 div.TVSearchButton:after {
     content: "Найти тур";
+}
+
+/*=====Календар турвизора======*/
+
+div.TVDTCalendar .TVCalBody{
+	height: auto !important;
+}
+div.TVDTCalendar {
+    width: 100%;
+    border: 0;
+}
+div.TVCalMainColor {
+	display: none;
+}
+div.TVCalendar .TVLocationBox .TVContent {
+    font-family: 'Gilroy-Bold';
+	font-size: 20px;
+	line-height: 24px;
+	color: #282828;
+}
+div.TVCalendar .TVLocationBox .TVContent:after{
+	display: none;
+}
+div.TVCalendarDepartureHeader {
+    padding: 20px 0 5px;
+}
+div.TVCalendarListHeader {
+    border-bottom: 1px solid #E7ECF1;
+    font-size: 16px;
+    color: #C1CEDF;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3px;
+}
+div.TVCalendarList {
+    font-size: 16px;
+    border-bottom: 1px solid #E7ECF1 !important;
+    margin: 0;
+    padding: 15px 0;
+}
+
+div.TVCalendarCountryValue {
+	padding-left: 14px;
+    font-family: 'Gilroy-Bold';
+    color: #282828;
+}
+div.TVCalendarAir{
+	color: #FF912A;
+	font-family: 'Gilroy-Medium';
+	margin-right: 24px;
+}
+div.TVCalendarAir:before{
+	content: "\e908";
+    color: #FF912A;
+    font-size: 20px;
+    padding-top: 1px;
+    display: inline-block;
+    vertical-align: top;
+}
+div.TVCalendarWater{
+	font-family: 'Gilroy-Medium';
+	color: #1F82FF;
+}
+div.TVCalendarWater:before {
+    content: "\e909";
+    color: #1F82FF;
+    font-size: 20px;
+    padding-top: 1px;
+    display: inline-block;
+    vertical-align: top;
+}
+div.TVCalendarPrice .TVCalendarPriceValue{
+	font-family: 'Gilroy-Bold';
+	font-size: 20px;
+	line-height: 24px;
+	color: #282828;
+}
+div.TVCalendarPrice .TVCalendarPriceValue:after {
+    font-family: 'Gilroy-Regular';
+	font-size: 16px;
+	line-height: 19px;
+	color: #282828;
+}
+div.TVDTCalendar .TVCalendarCountry{
+	width: 27%;
+}
+div.TVDTCalendar .TVCalendarWeather{
+	width: 27%;
+}
+div.TVDTCalendar .TVCalendarPrice {
+	width: 195px;
+}
+div.TVCalDirectOnly{
+	right: 0;
+}
+div.TVCalDirectOnly .TVCheckBox:after {
+    content: "Только прямые рейсы";
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    font-family: 'Gilroy-Medium';
+}
+div.TVCheckBoxContent {
+	margin-left: 12px;
+}
+div.TVCalendarBook {
+    top: 1px;
+    color: #C1CEDF;
+    font-size: 21px;
+}
+div.TVDTCalendar .TVCalendarCountryVisa {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 3px;
+    width: 46px;
+    height: 19px;
+    border-radius: 6px;
+    border: 1px solid #C1CEDF;
+    text-align: center;
+}
+div.TVCalendarCountryVisa:before {
+	font-family: 'Gilroy-Medium';
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: #C1CEDF;
+    content: "виза";
+}
+div.TVCalendarCountyList{
+	margin-bottom: 26px;
+}
+div.TVCalDirectOnly .TVCheckBoxImg{
+	width: 16px;
+	height: 16px;
+}
+div.TVCalDirectOnly .TVChecked:after {
+    position: absolute;
+    content: "\e905";
+    color: #434343;
+    font-size: 9px;
+    top: 3px;
+    left: 1px;
 }

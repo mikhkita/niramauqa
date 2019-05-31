@@ -204,12 +204,12 @@ $(document).ready(function(){
         activeCategory = "";
 
     $(".b-categories-item").click(function () {
-        nowShow = 0;
+        $(".b-categories-item.active").removeClass("active");
+        $(this).addClass("active");
         activeCategory = $(this).attr("data-class");
+        nowShow = 0;
         reinitGrid();
-        var iso = Isotope.data('.b-categories .b-country-list');
-        console.log(iso);
-    })
+    });
 
     $(".b-categories .show-more").click(function () {
         nowShow += step;
@@ -218,23 +218,35 @@ $(document).ready(function(){
     });
 
     function reinitGrid () {
-        var count = nowShow;
+        var validCount = 0;
+        $(".b-categories .show-more").removeClass("hide");
         grid.isotope({ filter: 
             function() {
-                var validClass = true;
+                var checkClass = true;
                 if(activeCategory){
-                    validClass = $(this).hasClass(activeCategory);
+                    checkClass = $(this).hasClass(activeCategory);
                 }
-                if(validClass){
-                    count++;
+                if(checkClass){
+                    validCount++;
                 }
-                var validCount = true;
-                if(count >= nowShow + step){
-                    validCount = false;
+                var checkCount = true;
+                if(validCount > nowShow + step){
+                    checkCount = false;
+                    validCount--;
                 }
-                return validClass && validCount;
+                return checkClass && checkCount;
             } 
         });
+        if(activeCategory){
+            if(validCount == $(".b-country-item."+activeCategory).length){
+                $(".b-categories .show-more").addClass("hide");
+            }
+        }else{
+            if(validCount == $(".b-country-item").length){
+                $(".b-categories .show-more").addClass("hide");
+            }
+        }
+        
     }
 
     // // Первая анимация элементов в слайде
