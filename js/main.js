@@ -154,34 +154,36 @@ $(document).ready(function(){
         });
     }
 
-    initCards();
-    var cardTimer = setInterval(function() {
-        var nextCard = getNextCard(),
-            nextOperator = getNextOperator();
-        while(arrActiveCards.indexOf(nextOperator) != -1){
-            nextOperator = getNextOperator();
-        }
-        var $nextCard = $(".b-card:eq("+nextCard+")");
-        var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
-        if($nextCard.hasClass("flipped")){
-            //заменить front
-            var $cont = $nextCard.find(".flip-card-front");
-            $cont.find(".b-operators-item").remove();
-            $nextOperator.clone().appendTo($cont);
-            setTimeout(function() {
-                $nextCard.removeClass("flipped");
-            }, 800);
-        }else{
-            //заменить back
-            var $cont = $nextCard.find(".flip-card-back");
-            $cont.find(".b-operators-item").remove();
-            $nextOperator.clone().appendTo($cont);
-            setTimeout(function() {
-                $nextCard.addClass("flipped");
-            }, 800);
-        }
-        arrActiveCards[nextCard] = nextOperator;
-    }, 1000);
+    if(countOperators > 0){
+        initCards();
+        var cardTimer = setInterval(function() {
+            var nextCard = getNextCard(),
+                nextOperator = getNextOperator();
+            while(arrActiveCards.indexOf(nextOperator) != -1){
+                nextOperator = getNextOperator();
+            }
+            var $nextCard = $(".b-card:eq("+nextCard+")");
+            var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+            if($nextCard.hasClass("flipped")){
+                //заменить front
+                var $cont = $nextCard.find(".flip-card-front");
+                $cont.find(".b-operators-item").remove();
+                $nextOperator.clone().appendTo($cont);
+                setTimeout(function() {
+                    $nextCard.removeClass("flipped");
+                }, 800);
+            }else{
+                //заменить back
+                var $cont = $nextCard.find(".flip-card-back");
+                $cont.find(".b-operators-item").remove();
+                $nextOperator.clone().appendTo($cont);
+                setTimeout(function() {
+                    $nextCard.addClass("flipped");
+                }, 800);
+            }
+            arrActiveCards[nextCard] = nextOperator;
+        }, 1000);
+    }
 
     $('.b-country-slider').slick({
         dots: true,
@@ -194,11 +196,13 @@ $(document).ready(function(){
         cssEase: 'linear'
     });
 
-    var grid = $('.b-categories .b-country-list').isotope({
-        itemSelector: '.b-country-item',
-        layoutMode: 'fitRows'
-    });
-
+    if($('.b-categories .b-country-list').length){
+        var grid = $('.b-categories .b-country-list').isotope({
+            itemSelector: '.b-country-item',
+            layoutMode: 'fitRows'
+        });
+    }
+    
     var step = 4,
         nowShow = 0,
         activeCategory = "";
