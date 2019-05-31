@@ -68,6 +68,8 @@
 }
 
 [class^="icon-"], [class*=" icon-"],
+.b-star:before, .b-star:after,
+.chosen-container-single .chosen-single div:before,
 div.TVTheme2 .TVHotelStar:before,
 div.TVOptionCheckBox:before, div.TVOptionListItem:before,
 div.TVCalendarAir:before, div.TVCalendarWater:before,
@@ -104,10 +106,10 @@ div.TVCalDirectOnly .TVChecked:after{
 .icon-checked:before {
   content: "\e905";
 }
-.icon-star:before {
+.b-star:before {
   content: "\e906";
 }
-.icon-star-fill:before {
+.b-star:after {
   content: "\e907";
 }
 .icon-sun:before {
@@ -115,6 +117,9 @@ div.TVCalDirectOnly .TVChecked:after{
 }
 .icon-wave:before {
   content: "\e909";
+}
+.icon-select:before {
+  content: "\e912";
 }
 
 .icon-planet:before {
@@ -2051,6 +2056,101 @@ ul.b-breadcrumbs {
 				border-bottom: 1px solid transparent;
 			}
 
+.b-online-search{
+	margin-bottom: 90px;
+}
+	.b-tourvisor-list{
+		margin-top: 24px;
+		margin-bottom: 70px;
+	}
+		.b-filter{
+			width: 302px;
+			border: 5px solid #EFF2F6;
+			border-radius: 10px;
+			padding: 18px 22px;
+		}
+			.b-filter-item{
+				margin-bottom: 20px;
+			}
+				.b-filter-item h3{
+					font-family: 'Gilroy-Bold';
+					color: #282828;
+					font-size: 20px;
+					line-height: 28px;
+					margin-bottom: 14px;
+				}
+			.b-star-list{
+
+			}
+				.b-star{
+					position: relative;
+					float: left;
+					margin-right: 16px;
+					width: 28px;
+					height: 28px;
+					cursor: pointer;
+				}
+				.b-star:last-child{
+					margin-right: 16px;
+				}
+				.b-star:hover{
+
+				}
+				.b-star:before{
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 28px;
+					color: #C1CEDF;
+				}
+				.b-star:after{
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					font-size: 28px;
+					color: #FF912A;
+				}
+				.b-star-list .b-star.highlight-h:after,
+				.b-star-list:not(.now-hover) .b-star.highlight:after{
+					display: block;
+				}
+
+			#rating-4_5 + label b{
+				color: #00BD17;
+			}
+			#rating-4_0 + label b{
+				color: #77CD00;
+			}
+			#rating-3_5 + label b{
+				color: #AECC00;
+			}
+			#rating-3_0 + label b{
+				color: #DDC500;
+			}
+
+			.b-filter .b-checkbox{
+				margin-bottom: 12px;
+			}
+				.b-filter .b-checkbox .b-checked{
+	   				border: 2px solid #BCC1C7;
+				}
+				.b-filter .b-checkbox p{
+					font-family: 'Gilroy-Regular';
+					font-size: 16px;
+					line-height: 19px;
+					color: #000;
+				}
+				.b-filter .b-checkbox .icon-checked:before {
+				    color: #ED7408;
+				}
+				.b-filter .b-checkbox input[type="checkbox"]:checked + span + label .b-checked,
+				.b-filter .b-checkbox input[type="checkbox"]:checked + label .b-checked,
+				.b-filter .b-checkbox:hover input[type="checkbox"] + span + label .b-checked,
+				.b-filter .b-checkbox:hover input[type="checkbox"] + label .b-checked{
+					border: 2px solid #ED7408;
+				}
+
 /*===========================*/
 
 input[type=text],
@@ -2149,6 +2249,142 @@ input{
 		text-decoration: none;
 	}
 
+/*======select======*/
+
+.b-select{
+
+}
+	.chosen-container-single .chosen-single{
+		padding: 8px 22px;
+		height: auto;
+		border: 2px solid #C1CEDF;
+		border-radius: 6px;
+		background-color: #fff;
+		background-image: none;
+		box-shadow: none;
+		color: #000;
+		font-family: 'Gilroy-Medium';
+		font-size: 16px;
+		line-height: 24px;
+	}
+		.chosen-container-single .chosen-single div {
+		    right: 18px;
+		    width: 15px;
+		}
+		.chosen-container-single .chosen-single div:before {
+		    position: absolute;
+		    top: 13px;
+		    right: 0;
+		    display: inline-block;
+		    content: "\e912";
+		    font-size: 14px;
+		    color: #C1CEDF;
+		}
+		.chosen-container-single:hover .chosen-single div:before{
+			color: #000;
+		}
+		/*chosen-with-drop chosen-container-active*/
+		.chosen-container-active.chosen-with-drop .chosen-single{
+			border: 2px solid #C1CEDF;
+			background-image: none;
+			box-shadow: none;
+		}
+		.chosen-container .chosen-drop{
+			box-shadow: none;
+			border: 2px solid #C1CEDF;
+		}
+		.chosen-container .chosen-results {
+		    margin: 0;
+		    padding: 8px 0;
+		}
+		.chosen-container .chosen-results li {
+			font-family: 'Gilroy-Regular';
+		    padding: 8px 22px;
+		}
+		.chosen-container-single .chosen-drop {
+		    margin-top: -2px;
+		}
+
+/*=======radio=======*/
+
+.b-radio-list li{
+	position: relative;
+	margin-bottom: 10px;
+}
+.b-radio-list input[type="radio"]{
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	margin-bottom: 0;
+}
+
+.b-radio-list input[type="radio"] + span + label,
+.b-radio-list input[type="radio"] + label {
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+}
+
+.b-radio-list input[type="radio"] + span + label:before,
+.b-radio-list input[type="radio"] + label:before {
+    top: 0;
+    left: 0;
+    width: 20px;
+	height: 20px;
+	border-radius: 13px;
+	border: 2px solid #C1CEDF;
+	background-color: #FFF;
+}
+
+.b-radio-list input[type="radio"]:checked + span + label:after,
+.b-radio-list input[type="radio"]:checked + label:after {
+   background-color: #FF912A;
+   background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
+}
+
+.b-radio-list input[type="radio"]:checked + span + label:before,
+.b-radio-list input[type="radio"]:checked + label:before{
+	border: 2px solid #FF912A;
+}
+
+.b-radio-list input[type="radio"] + span + label:after,
+.b-radio-list input[type="radio"] + label:after  {
+    top: 6px;
+    left: 6px;
+    height: 8px;
+    width: 8px;
+    border-radius: 10px;
+}
+
+.b-radio-list input[type="radio"] + label:before,
+.b-radio-list input[type="radio"] + label:after,
+.b-radio-list input[type="radio"] + span + label:before,
+.b-radio-list input[type="radio"] + span + label:after {
+    content: ' ';
+    border-radius: 50%;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px){
+
+	.b-radio-list input[type="radio"] + span + label:hover:before,
+	.b-radio-list input[type="radio"] + label:hover:before{
+	    border: 2px solid #FF912A;
+	}
+	.b-radio-list input[type="radio"] + span + label:hover:after,
+	.b-radio-list input[type="radio"] + label:hover:after{
+	    background-color: #FF912A;
+   		background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
+   		opacity: 0.3;
+	}
+	.b-radio-list input[type="radio"]:checked + span + label:hover:after,
+	.b-radio-list input[type="radio"]:checked + label:hover:after{
+   		opacity: 1;
+	}
+
+}
 
 @media (-webkit-min-device-pixel-ratio: 1.5) {
 	

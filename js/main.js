@@ -253,6 +253,35 @@ $(document).ready(function(){
         
     }
 
+    $(".b-star-list").hover(function() {
+        $(this).addClass("now-hover");
+    }, function() {
+        $(this).removeClass("now-hover");
+    });
+
+    $(".b-star").hover(function() {
+        $(this).addClass("highlight-h");
+        $(this).prevAll(".b-star").addClass("highlight-h");
+    }, function() {
+        $(this).removeClass("highlight-h");
+        $(this).prevAll(".b-star").removeClass("highlight-h");
+    });
+
+    $(".b-star").click(function() {
+        var $this = $(this);
+        //здесь будет ajax-запрос
+        $this.parent().find(".b-star").each(function() {
+            $(this).removeClass("highlight");
+        });
+        $this.addClass("highlight");
+        $this.prevAll(".b-star").addClass("highlight");
+    });
+
+    $(".b-select-chosen select").chosen({
+        width: "100%",
+        disable_search_threshold: 10000
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
