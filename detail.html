@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/slick.css" type="text/css">
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
 	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
@@ -85,145 +86,244 @@
 	<div class="b-online-search">
 		<div class="b-block">
 			<h2 class="b-title regular"><b>Туры в Турцию из Белгорода</b> – <br>онлайн поиск путевки</h2>
-			<div class="b b-tourvisor-header">
+			<div class="b b-tourvisor-header b-tourvisor-inner">
 				<div class="tv-search-form tv-moduleid-189840"></div>
 			</div>
 			<div class="b-tourvisor-list">
-				<div class="b-filter">
-					<div class="b-filter-item">
-						<h3>Класс отеля</h3>
-						<div class="b-star-list clearfix">
-							<div class="b-star"></div>
-							<div class="b-star"></div>
-							<div class="b-star"></div>
-							<div class="b-star"></div>
-							<div class="b-star"></div>
+				<div class="b-left">
+					<div class="b-filter">
+						<div class="b-filter-item">
+							<h3>Класс отеля</h3>
+							<div class="b-star-list clearfix">
+								<div class="b-star"></div>
+								<div class="b-star"></div>
+								<div class="b-star"></div>
+								<div class="b-star"></div>
+								<div class="b-star"></div>
+							</div>
+						</div>
+						<div class="b-filter-item">
+							<h3>Курорт/отель</h3>
+							<div class="b-select b-select-chosen">
+								<select name="resort" class="select-resort">
+									<option value="">Любой</option>
+									<option value="">Анталия 1</option>
+									<option value="">Анталия 2</option>
+									<option value="">Анталия 3</option>
+								</select>				
+							</div>
+						</div>
+						<div class="b-filter-item">
+							<h3>Питание</h3>
+							<ul class="b-radio-list">
+								<li>
+									<input id="food-all" type="radio" name="food" value="all" checked>
+									<label for="food-all">Любое</label>
+								</li>
+								<li>
+									<input id="food-BB" type="radio" name="food" value="BB">
+									<label for="food-BB"><b>BB</b> – Только завтрак</label>
+								</li>
+								<li>
+									<input id="food-HB" type="radio" name="food" value="HB">
+									<label for="food-HB"><b>HB</b> – Завтрак, ужин</label>
+								</li>
+								<li>
+									<input id="food-FB" type="radio" name="food" value="FB">
+									<label for="food-FB"><b>FB</b> – Полный пансион</label>
+								</li>
+								<li>
+									<input id="food-Al" type="radio" name="food" value="Al">
+									<label for="food-Al"><b>Al</b> – Все включено</label>
+								</li>
+								<li>
+									<input id="food-UAl" type="radio" name="food" value="UAl">
+									<label for="food-UAl"><b>UAl</b> – Ультра все включено</label>
+								</li>
+							</ul>
+						</div>
+						<div class="b-filter-item">
+							<h3>Рейтинг</h3>
+							<ul class="b-radio-list">
+								<li>
+									<input id="rating-all" type="radio" name="rating" value="all" checked>
+									<label for="rating-all">Любой рейтинг</label>
+								</li>
+								<li>
+									<input id="rating-4_5" type="radio" name="rating" value="4.5">
+									<label for="rating-4_5"><b>4.5+</b>&nbsp;Превосходно</label>
+								</li>
+								<li>
+									<input id="rating-4_0" type="radio" name="rating" value="4.0">
+									<label for="rating-4_0"><b>4.0+</b>&nbsp;Очень хорошо</label>
+								</li>
+								<li>
+									<input id="rating-3_5" type="radio" name="rating" value="3.5">
+									<label for="rating-3_5"><b>3.5+</b>&nbsp;Хорошо</label>
+								</li>
+								<li>
+									<input id="rating-3_0" type="radio" name="rating" value="3.0">
+									<label for="rating-3_0"><b>3.0+</b>&nbsp;Удовлетворительно</label>
+								</li>
+							</ul>
+						</div>
+						<div class="b-filter-item">
+							<h3>Тип отеля</h3>
+							<ul class="b-chechbox-list">
+								<li class="b-checkbox">
+									<input id="hotel-1" type="checkbox" name="hotel" checked>
+									<label for="hotel-1">
+										<div class="b-checked icon-checked"></div>
+										<p>Активный</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-2" type="checkbox" name="hotel">
+									<label for="hotel-2">
+										<div class="b-checked icon-checked"></div>
+										<p>Спокойный</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-3" type="checkbox" name="hotel">
+									<label for="hotel-3">
+										<div class="b-checked icon-checked"></div>
+										<p>Семейный</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-4" type="checkbox" name="hotel">
+									<label for="hotel-4">
+										<div class="b-checked icon-checked"></div>
+										<p>Здоровье</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-5" type="checkbox" name="hotel">
+									<label for="hotel-5">
+										<div class="b-checked icon-checked"></div>
+										<p>Городской</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-6" type="checkbox" name="hotel">
+									<label for="hotel-6">
+										<div class="b-checked icon-checked"></div>
+										<p>Пляжный</p>
+									</label>
+								</li>
+								<li class="b-checkbox">
+									<input id="hotel-7" type="checkbox" name="hotel">
+									<label for="hotel-7">
+										<div class="b-checked icon-checked"></div>
+										<p>Deluxe</p>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="b-filter-item">
+							<div class="b-range">
+								<div class="b-range-top clearfix">
+									<h3>Цена</h3>
+									<div class="toggle-valuta">
+										<div class="valuta-rub">руб.</div>
+										<div class="toggle active"><div class="toggle-btn"></div></div>
+										<div class="valuta-dollar">у.е.</div>
+									</div>
+								</div>
+								<div class="b-range-slider">
+									<div class="slider-range" data-range-from="0" data-range-to="900000"></div>
+									<div class="range-inputs clearfix">
+										<input class="range-from" type="text" name="" oninput="this.value = this.value.replace(/\D/g, '')">
+										<input class="range-to" type="text" name="" oninput="this.value = this.value.replace(/\D/g, '')">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="b-filter-item">
-						<h3>Курорт/отель</h3>
-						<div class="b-select b-select-chosen">
-							<select name="resort" class="select-resort">
-								<option value="">Любой</option>
-								<option value="">Анталия 1</option>
-								<option value="">Анталия 2</option>
-								<option value="">Анталия 3</option>
-							</select>				
+					<div class="b-tourvisor-nav">
+						<div class="b-tourvisor-nav-item clearfix">
+							<h3>Туры по месяцам</h3>
+							<ul class="half">
+								<li><a href="#">Январь</a></li>
+								<li><a href="#">Февраль</a></li>
+								<li><a href="#">Март</a></li>
+								<li><a href="#">Апрель</a></li>
+								<li><a href="#">Май</a></li>
+								<li><a href="#">Июнь</a></li>
+							</ul>
+							<ul class="half">
+								<li><a href="#">Июль</a></li>
+								<li><a href="#">Август</a></li>
+								<li><a href="#">Сентябрь</a></li>
+								<li><a href="#">Октябрь</a></li>
+								<li><a href="#">Ноябрь</a></li>
+								<li><a href="#">Декабрь</a></li>
+							</ul>
+						</div>
+						<div class="b-tourvisor-nav-item clearfix">
+							<h3>Туры по сезонам</h3>
+							<div class="b-seasons">
+								<div class="b-season">
+									<img src="i/tours-summer.svg">
+									<a href="#">Лето</a>
+								</div>
+								<div class="b-season">
+									<img src="i/tours-autumn.svg">
+									<a href="#">Осень</a>
+								</div>
+							</div>
+							<div class="b-seasons">
+								<div class="b-season">
+									<img src="i/tours-winter.svg">
+									<a href="#">Зима</a>
+								</div>
+								<div class="b-season">
+									<img src="i/tours-spring.svg">
+									<a href="#">Весна</a>
+								</div>
+							</div>
+						</div>
+						<div class="b-tourvisor-nav-item">
+							<h3>Наши преимущества</h3>
+							<div class="nav-adv">
+								<img src="i/adv-cards.svg">
+								<p>Онлайн-оплата туров прямо на сайте</p>
+							</div>
+							<div class="nav-adv">
+								<img src="i/adv-earth.svg">
+								<p>Поиск туров по всем туроператорам</p>
+							</div>
+							<div class="nav-adv">
+								<img src="i/adv-money.svg">
+								<p>Комиссию за вас платит туроператор</p>
+							</div>
+						</div>
+						<div class="b-tourvisor-nav-item clearfix">
+							<h3>Туры в другие страны</h3>
+							<ul>
+								<li><a href="#">Туры в Доминикану</a></li>
+								<li><a href="#">Туры в Таиланд</a></li>
+								<li><a href="#">Туры в Черногорию </a></li>
+								<li><a href="#">Туры в Индию</a></li>
+								<li><a href="#">Туры на Кипр</a></li>
+								<li><a href="#">Туры в Грузию</a></li>
+							</ul>
+						</div>
+						<div class="b-tourvisor-nav-item b-nav-seo">
+							<h3>Заголовок первого блока</h3>
+							<p>Идейные соображения высшего порядка, а также укрепление и развитие структуры представляет собой интересный эксперимент проверки дальнейших направлений развития. </p>
+						</div>
+						<div class="b-tourvisor-nav-item b-nav-seo">
+							<h3 class="with-icon">
+								<span class="seo-icon seo-icon-gift"></span>Заголовок второго блока с иконкой</span>
+							</h3>
+							<p>Равным образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.<br><br>Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют определения и уточнения форм развития.</p>
 						</div>
 					</div>
-					<div class="b-filter-item">
-						<h3>Питание</h3>
-						<ul class="b-radio-list">
-							<li>
-								<input id="food-all" type="radio" name="food" value="all" checked>
-								<label for="food-all">Любое</label>
-							</li>
-							<li>
-								<input id="food-BB" type="radio" name="food" value="BB">
-								<label for="food-BB"><b>BB</b> – Только завтрак</label>
-							</li>
-							<li>
-								<input id="food-HB" type="radio" name="food" value="HB">
-								<label for="food-HB"><b>HB</b> – Завтрак, ужин</label>
-							</li>
-							<li>
-								<input id="food-FB" type="radio" name="food" value="FB">
-								<label for="food-FB"><b>FB</b> – Полный пансион</label>
-							</li>
-							<li>
-								<input id="food-Al" type="radio" name="food" value="Al">
-								<label for="food-Al"><b>Al</b> – Все включено</label>
-							</li>
-							<li>
-								<input id="food-UAl" type="radio" name="food" value="UAl">
-								<label for="food-UAl"><b>UAl</b> – Ультра все включено</label>
-							</li>
-						</ul>
-					</div>
-					<div class="b-filter-item">
-						<h3>Рейтинг</h3>
-						<ul class="b-radio-list">
-							<li>
-								<input id="rating-all" type="radio" name="rating" value="all" checked>
-								<label for="rating-all">Любой рейтинг</label>
-							</li>
-							<li>
-								<input id="rating-4_5" type="radio" name="rating" value="4.5">
-								<label for="rating-4_5"><b>4.5+</b>&nbsp;Превосходно</label>
-							</li>
-							<li>
-								<input id="rating-4_0" type="radio" name="rating" value="4.0">
-								<label for="rating-4_0"><b>4.0+</b>&nbsp;Очень хорошо</label>
-							</li>
-							<li>
-								<input id="rating-3_5" type="radio" name="rating" value="3.5">
-								<label for="rating-3_5"><b>3.5+</b>&nbsp;Хорошо</label>
-							</li>
-							<li>
-								<input id="rating-3_0" type="radio" name="rating" value="3.0">
-								<label for="rating-3_0"><b>3.0+</b>&nbsp;Удовлетворительно</label>
-							</li>
-						</ul>
-					</div>
-					<div class="b-filter-item">
-						<h3>Тип отеля</h3>
-						<ul class="b-chechbox-list">
-							<li class="b-checkbox">
-								<input id="hotel-1" type="checkbox" name="hotel" checked>
-								<label for="hotel-1">
-									<div class="b-checked icon-checked"></div>
-									<p>Активный</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-2" type="checkbox" name="hotel">
-								<label for="hotel-2">
-									<div class="b-checked icon-checked"></div>
-									<p>Спокойный</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-3" type="checkbox" name="hotel">
-								<label for="hotel-3">
-									<div class="b-checked icon-checked"></div>
-									<p>Семейный</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-4" type="checkbox" name="hotel">
-								<label for="hotel-4">
-									<div class="b-checked icon-checked"></div>
-									<p>Здоровье</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-5" type="checkbox" name="hotel">
-								<label for="hotel-5">
-									<div class="b-checked icon-checked"></div>
-									<p>Городской</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-6" type="checkbox" name="hotel">
-								<label for="hotel-6">
-									<div class="b-checked icon-checked"></div>
-									<p>Пляжный</p>
-								</label>
-							</li>
-							<li class="b-checkbox">
-								<input id="hotel-7" type="checkbox" name="hotel">
-								<label for="hotel-7">
-									<div class="b-checked icon-checked"></div>
-									<p>Deluxe</p>
-								</label>
-							</li>
-						</ul>
-					</div>
-					<div class="b-filter-item">
-						<div class="">
-							<h3>Цена</h3>
-						</div>
-					</div>
+				</div>
+				<div class="b-right">
+
 				</div>
 			</div>
 			<div class="center">
@@ -245,10 +345,10 @@
 		<div class="b-block">
 			<h2 class="b-title">Почему вам стоит посетить Турцию?</h2>
 			<div class="b-country-adv-main">
-				<div class="adv-left">
+				<div class="adv-main-left">
 					<img src="i/detail-2.jpg">
 				</div>
-				<div class="adv-right">
+				<div class="adv-main-right">
 					<h3>Пляжная «жемчужина» Турции — <b>Анталийское побережье</b></h3>
 					<p>Центральная Анатолия — регион с невероятными пейзажами и древними городами, хранящими следы величия могущественной цивилизации. Анкара — главный, но далеко не единственный из них. Есть еще Аксарай с мечетями, гробницами и караван-сараями.<br><br>Анталийское побережье — притча во языцех для адептов отдыха по системе «все включено». Анталия нуждается если не в представлении, то в реабилитации своей культурной значимости: здесь есть не только отели и бары, но и россыпь древних достопримечательностей. </p>
 				</div>
@@ -542,6 +642,7 @@
 	<script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -282,6 +282,54 @@ $(document).ready(function(){
         disable_search_threshold: 10000
     });
 
+    $( function() {
+        $(".slider-range").each(function() {
+            var $this = $(this),
+                from = Number($(this).attr("data-range-from")),
+                to = Number($(this).attr("data-range-to"));
+            $this.slider({
+                range: true,
+                step: 1000,
+                min: from,
+                max: to,
+                values: [from, to],
+                slide: function( event, ui ) {
+                    $this.parent().find(".range-from").val(ui.values[0]);
+                    $this.parent().find(".range-to").val(ui.values[1]);
+                }
+            });
+            $this.parent().find(".range-from").val(from);
+            $this.parent().find(".range-to").val(to);
+        });
+    });
+
+    $('.range-from, .range-to').on('change', function(){
+        var count = $(this).val()*1,
+            $slider = $(this).parents(".b-filter-item-range").find(".slider-range");
+            from = Number($slider.attr("data-range-from"));
+            to = Number($slider.attr("data-range-to"));
+        if($(this).hasClass("range-from")){
+            var inputTo = $(this).siblings(".range-to").val()*1;
+            count = (count > inputTo) ? inputTo : count;
+        }else{
+            var inputFrom = $(this).siblings(".range-from").val()*1;
+            count = (count < inputFrom) ? inputFrom : count;
+        }
+        count = (count < from)? from : count;
+        count = (count > to) ? to : count;
+        $(this).val(count);
+        var valCurrent =  $slider.slider( "option", "values" );
+        if($(this).hasClass("range-from")){
+            $slider.slider("option", "values", [count, valCurrent[1]]).trigger('slidechange');
+        }else{
+            $slider.slider("option", "values", [valCurrent[0], count]).trigger('slidechange');
+        }
+    });
+
+    $(".toggle").click(function () {
+        $(this).toggleClass("active");
+    });
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 

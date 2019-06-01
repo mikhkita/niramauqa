@@ -1894,7 +1894,7 @@ ul.b-breadcrumbs {
 	.b-country-desc h2{
 		max-width: 706px;
 		font-family: 'Gilroy-Light';
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 		color: #FFF;
 		text-align: left;
 	}
@@ -1915,31 +1915,31 @@ ul.b-breadcrumbs {
 		display: table;
 		margin-bottom: 44px;
 	}
-		.adv-left{
+		.adv-main-left{
 			display: table-cell;
 			vertical-align: middle;
 			width: 50%;
 		}
-			.adv-left img{
+			.adv-main-left img{
 				border-radius: 6px;
 				overflow: hidden;
 			}
-		.adv-right{
+		.adv-main-right{
 			display: table-cell;
 			vertical-align: middle;
 			width: 50%;
 			padding-left: 24px;
 		}
-			.adv-right h3{
+			.adv-main-right h3{
 				font-family: 'Gilroy-Regular';
 				font-size: 32px;
 				line-height: 40px;
 				margin-bottom: 24px;
 			}
-			.adv-right h3 b{
+			.adv-main-right h3 b{
 				font-family: 'Gilroy-bold';
 			}
-			.adv-right p{
+			.adv-main-right p{
 
 			}
 
@@ -1988,10 +1988,12 @@ ul.b-breadcrumbs {
 	.b-feedback.b-feedback-shadow .b-feedback-text {
 	    padding-top: 44px;
 	    padding-bottom: 54px;
+	    padding-left: 194px;
 	}
 	.b-feedback.b-feedback-shadow .b-5-manager{
 		bottom: 0;
 		top: auto;
+		right: 96px;
 	}
 .b-country-resorts{
 	margin-bottom: 80px;
@@ -2063,16 +2065,24 @@ ul.b-breadcrumbs {
 		margin-top: 24px;
 		margin-bottom: 70px;
 	}
+	.b-tourvisor-list .b-left{
+		width: 302px;
+	}
 		.b-filter{
-			width: 302px;
+			width: 100%;
 			border: 5px solid #EFF2F6;
 			border-radius: 10px;
-			padding: 18px 22px;
+			padding: 20px 22px 26px 22px;
+			margin-bottom: 24px;
 		}
 			.b-filter-item{
-				margin-bottom: 20px;
+				margin-bottom: 22px;
 			}
-				.b-filter-item h3{
+			.b-filter-item:last-child{
+				margin-bottom: 0;
+			}
+				.b-filter-item h3,
+				.b-tourvisor-nav-item h3{
 					font-family: 'Gilroy-Bold';
 					color: #282828;
 					font-size: 20px;
@@ -2130,7 +2140,8 @@ ul.b-breadcrumbs {
 			}
 
 			.b-filter .b-checkbox{
-				margin-bottom: 12px;
+				line-height: 18px;
+				margin-bottom: 16px;
 			}
 				.b-filter .b-checkbox .b-checked{
 	   				border: 2px solid #BCC1C7;
@@ -2146,10 +2157,227 @@ ul.b-breadcrumbs {
 				}
 				.b-filter .b-checkbox input[type="checkbox"]:checked + span + label .b-checked,
 				.b-filter .b-checkbox input[type="checkbox"]:checked + label .b-checked,
-				.b-filter .b-checkbox:hover input[type="checkbox"] + span + label .b-checked,
-				.b-filter .b-checkbox:hover input[type="checkbox"] + label .b-checked{
+				.b-filter .b-checkbox input[type="checkbox"] + span + label:hover .b-checked,
+				.b-filter .b-checkbox input[type="checkbox"] + label:hover .b-checked{
 					border: 2px solid #ED7408;
 				}
+			.b-range{
+
+			}
+				.b-range-top{
+					margin-bottom: 20px;
+				}
+					.b-range-top h3{
+						float: left;
+						margin-bottom: 0;
+					}
+					.toggle-valuta{
+						float: right;
+					}
+						.valuta-rub{
+							display: inline-block;
+							vertical-align: top;
+							font-family: 'Gilroy-Medium';
+							color: #000;
+							line-height: 18px;
+						}
+						.toggle{
+							position: relative;
+							display: inline-block;
+							vertical-align: top;
+							width: 38px;
+							height: 18px;
+							border: 2px solid #C1CEDF;
+							border-radius: 100px;
+							margin: 0 4px;
+							cursor: pointer;
+						}
+						.toggle:hover{
+							border: 2px solid rgba(237,116,8,0.5);
+						}
+							.toggle-btn{
+								position: absolute;
+								top: -2px;
+								left: -2px;
+								width: 18px;
+								height: 18px;
+								background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
+								border-radius: 100px;
+								-webkit-transition: transform 150ms ease-out;
+								   -moz-transition: transform 150ms ease-out;
+								    -ms-transition: transform 150ms ease-out;
+								   	 -o-transition: transform 150ms ease-out;
+										transition: transform 150ms ease-out;
+							}
+							.toggle.active .toggle-btn{
+								-webkit-transform: translateX(20px);
+								-moz-transform: translateX(20px);
+								-ms-transform: translateX(20px);
+								-o-transform: translateX(20px);
+								transform: translateX(20px);
+							}
+						.valuta-dollar{
+							display: inline-block;
+							vertical-align: top;
+							font-family: 'Gilroy-Medium';
+							color: #000;
+							line-height: 18px;
+						}
+				.b-range-slider{
+
+				}
+					.slider-range{
+						margin-bottom: 18px;
+					}
+					.range-inputs{
+
+					}
+						.range-from{
+							float: left;
+							width: 98px;
+							font-size: 16px;
+							line-height: 19px;
+							color: #000;
+							padding: 6px 11px;
+							border: 2px solid #C1CEDF;
+							border-radius: 4px;
+						}
+						.range-to{
+							float: right;
+							width: 98px;
+							font-size: 16px;
+							line-height: 19px;
+							color: #000;
+							padding: 6px 11px;
+							border: 2px solid #C1CEDF;
+							border-radius: 4px;
+						}
+						.ui-slider .ui-slider-handle {
+							display: block;
+						    width: 18px;
+						    height: 18px;
+						    cursor: pointer;
+						    border-radius: 100px;
+						    border: 0;
+						}
+						.ui-widget-content .ui-state-default{
+							top: -7px;
+							background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
+						}
+						.ui-widget-content .ui-state-default:before{
+							content: " ";
+							position: absolute;
+							top: 5px;
+							left: 5px;
+							width: 8px;
+							height: 8px;
+							background-color: #FFF;
+							border-radius: 100px;
+						}
+						.ui-widget-header {
+						    background: #C1CEDF;
+						}
+						.ui-slider-horizontal {
+							height: 5px;
+						}
+						.ui-widget.ui-widget-content {
+							border: 1px solid #C1CEDF;
+							margin-left: 8px;
+							margin-right: 8px;
+						}
+						.ui-slider-horizontal .ui-slider-range {
+						    
+						}
+
+	.b-tourvisor-nav{
+
+	}
+		.b-tourvisor-nav-item{
+			margin-bottom: 24px;
+		}	
+			.b-tourvisor-nav-item a,
+			.b-tourvisor-nav-item p{
+				color: #161616;
+			}
+			.b-tourvisor-nav-item ul{
+				list-style: none;
+			}
+			.b-tourvisor-nav-item ul.half{
+				width: 50%;
+				float: left;
+			}
+				.b-tourvisor-nav-item ul li{
+					position: relative;
+					padding-left: 21px;
+					margin-bottom: 4px;
+				}
+				.b-tourvisor-nav-item ul li:last-child{
+					margin-bottom: 0;
+				}
+					.b-tourvisor-nav-item ul li:before {
+					    content: " ";
+					    position: absolute;
+					    top: 10px;
+					    left: 0;
+					    width: 6px;
+					    height: 6px;
+					    background-color: #C1CEDF;
+					    border-radius: 10px;
+					}
+						.b-tourvisor-nav-item ul li a:hover,
+						.b-tourvisor-nav-item .b-seasons .b-season a:hover{
+							text-decoration: underline;
+						}
+
+			.b-tourvisor-nav-item .b-seasons{
+				width: 50%;
+				float: left;
+			}
+				.b-tourvisor-nav-item .b-seasons .b-season{
+					margin-bottom: 16px;
+				}
+				.b-tourvisor-nav-item .b-seasons .b-season:last-child{
+					margin-bottom: 0;
+				}
+					.b-tourvisor-nav-item .b-seasons .b-season img{
+						display: inline-block;
+						vertical-align: top;
+						width: 30px;
+						height: 30px;
+						margin-right: 8px;
+					}
+					.b-tourvisor-nav-item .b-seasons .b-season a{
+						display: inline-block;
+						vertical-align: top;
+						margin-top: 3px;
+					}
+
+			.b-tourvisor-nav-item .nav-adv{
+				display: table;
+				margin-bottom: 20px;
+			}
+			.b-tourvisor-nav-item .nav-adv:last-child{
+				margin-bottom: 0;
+			}
+				.b-tourvisor-nav-item .nav-adv img{
+					display: table-cell;
+					vertical-align: middle;
+					width: 60px;
+					height: 60px;
+				}
+				.b-tourvisor-nav-item .nav-adv p{
+					display: table-cell;
+					vertical-align: middle;
+					padding-left: 24px;
+				}
+		.b-nav-seo{
+
+		}
+			.b-nav-seo h3.with-icon{
+				position: relative;
+				padding-left: 50px;
+			}
+
 
 /*===========================*/
 
@@ -2196,6 +2424,7 @@ input{
 	font-size: 14px;
 	line-height: 18px;
 	cursor: pointer;
+	display: inline-block;
 }
 
 .b-checkbox input[type="checkbox"]{
@@ -2309,7 +2538,7 @@ input{
 
 .b-radio-list li{
 	position: relative;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 .b-radio-list input[type="radio"]{
 	position: absolute;
@@ -2729,6 +2958,9 @@ div.TVSearchButton:hover{
 }
 div.TVSearchButton:after {
     content: "Найти тур";
+}
+.b-tourvisor-inner div.TVlocation{
+	color: #282828;
 }
 
 /*=====Календар турвизора======*/
