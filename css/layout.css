@@ -1891,6 +1891,32 @@ ul.b-breadcrumbs {
 
 /*=========Детальная=========*/
 
+.b-tourvisor-calendar{
+	position: relative;
+	z-index: 5;
+	padding-bottom: 160px;
+	margin-bottom: 68px;
+}
+	.b-tourvisor-calendar .content{
+		background-color: #fdb669;
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		top: -140px;
+	}
+.b-head-detail{
+	padding-bottom: 230px;
+}
+	.b-head-detail .b-head-white {
+		height: 258px;
+	}
+	.b-head-detail .b-head-text{
+		margin-bottom: 24px;
+	}
+	.b-head-detail .b-head-top{
+		margin-bottom: 12px;
+	}
+
 .b-adv-list{
 
 }
