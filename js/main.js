@@ -37,7 +37,7 @@ $(document).ready(function(){
         var rowCountry = 4,
             nextRow = 0;
         $(".no-margin").removeClass("no-margin");
-        $(".b-country-list .b-country-item").each(function() {
+        $(".b-popular .b-country-list .b-country-item").each(function() {
             if($(this).parents(".b-country-slider").length){
                 nextRow = 2;
             }else{
@@ -269,7 +269,6 @@ $(document).ready(function(){
 
     $(".b-star").click(function() {
         var $this = $(this);
-        //здесь будет ajax-запрос
         $this.parent().find(".b-star").each(function() {
             $(this).removeClass("highlight");
         });

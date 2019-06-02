@@ -73,7 +73,8 @@
 div.TVTheme2 .TVHotelStar:before,
 div.TVOptionCheckBox:before, div.TVOptionListItem:before,
 div.TVCalendarAir:before, div.TVCalendarWater:before,
-div.TVCalDirectOnly .TVChecked:after{
+div.TVCalDirectOnly .TVChecked:after,
+div.TVTem2PriceArrow:before{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -456,7 +457,7 @@ b{
 		}
 	.b-head-white{
 		position: absolute;
-	    bottom: -1px;
+	    bottom: -2px;
 	    z-index: 2;
 	    height: 318px;
 	    width: 100%;
@@ -665,6 +666,9 @@ b{
 		    background-position: 50% 50%;
 		    background-repeat: no-repeat;
 		    background-size: cover;
+		}
+		.b-country-list.square .b-country-item{
+			height: 302px;
 		}
 		.b-country-item.wide{
 			width: 100%;
@@ -904,6 +908,20 @@ b{
 								vertical-align: top;
 								font-size: 10px;
 							}
+					.info-wide{
+						width: 100%;
+					}
+						.info-wide h3{
+							font-family: 'Gilroy-Bold';
+							font-size: 28px;
+							line-height: 28px;
+							margin-bottom: 4px;
+						}
+						.info-wide .price{
+							font-size: 16px;
+							line-height: 16px;
+						}
+
 		.b-country-item.wide h3{
 			font-family: 'Gilroy-Bold';
 			font-size: 32px;
@@ -1665,6 +1683,15 @@ b{
 
 /*=======Поиск туров=======*/
 
+.b-title-absolute h2.b-title{
+	position: absolute;
+	width: 100%;
+	top: -64px;
+}
+	.b-title-absolute .b-block{
+		padding-top: 40px;
+	}
+
 .b-head-inner{
 	padding-bottom: 136px;
 }
@@ -1724,13 +1751,7 @@ ul.b-breadcrumbs {
  	z-index: 5;
  	margin-bottom: 95px;
  }
- 	 .b-categories h2{
- 		position: absolute;
-    	width: 100%;
-    	top: -64px;
- 	}
 	.b-categories-list{
-		padding-top: 40px;
 		margin-bottom: 53px;
 	}
 		.b-categories-item{
@@ -1772,9 +1793,14 @@ ul.b-breadcrumbs {
 			height: 302px;
 		}
 
-.b-country-item.hidden{
-	display: none;
+.b-categories .b-country-list{
+	width: calc(100% + 24px);
+	margin-left: -12px;
 }
+	.b-categories .b-country-item{
+		width: calc(25% - 24px);
+		margin: 12px;
+	}
 
 .b-feedback{
 	margin-bottom: 120px;
@@ -1935,6 +1961,7 @@ ul.b-breadcrumbs {
 				font-size: 32px;
 				line-height: 40px;
 				margin-bottom: 24px;
+				color: #282828;
 			}
 			.adv-main-right h3 b{
 				font-family: 'Gilroy-bold';
@@ -2160,6 +2187,9 @@ ul.b-breadcrumbs {
 				.b-filter .b-checkbox input[type="checkbox"] + span + label:hover .b-checked,
 				.b-filter .b-checkbox input[type="checkbox"] + label:hover .b-checked{
 					border: 2px solid #ED7408;
+				}
+				.b-filter .b-checkbox label{
+					display: inline-block;
 				}
 			.b-range{
 
@@ -2424,7 +2454,6 @@ input{
 	font-size: 14px;
 	line-height: 18px;
 	cursor: pointer;
-	display: inline-block;
 }
 
 .b-checkbox input[type="checkbox"]{
@@ -3105,4 +3134,113 @@ div.TVCalDirectOnly .TVChecked:after {
     font-size: 9px;
     top: 3px;
     left: 1px;
+}
+
+/*=================*/
+
+div.TVTem2Image img {
+    border-radius: 5px;
+}
+div.TVTem2Info {
+    margin-left: 240px;
+}
+div.TVTem2TourContainer .TVSRStar {
+    color: #FF912A;
+    margin: 0 6px 0 0;
+}
+div.TVTem2TourContainer .TVSRStar:before {
+    font-size: 18px;
+}
+div.TVTem2Name {
+    color: #282828;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: 'Gilroy-Bold';
+    margin-bottom: 8px;
+}
+div.TVTem2Resort {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Gilroy-Medium';
+    color: #B5C3D6;
+}
+div.TVTem2Description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #434343;
+    max-height: 72px;
+    font-family: 'Gilroy-Regular';
+    margin-top: 4px;
+}
+div.TVTheme2 .TVSRNavButton, .TVTheme2 a.TVSRNavButton, .TVTheme2 a.TVSRNavButton:link {
+    border: 2px solid #E7ECF1;
+    border-radius: 6px;
+    padding: 8px 22px;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #434343;
+}
+div.TVTem2AboutTitle:before {
+    content: "Об отеле";
+}
+div.TVTem2MapTitle:before {
+    content: "На карте";
+}
+div.TVTem2ReviewTitle:before {
+    content: "Отзывы";
+}
+div.TVTem2PriceTitle:before {
+    content: "Цены";
+}
+div.TVTem2TourContainer {
+    border-top: 5px solid #EFF2F6;
+}
+div.TVTem2TourBlock {
+    padding: 10px 0 0 0;
+}
+div.TVTem2Buttons {
+    height: 68px;
+}
+div.TVTem2PriceValue{
+	color: #282828;
+    font-size: 28px;
+    line-height: 32px;
+    font-family: 'Gilroy-Bold';
+}
+div.TVCurrencyRUB .TVCurrencyVal:after, div.TVCurrencyVal:after {
+    content: " руб.";
+    color: #282828;
+    font-size: 28px;
+    line-height: 32px;
+    font-family: 'Gilroy-Bold';
+}
+div.TVTem2PriceSuffix {
+    text-transform: none;
+}
+div.TVTem2PriceArrow {
+    background-color: #FFF;
+    color: #C1CEDF;
+}
+div.TVTem2PriceArrow:before {
+    content: "\e904";
+    font-size: 18px;
+    color: #C1CEDF;
+    position: absolute;
+    top: 7px;
+    left: 11px;
+}
+div.TVTem2PriceSuffix, div.TVTem2PriceValue {
+    margin-right: 10px;
+}
+div.TVTem2TourBlock:hover div.TVTem2PriceArrow {
+    background-color: #f6f6f6;
+    color: #282828;
+}
+div.TVTem2TourBlock:hover div.TVTem2PriceArrow:before{
+	color: #282828;
+}
+div.TVTem2TourContainer{
+	padding-top: 0;
+	padding-bottom: 0;
 }
