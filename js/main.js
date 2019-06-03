@@ -329,6 +329,38 @@ $(document).ready(function(){
         $(this).toggleClass("active");
     });
 
+    // =========Турвизор=========
+
+    $("body").on("click", ".b-tourvisor-with-filter .TVSearchButton", function(){
+        // if( !$(".b-for-results .TVSearchResults").length ){
+        //     clearInterval(minInterval2);
+        //     minInterval2 = setInterval(function(){
+        //         if( $(".TVSearchResults").length ){
+        //             moveResult();
+        //         }
+        //     },1);
+        // }
+    });
+
+    //ждать пока турвизор загрузится
+    var waitTourvisor = setInterval(function(){
+        if( $(".b-tourvisor-with-filter .TVSearchButton").length ){
+            //нажать кнопку и ждать загрузки туров
+            $(".b-tourvisor-with-filter .TVSearchButton").click();
+            $(".b-tourvisor-with-filter .TVFilterForm").wrap("<div class='defaultTVFilterForm'></div>");
+            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVFilterForm").after($(".b-tourvisor-nav"));
+            //заменить "Питание от"
+            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVMeal").after($(".b-TVMeal"));
+            //заменить "Рейтинг"
+            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVMeal").after($(".b-TVRating"));
+            //заменить "Тип отеля"
+
+            
+            
+            clearInterval(waitTourvisor);
+        }
+    }, 30);
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
