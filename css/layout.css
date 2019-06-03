@@ -629,12 +629,15 @@ b{
 			margin-bottom: 8px;
 		}
 			.b-statistics-item img{
+				position: relative;
+				left: -10px;
 				height: 75px;
 				display: inline-block;
 				vertical-align: top;
-				margin-right: 4px;
 			}
 			.b-statistics-item span{
+				position: relative;
+				left: -10px;
 				display: inline-block;
 				vertical-align: top;
 				padding-top: 17px;
@@ -1789,9 +1792,6 @@ ul.b-breadcrumbs {
 		.b-categories .b-country-list{
 			margin-bottom: 34px;
 		}
-		.b-categories .b-country-item{
-			height: 302px;
-		}
 
 .b-categories .b-country-list{
 	width: calc(100% + 24px);
@@ -2148,7 +2148,8 @@ ul.b-breadcrumbs {
 				.b-star{
 					position: relative;
 					float: left;
-					margin-right: 16px;
+					padding-right: 16px;
+    				box-sizing: content-box;
 					width: 28px;
 					height: 28px;
 					cursor: pointer;
