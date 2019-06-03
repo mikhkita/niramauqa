@@ -1868,7 +1868,6 @@ ul.b-breadcrumbs {
 				    color: #434343;
 				}
 				.b-feedback-form .b-checkbox a{
-					text-decoration: none;
 					color: #434343;
 				}
 			.b-feedback-form .b-btn{
@@ -1925,14 +1924,19 @@ ul.b-breadcrumbs {
 		width: calc(100%/3 - 16px);
 		margin-right: 24px;
 		text-align: center;
+		color: #FFF;
 	}
 	.b-adv-item:last-child{
 		margin-right: 0;
 	}
-		.b-adv-item p{
+		.b-adv-item a{
+			color: #FFF;
 			font-size: 20px;
 			line-height: 28px;
-			color: #FFF;
+			text-decoration: underline;
+		}
+		.b-adv-item a:hover{
+			text-decoration: none;
 		}
 
 .b-country-desc{
