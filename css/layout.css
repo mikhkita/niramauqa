@@ -75,7 +75,9 @@ div.TVOptionCheckBox:before, div.TVOptionListItem:before,
 div.TVCalendarAir:before, div.TVCalendarWater:before,
 div.TVCalDirectOnly .TVChecked:after,
 div.TVTem2PriceArrow:before,
-.b-tourvisor-with-filter .TVHotelTypeItem:before{
+.b-tourvisor-with-filter .TVHotelTypeItem:before,
+.b-tourvisor-calendar-cont .TVCalTempSun .TVCalTemperatureValue:before,
+.b-tourvisor-calendar-cont .TVCalTempWater .TVCalTemperatureValue:before{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -249,35 +251,6 @@ b{
 	z-index: 2;
 }
 
-.b-tourvisor-with-filter .TVSRSearchMoreBtn{
-	position: relative !important;
-	color: #FFF !important;
-	border-radius: 100px !important;
-	display: inline-block !important;
-	width: 326px !important;
-	padding: 20px 52px 21px 52px !important;
-	text-align: center !important;
-	background: -moz-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
-	background: -webkit-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
-	background: -ms-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
-	box-shadow: 0 10px 25px 0 rgba(0,78,176,0.40), inset 0 -27px 0px -23px rgba(0,78,176,1), inset 0 15px 0px -12px rgba(213, 221, 246, 0.4) !important;
-	-webkit-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	   -moz-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	    -ms-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	   	 -o-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-			transition: box-shadow 150ms ease-out, transform 100ms ease-out;
-	text-transform: uppercase !important;
-	border: 0 !important;
-	box-sizing: border-box;
-}
-
-.b-tourvisor-with-filter .TVSRSearchMoreBtn:after{
-	font-family: 'Gilroy-Heavy';
-	letter-spacing: 1px;
-	font-size: 22px;
-	line-height: 32px;
-}
-
 /*====Кнопки====*/
 
 .b-btn{
@@ -422,6 +395,45 @@ b{
 		background-color: #FFF;
 		color: #434343;
 	}
+
+/*====Кнопки турвизора====*/
+
+.b-tourvisor-with-filter .TVSRSearchMoreBtn,
+.b-calendar .TVCalShowAll{
+	position: relative !important;
+	color: #FFF !important;
+	border-radius: 100px !important;
+	display: inline-block !important;
+	padding: 20px 52px 21px 52px !important;
+	text-align: center !important;
+	background: -moz-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
+	background: -webkit-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
+	background: -ms-linear-gradient(-90deg, #68A9FB 0%, #095AC0 100%) !important;
+	box-shadow: 0 10px 25px 0 rgba(0,78,176,0.40), inset 0 -27px 0px -23px rgba(0,78,176,1), inset 0 15px 0px -12px rgba(213, 221, 246, 0.4) !important;
+	-webkit-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	   -moz-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	    -ms-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	   	 -o-transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+			transition: box-shadow 150ms ease-out, transform 100ms ease-out;
+	text-transform: uppercase !important;
+	border: 0 !important;
+	box-sizing: border-box;
+}
+
+.b-tourvisor-with-filter .TVSRSearchMoreBtn{
+	width: 326px !important;
+}
+.b-calendar .TVCalShowAll{
+	width: 376px !important;
+}
+
+.b-tourvisor-with-filter .TVSRSearchMoreBtn:after,
+.b-calendar .TVCalShowAll:before{
+	font-family: 'Gilroy-Heavy';
+	letter-spacing: 1px;
+	font-size: 22px;
+	line-height: 32px;
+}
 
 /*=======Главная========*/
 
@@ -1940,12 +1952,14 @@ ul.b-breadcrumbs {
 	margin-bottom: 68px;
 }
 	.b-tourvisor-calendar .content{
-		background-color: #fdb669;
 		width: 100%;
-		height: 300px;
 		position: absolute;
 		top: -140px;
 	}
+.b-tourvisor-hidden{
+	display: none !important;
+}
+
 .b-head-detail{
 	padding-bottom: 230px;
 }
@@ -3443,15 +3457,22 @@ div.TVSearchButton:after {
 
 /*=====Календар турвизора======*/
 
+div.TVCalendarFooter{
+	border-top: 0;
+	background-color: #FFF;
+	margin-top: 30px;
+	padding: 10px 0 30px;
+}
+.b-calendar .TVMultyFilter{
+	display: none;
+}
+
 div.TVDTCalendar .TVCalBody{
-	height: auto !important;
+	
 }
 div.TVDTCalendar {
     width: 100%;
     border: 0;
-}
-div.TVCalMainColor {
-	display: none;
 }
 div.TVCalendar .TVLocationBox .TVContent {
     font-family: 'Gilroy-Bold';
@@ -3693,3 +3714,164 @@ div.TVTem2TourContainer{
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+/*=====Календарь в хедере=====*/
+
+.b-tourvisor-calendar h2{
+	font-size: 32px;
+	line-height: 50px;
+	color: #282828;
+	font-family: 'Gilroy-Bold';
+	text-align: center;
+}
+.b-tourvisor-calendar-cont .b-btn{
+	position: absolute;
+	bottom: -8px;
+	right: 0;
+	min-width: 220px;
+    padding: 14px 38px 15px 38px;
+}
+.b-tourvisor-calendar-cont .b-btn.hidden{
+	display: none;
+}
+.b-tourvisor-calendar-cont  .b-btn .btn-bold {
+	font-size: 16px;
+}
+.b-tourvisor-calendar-cont .TVCalendarWindowBody{
+	padding: 0;
+}
+.b-tourvisor-calendar-cont .TVCalWinInfoLeft{
+	display: none;
+}
+.b-tourvisor-calendar-cont .TVCalDiagram {
+	padding: 8px 0 0;
+	text-align: left;
+    height: 140px;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramItem {
+    height: 80px;
+    width: 31px;
+    margin: 0 5px;
+}
+.b-tourvisor-calendar-cont .TVCalLineMiddle {
+    top: 47px;
+}
+.b-tourvisor-calendar-cont .TVCalLineBottom{
+	top: 95px;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramColumn {
+    background-color: #E7ECF1;
+    border: 1px solid #E7ECF1;
+    border-radius: 5px 5px 0 0;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramNone {
+	border: none;
+    border-bottom: 1px solid #E7ECF1;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramActive{
+	border: none;
+	background-image: linear-gradient(135deg, #FAD961 0%, #F76B1C 100%);
+	border-bottom: 0;
+}
+.b-tourvisor-calendar-cont .TVCalendarLine{
+    border-top: 1px solid #E7ECF1;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramDate {
+    margin-top: 18px;
+    font-family: 'Gilroy-Medium';
+    font-size: 16px;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramHolidays {
+    color: #F76B1C;
+}
+.b-tourvisor-calendar-cont .TVCalendarMonth {
+    margin: 30px 0 0 0;
+    font-family: 'Gilroy-Bold';
+}
+.b-tourvisor-calendar-cont .TVCalendarNext,
+.b-tourvisor-calendar-cont .TVCalendarPrev {
+    margin-top: 5px;
+    color: #000;
+}
+.b-tourvisor-calendar-cont .TVCalendarPriceValue{
+	color: #282828;
+    font-size: 32px;
+    line-height: 32px;
+    font-family: 'Gilroy-Bold';
+}
+.b-tourvisor-calendar-cont .TVCalendarPriceValue:after {
+	font-family: 'Gilroy-Regular';
+    content: "руб.";
+    margin-left: 10px;
+    font-size: 24px;
+}
+.b-tourvisor-calendar-cont .TVCalendarPriceValue:before {
+    content: "от";
+    margin-right: 10px;
+}
+.b-tourvisor-calendar-cont .TVCalNights{
+	display: none;
+}
+.b-tourvisor-calendar-cont .TVCalWindowInfoRight {
+    position: absolute;
+    top: 9px;
+    right: 0;
+}
+.b-tourvisor-calendar-cont .TVCalShowTours{
+	position: absolute;
+    top: 0;
+    display: none;
+}
+
+.b-tourvisor-calendar-cont .TVCalTempSun .TVCalTemperatureDescription:after,
+.b-tourvisor-calendar-cont .TVCalTempWater .TVCalTemperatureDescription:after{
+    display: none;
+}
+.b-tourvisor-calendar-cont .TVCalendarInfo{
+	position: absolute;
+    top: 15px;
+    left: 0;
+}
+.b-tourvisor-calendar-cont .TVCalTempSun .TVCalTemperatureValue,
+.b-tourvisor-calendar-cont .TVCalTempWater .TVCalTemperatureValue{
+	position: relative;
+	color: #282828;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Gilroy-Medium';
+    margin-top: 0;
+}
+.b-tourvisor-calendar-cont .TVCalTempSun .TVCalTemperatureValue{
+	padding-left: 42px;
+}
+.b-tourvisor-calendar-cont .TVCalTempWater .TVCalTemperatureValue{
+	padding-left: 38px;
+}
+.b-tourvisor-calendar-cont .TVCalTempSun .TVCalTemperatureValue:before{
+    content: "\e908";
+    font-size: 32px;
+    color: #F76B1C;
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.b-tourvisor-calendar-cont .TVCalTempWater .TVCalTemperatureValue:before{
+	content: "\e909";
+	font-size: 26px;
+	color: #095AC0;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.b-tourvisor-calendar-cont .TVCalTemperatureContainer{
+	margin-right: 34px;
+}
+.b-tourvisor-calendar-cont .TVCalendarNext,
+.b-tourvisor-calendar-cont .TVCalendarPrev{
+    font-size: 35px;
+}
+.b-tourvisor-calendar-cont .TVCalDiagramTitle{
+	display: none;
+}
+
+

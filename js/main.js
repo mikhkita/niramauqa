@@ -395,6 +395,43 @@ $(document).ready(function(){
         });
     }
 
+    if($(".b-tourvisor-hidden").length){
+        var waitTourvisorHidden = setInterval(function(){
+            if( $(".b-tourvisor-hidden .TVCalendar").length ){
+                //найти текущую страну
+                var country = $(".b-tourvisor-calendar").attr("data-country");
+                $(".b-tourvisor-hidden .TVCalendarCountyList .TVCalendarRow").each(function() {
+                    if($(this).find(".TVCalendarCountryValue").text() == country){
+                        $(this).click();
+                        //чекать открытие попапа
+                        var waitCalendarPopup = setInterval(function(){
+                            if($(".TVModalContainer .TVCalendarWindow").length){
+                                //открыть все страны
+
+                                //скрыть попап
+                                //$(".TVClosePopup").click();
+                                
+                                $(".b-tourvisor-calendar-cont").append($(".TVCalendarWindowBody"));
+                                clearInterval(waitCalendarPopup);
+                            }
+                        }, 10);
+                        return false;
+                    }
+                });
+                clearInterval(waitTourvisorHidden);
+            }
+        }, 30);
+    }
+
+    $("body").on("click", ".TVCalDiagramItem", function(){
+        $(".b-tourvisor-calendar-cont .b-btn").removeClass("hidden");
+    });
+
+    $(".b-tourvisor-calendar-cont .b-btn").click(function() {
+        $(".b-tourvisor-calendar-cont .TVCalShowTours a").click();
+        return false;
+    })
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
