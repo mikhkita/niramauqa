@@ -281,85 +281,119 @@ $(document).ready(function(){
         disable_search_threshold: 10000
     });
 
-    $( function() {
-        $(".slider-range").each(function() {
-            var $this = $(this),
-                from = Number($(this).attr("data-range-from")),
-                to = Number($(this).attr("data-range-to"));
-            $this.slider({
-                range: true,
-                step: 1000,
-                min: from,
-                max: to,
-                values: [from, to],
-                slide: function( event, ui ) {
-                    $this.parent().find(".range-from").val(ui.values[0]);
-                    $this.parent().find(".range-to").val(ui.values[1]);
-                }
-            });
-            $this.parent().find(".range-from").val(from);
-            $this.parent().find(".range-to").val(to);
-        });
-    });
-
-    $('.range-from, .range-to').on('change', function(){
-        var count = $(this).val()*1,
-            $slider = $(this).parents(".b-filter-item-range").find(".slider-range");
-            from = Number($slider.attr("data-range-from"));
-            to = Number($slider.attr("data-range-to"));
-        if($(this).hasClass("range-from")){
-            var inputTo = $(this).siblings(".range-to").val()*1;
-            count = (count > inputTo) ? inputTo : count;
-        }else{
-            var inputFrom = $(this).siblings(".range-from").val()*1;
-            count = (count < inputFrom) ? inputFrom : count;
-        }
-        count = (count < from)? from : count;
-        count = (count > to) ? to : count;
-        $(this).val(count);
-        var valCurrent =  $slider.slider( "option", "values" );
-        if($(this).hasClass("range-from")){
-            $slider.slider("option", "values", [count, valCurrent[1]]).trigger('slidechange');
-        }else{
-            $slider.slider("option", "values", [valCurrent[0], count]).trigger('slidechange');
-        }
-    });
-
-    $(".toggle").click(function () {
-        $(this).toggleClass("active");
-    });
-
     // =========Турвизор=========
 
-    $("body").on("click", ".b-tourvisor-with-filter .TVSearchButton", function(){
-        // if( !$(".b-for-results .TVSearchResults").length ){
-        //     clearInterval(minInterval2);
-        //     minInterval2 = setInterval(function(){
-        //         if( $(".TVSearchResults").length ){
-        //             moveResult();
-        //         }
-        //     },1);
-        // }
-    });
+    if($(".b-tourvisor-header").length){
+        var waitTourvisorH = setInterval(function(){
+            if( $(".b-tourvisor-header .TVMainForm").length ){
+                $(".b-tourvisor-header .tourvisor-preloader").hide();
+                clearInterval(waitTourvisorH);
+            }
+        }, 30);
+    }
 
-    //ждать пока турвизор загрузится
-    var waitTourvisor = setInterval(function(){
-        if( $(".b-tourvisor-with-filter .TVSearchButton").length ){
-            //нажать кнопку и ждать загрузки туров
-            $(".b-tourvisor-with-filter .TVSearchButton").click();
-            $(".b-tourvisor-with-filter .TVFilterForm").wrap("<div class='defaultTVFilterForm'></div>");
-            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVFilterForm").after($(".b-tourvisor-nav"));
-            //заменить "Питание от"
-            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVMeal").after($(".b-TVMeal"));
-            //заменить "Рейтинг"
-            $(".b-tourvisor-with-filter .defaultTVFilterForm .TVMeal").after($(".b-TVRating"));
-            //заменить "Тип отеля"
+    if($(".b-tourvisor-with-filter").length){
+        //ждать пока турвизор загрузится
+        var waitTourvisorF = setInterval(function(){
+            if( $(".b-tourvisor-with-filter .TVSearchButton").length ){
+                //нажать кнопку и ждать загрузки туров
+                $(".b-tourvisor-with-filter .TVSearchButton").click();
+                $(".b-tourvisor-with-filter .TVFilterForm").wrap("<div class='defaultTVFilterForm'></div>");
+                $(".b-tourvisor-with-filter .defaultTVFilterForm .TVFilterForm").after($(".b-tourvisor-nav"));
+                //заменить "Питание от"
+                $(".b-tourvisor-with-filter .defaultTVFilterForm .TVMeal").after($(".b-TVMeal"));
+                //заменить "Рейтинг"
+                $(".b-tourvisor-with-filter .defaultTVFilterForm .TVRating").after($(".b-TVRating"));
 
-            
-            
-            clearInterval(waitTourvisor);
-        }
-    }, 30);
+                // Подписка в результатах поиска (после третьего отеля)
+                setInterval(function(){
+                    var $sub;
+                    if( !$(".TVSRBodyContainer .b-search-subscribe-1").length && $(".blpricesort").length >= 3 ){
+                        $sub = $("#b-search-subscribe-1").clone();
+                        $sub.removeAttr("id");
+                        $(".blpricesort").eq(2).after($sub);
+                    }
+                    if( !$(".TVSRBodyContainer .b-search-subscribe-2").length && $(".blpricesort").length >= 5 ){
+                        $sub = $("#b-search-subscribe-2").clone();
+                        $sub.removeAttr("id");
+                        $(".blpricesort").eq(4).after($sub);
+                    }
+                    if( !$(".TVSRBodyContainer .b-search-pay").length && $(".blpricesort").length >= 7 ){
+                        $sub = $("#b-search-pay").clone();
+                        $sub.removeAttr("id");
+                        $(".blpricesort").eq(6).after($sub);
+                    }
+                    bindValidate();
+                }, 500);
+
+                clearInterval(waitTourvisorF);
+            }
+        }, 30);
+
+        $("input[name='food']").on('change', function(){
+            var i = $(this).parent().index();
+            $(".b-tourvisor-with-filter .TVMeal .TVOptionSelector").click();
+            $(".tv_drop_panel").addClass("hidden");
+            setTimeout(function () {
+                $(".tv_drop_panel:not(.TVHide) .TVListBox .TVListBoxItem").eq(i).click();
+                $(".tv_drop_panel").removeClass("hidden");
+            }, 20)
+        });
+
+        $("input[name='rating']").on('change', function(){
+            var i = $(this).parent().index();
+            $(".b-tourvisor-with-filter .TVRating .TVOptionSelector").click();
+            $(".tv_drop_panel").addClass("hidden");
+            setTimeout(function () {
+                if(i == 0){
+                    $(".tv_drop_panel:not(.TVHide) .TVListBox .TVListBoxItem").eq(0).click();
+                }else{
+                    var count = $(".tv_drop_panel:not(.TVHide) .TVListBox .TVListBoxItem").length;
+                    $(".tv_drop_panel:not(.TVHide) .TVListBox .TVListBoxItem").eq(count - i).click();
+                }
+                $(".tv_drop_panel").removeClass("hidden");
+            }, 20)
+        });
+    }
+
+    function bindValidate() {
+        $(".TVSRBodyContainer .b-btn-submit.ajax").parents("form").each(function(){
+            if(!$(this).hasClass("validate-on")){
+                $(this).validate({
+                    rules: {
+                        email: 'email',
+                        phone: 'customPhone'
+                    },
+                    errorElement : "span"
+                });
+                $(this).addClass("validate-on");
+                if( $(this).find("input[name=phone]").length ){
+                    $(this).find("input[name=phone]").each(function(){
+                        var phoneMask = new IMask($(this)[0], {
+                            mask: '+{7} (000) 000-00-00',
+                            prepare: function(value, masked){
+                                if( value == 8 && masked._value.length == 0 ){
+                                    return "+7 (";
+                                }
+
+                                if( value == 8 && masked._value == "+7 (" ){
+                                    return "";
+                                }
+
+                                tmp = value.match(/[\d\+]*/g);
+                                if( tmp && tmp.length ){
+                                    value = tmp.join("");
+                                }else{
+                                    value = "";
+                                }
+                                return value;
+                            }
+                        });
+                    });
+                }
+            }
+        });
+    }
 
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");

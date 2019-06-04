@@ -74,7 +74,8 @@ div.TVTheme2 .TVHotelStar:before,
 div.TVOptionCheckBox:before, div.TVOptionListItem:before,
 div.TVCalendarAir:before, div.TVCalendarWater:before,
 div.TVCalDirectOnly .TVChecked:after,
-div.TVTem2PriceArrow:before{
+div.TVTem2PriceArrow:before,
+.b-tourvisor-with-filter .TVHotelTypeItem:before{
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -1283,7 +1284,6 @@ b{
 			.b-mailing-form  .b-checkbox{
 				margin-top: 16px;
 			}
-
 	.b-widget-vk{
 		float: right;
 		height: 384px;
@@ -1714,6 +1714,20 @@ b{
 			}
 
 /*=======Поиск туров=======*/
+
+.b-tourvisor-header{
+	width: 100%;
+	min-height: 124px;
+}
+	.tourvisor-preloader{
+		position: absolute;
+		bottom: 10px;
+		left: calc(50% - 77px);
+	}
+	.tourvisor-preloader img{
+		width: 154px;
+		height: 50px;
+	}
 
 .b-title-absolute h2.b-title{
 	position: absolute;
@@ -3205,7 +3219,53 @@ div.TVSearchButton:after {
 	display: none;
 }
 
-
+.b-tourvisor-with-filter .TVHotelTypeItem{
+	position: relative;
+}
+.b-tourvisor-with-filter .TVHotelTypeItem:before{
+	content: "\e905";
+	width: 16px;
+	height: 16px;
+	font-size: 10px;
+	position: absolute;
+	left: 4px;
+	top: 5px;
+	color: rgba(237,116,8,0);
+}
+.b-tourvisor-with-filter .TVHotelTypeItem:after{
+	content: " ";
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 2px solid #C1CEDF;
+	border-radius: 3px;
+}
+.b-tourvisor-with-filter .TVHotelTypeItem:hover:before{
+	color: rgba(237,116,8,0.3);
+}
+.b-tourvisor-with-filter .TVHotelTypeItem:hover:after{
+	border: 2px solid #ED7408;
+}
+.b-tourvisor-with-filter .TVHotelTypeItem.TVChecked:before{
+	color: rgba(237,116,8,1);
+}
+.b-tourvisor-with-filter .TVHotelTypeItem.TVChecked:after{
+	border: 2px solid #ED7408;
+}
+.b-tourvisor-with-filter .TVHotelTypeItem {
+	font-size: 16px;
+    line-height: 20px;
+    padding-left: 36px;
+    margin-bottom: 14px;
+    color: #000;
+    font-family: 'Gilroy-Regular';
+}
+.b-tourvisor-with-filter .TVHotelTypeChecked,
+.b-tourvisor-with-filter .TVHotelTypeItem.TVChecked {
+    background-color: #FFF;
+}
 
 .b-tourvisor-with-filter div.TVSRPanel{
 	display: none;
@@ -3225,6 +3285,7 @@ div.TVSearchButton:after {
 }
 .b-tourvisor-with-filter .b-radio-list label{
 	font-family: 'Gilroy-Regular';
+	color: #000;
 }
 .b-tourvisor-with-filter .b-filter *{
 	box-sizing: border-box;
@@ -3233,6 +3294,152 @@ div.TVSearchButton:after {
 .b-tourvisor-with-filter .b-filter .b-star{
 	box-sizing: content-box;
 }
+.b-tourvisor-with-filter div.TVTem2Buttons{
+	height: 78px;
+}
+.b-tourvisor-with-filter div.TVTem2TourBlock {
+    padding: 24px 0 0 0;
+}
+.b-tourvisor-with-filter .TVSRBodyContainer .blpricesort:first-child .TVTem2TourContainer{
+	border-top: 0;
+}
+.b-tourvisor-with-filter .TVSRBodyContainer .blpricesort:first-child .TVTem2TourBlock{
+	padding-top: 0;
+}
+.b-tourvisor-with-filter .TVTem2Image {
+    position: relative;
+    height: 155px;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.b-tourvisor-with-filter .TVTem2Image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 155px;
+    width: auto;
+    max-width: 1000px;
+    border-radius: 0;
+}
+
+.tv_drop_panel.hidden{
+	display: none !important;
+}
+
+.TVSRBodyContainer .b-search-subscribe-1,
+.TVSRBodyContainer .b-search-subscribe-2,
+.TVSRBodyContainer .b-search-pay{
+	padding: 24px 0;
+	border-top: 5px solid #EFF2F6;
+
+}
+.TVSRBodyContainer .b-search-subscribe.b-mailing-cont{
+	box-sizing: border-box;
+	padding: 36px 50px;
+}
+.TVSRBodyContainer .b-search-subscribe *,
+.TVSRBodyContainer .b-search-pay *{
+	box-sizing: border-box;
+}
+	.TVSRBodyContainer .b-search-subscribe h2{
+		font-size: 32px;
+		line-height: 40px;
+		font-family: 'Gilroy-Bold';
+		margin-bottom: 16px;
+	}
+	.TVSRBodyContainer .b-search-subscribe .mailing-text{
+		font-size: 20px;
+		line-height: 30px;
+		font-family: 'Gilroy-Regular';
+	}
+
+.TVSRBodyContainer .b-subscribe-cont{
+	box-sizing: border-box;
+	background-position: 100% 50%;
+    background-image: url(../i/search-back.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	box-shadow: inset 0 0 300px 0 rgba(31,61,135,0.07);
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 100%;
+	padding: 32px 50px 36px 50px;
+}
+	.TVSRBodyContainer .b-subscribe-form input{
+		margin-right: 12px;
+		width: 266px;
+	    border: 2px solid #BCC1C7;
+	    color: #434343;
+	}
+	.TVSRBodyContainer .b-subscribe-form .b-btn-submit{
+		display: inline-block;
+		vertical-align: top;
+		min-width: 280px;
+		width: 280px;
+	}
+	.TVSRBodyContainer .b-subscribe-form .b-checkbox{
+		margin-top: 16px;
+	}
+	.TVSRBodyContainer .b-subscribe-form input::-webkit-input-placeholder {
+		color: #BCC1C7;
+	}
+	.TVSRBodyContainer .b-subscribe-form input:-moz-placeholder {
+		color: #BCC1C7;
+	}
+	.TVSRBodyContainer .b-subscribe-form .b-checkbox{
+		color: #434343;
+	}
+		.TVSRBodyContainer .b-subscribe-form .b-checkbox .b-checked {
+		    border: 2px solid #BCC1C7;
+		}
+		.TVSRBodyContainer .b-subscribe-form .b-checkbox .icon-checked:before{
+		    color: #434343;
+		}
+		.TVSRBodyContainer .b-subscribe-form .b-checkbox a{
+			color: #434343;
+		}
+
+.b-search-pay{
+	position: relative;
+}
+	.b-search-pay-wrap{
+		position: relative;
+		padding: 36px 50px;
+		overflow: hidden;
+		border-radius: 10px;
+		background-image: linear-gradient(45deg, #68A9FB 0%, #095AC0 100%);
+		box-shadow: inset 0 0 300px 0 rgba(31,61,135,0.07);
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+	}
+		.b-search-pay-content{
+			max-width: 497px;
+		}
+			.b-search-pay-content h2{
+				font-size: 32px;
+				line-height: 40px;
+				font-family: 'Gilroy-Bold';
+				margin-bottom: 16px;
+				color: #FFF;
+			}
+			.b-search-pay-content p{
+				font-size: 20px;
+				line-height: 30px;
+				font-family: 'Gilroy-Regular';
+				color: #FFF;
+			}
+		.b-search-pay img{
+			position: absolute;
+			top: 10px;
+    		right: -17px;
+			height: 238px;
+			width: 395px;
+		}
 
 /*=====Календар турвизора======*/
 
