@@ -50,6 +50,7 @@ body {
     padding-bottom: 210px;
 }
 .b-3-back {
+	top: -250px;
     height: 900px;
     background-size: 1400px;
 }
@@ -110,7 +111,7 @@ body {
 	    padding: 57px 93px 63px 93px;
 	}
 	.b-3-back{
-		/*bottom: 210px;*/
+
 	}
 	.b-operators-item .b-img {
 	    width: calc(100% - 32px);
@@ -195,7 +196,6 @@ body {
 	.b-3-back {
 	    height: 780px;
 	    background-size: 1100px;
-	    /*bottom: 140px;*/
 	}
 	.b-3-woman {
 	    max-width: 630px;

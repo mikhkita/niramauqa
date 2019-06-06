@@ -446,7 +446,7 @@ $(document).ready(function(){
                     if($(".TVModalContainer .TVCalendarWindow").length){
                         //закрыть попап
                         $(".TVClosePopup").click();
-                        
+                        //переместить календарь
                         $(".b-tourvisor-calendar-cont").append($(".TVCalendarWindowBody"));
                         clearInterval(waitCalendarPopup);
                         setTimeout(function() {
@@ -481,6 +481,21 @@ $(document).ready(function(){
             }
         }, 30);
     }
+
+    //переключение по месяцам
+    $("body").on("click", ".b-tourvisor-calendar-cont .TVCalendarPrev, .b-tourvisor-calendar-cont .TVCalendarNext", function(){
+        $("body").addClass("TVHidePopup");
+        var waitPopup = setInterval(function(){
+            if($(".TVModalContainer .TVCalendarWindow").length){
+                $(".TVClosePopup").click();
+                clearInterval(waitPopup);
+                setTimeout(function() {
+                    $("body").removeClass("TVHidePopup");
+                }, 400);
+                
+            }
+        }, 10);
+    });
 
     $("body").on("click", ".TVCalDiagramItem", function(){
         if($(this).find(".TVCalDiagramNone").length == 0){
