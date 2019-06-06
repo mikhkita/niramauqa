@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="css/chosen.min.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 
+	<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1328px)" href="css/layout-tablet.css">
+
 	<!-- <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="css/layout-tablet.css">
 	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 767px)" href="css/layout-mobile.css">
 
@@ -35,7 +37,13 @@
 				<li><a href="#" class="active">О компании</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
-			<a href="#" class="b-search-tours"><p>Перейти в поиск туров</p><span class="icon-next"></span></a>
+			<a href="#" class="b-search-tours">
+				<p>
+					<span class="desktop">Перейти в поиск туров</span>
+					<span class="tablet">Поиск туров</span>
+				</p>
+				<span class="icon-next"></span>
+			</a>
 		</div>
 	</div>
 
@@ -276,7 +284,7 @@
 					</div>
 				</div>
 				<div class="b-3-content-bottom">
-					<p>Турагентство <b>«Аквамарин»</b><br>занимается подбором и продажей<br>туров <b>по цене туроператоров</b></p>
+					<p>Турагентство <b>«Аквамарин»</b> занимается подбором и продажей туров <b>по цене туроператоров</b></p>
 				</div>
 			</div>
 		</div>
@@ -299,7 +307,7 @@
 						</div>
 					</div>
 					<h3>1. Вы не платите за нашу работу</h3>
-					<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – <b>за вас<br>это делает туроператор.</b></p>
+					<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – <b>за вас это делает туроператор.</b></p>
 				</div>
 				<div class="b-4-item">
 
@@ -356,7 +364,7 @@
 						<img src="i/svg-icon-3.svg">
 					</div>
 					<h3>3. В сети 24 часа 7 дней в неделю</h3>
-					<p>Кроме того, что все будет тщательно спланировано, мы всегда на связи. Так что все возникшие хлопоты <b>будут<br>только нашими хлопотами.</b></p>
+					<p>Кроме того, что все будет тщательно спланировано, мы всегда на связи. Так что все возникшие хлопоты <b>будут только нашими хлопотами.</b></p>
 				</div>
 			</div>
 		</div>
@@ -530,43 +538,14 @@
 		<div class="b-head-gradient"></div>
 		<div class="b-block gradient-after">
 			<h2 class="b-title white">Туры от официальных туроператоров</h2>
+			<div class="b-card flip-card b-card-template">
+				<div class="flip-card-inner">
+					<div class="flip-card-front"></div>
+					<div class="flip-card-back"></div>
+				</div>
+			</div>
 			<div class="b-card-list clearfix">
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
-				<div class="b-card flip-card">
-					<div class="flip-card-inner">
-						<div class="flip-card-front"></div>
-						<div class="flip-card-back"></div>
-					</div>
-				</div>
+	
 			</div>
 			<div class="b-operators-list" style="display: none;">
 				<div class="b-operators-item">
@@ -681,8 +660,10 @@
 				</div>
 			</div>
 			<div class="b-footer-bottom">
-				<div class="b-copyright">© 2008-2019 Аквамарин. Все права защищены</div>
-				<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
+				<div class="b-footer-bottom-left">
+					<div class="b-copyright">© 2008-2019 Аквамарин. Все права защищены</div>
+					<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
+				</div>
 				<div class="visa-master"></div>
 				<div class="b-redder">Разработка стайта:<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a></div>
 			</div>

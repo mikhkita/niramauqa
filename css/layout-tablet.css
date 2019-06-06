@@ -1,0 +1,361 @@
+
+body {
+	min-width: 750px;
+}
+
+.b-block{
+	width: calc(100% - 48px);
+}
+
+.b-search-tours .desktop{
+	display: none;
+}
+.b-search-tours .tablet{
+	display: inline-block;
+}
+.b-search-tours{
+	padding: 13px 25px 14px 25px;
+}
+.b-search-tours:hover .icon-next{
+	-webkit-transform: none;
+	   -moz-transform: none;
+    	-ms-transform: none;
+    	 -o-transform: none;
+    		transform: none;
+}
+
+.b-statistics-item span {
+    font-size: 32px;
+    line-height: 36px;
+    padding-top: 20px;
+}
+.b-statistics-item img {
+    height: 62px;
+}
+.b-statistics-item p {
+    font-size: 20px;
+    line-height: 24px;
+}
+.b-statistics {
+    margin-bottom: 65px;
+}
+.b-3-woman{
+	max-width: 800px;
+	left: -160px;
+}
+.b-3-content-top {
+    position: relative;
+    z-index: 1;
+    padding-top: 122px;
+    padding-bottom: 210px;
+}
+.b-3-back {
+    height: 900px;
+    background-size: 1400px;
+}
+.b-3-text p {
+    font-size: 40px;
+    line-height: 52px;
+}
+.b-3-text p b {
+    font-size: 46px;
+    line-height: 56px;
+}
+.b-3 {
+    margin-bottom: 80px;
+}
+.b-4 h2 {
+    font-size: 56px;
+    line-height: 56px;
+    margin-bottom: 60px;
+}
+.b-mailing-cont {
+    width: calc(100% - 304px);
+}
+.b-mailing-form .b-btn-submit {
+    width: auto;
+    min-width: 260px;
+}
+.b-mailing-form input[type=text] {
+    width: calc(100% - 306px);
+}
+.b-footer-item.column-1,
+.b-footer-item.column-2{
+	margin-right: 100px;
+}
+.b-footer-politics,
+.b-copyright{
+	margin-right: 50px;
+}
+.b-feedback.b-feedback-shadow .b-5-manager{
+	right: 16px;
+}
+.b-4-item:nth-child(3n) p{
+     padding: 0; 
+}
+
+@media screen and (max-width: 1210px){
+
+	.b-menu li a{
+		padding: 6px 10px 7px 10px;
+	}
+	.b-3-text {
+	    width: 436px;
+	}
+	.b-3-content-bottom p {
+	    font-size: 44px;
+	    line-height: 58px;
+	}
+	.b-3-content-bottom {
+	    padding: 57px 93px 63px 93px;
+	}
+	.b-3-back{
+		/*bottom: 210px;*/
+	}
+	.b-operators-item .b-img {
+	    width: calc(100% - 32px);
+	}
+	.visa-master{
+		display: none;
+	}
+	.b-footer-item.column-1, .b-footer-item.column-2 {
+	    margin-right: 60px;
+	}
+	.b-feedback-text {
+	    padding-left: 104px;
+	}
+	.b-5-manager,
+	.b-feedback .b-5-manager{
+		right: 0;
+	}
+	.b-feedback.b-feedback-shadow .b-feedback-text{
+	    padding-left: 32px;
+	}
+	
+}
+
+@media screen and (max-width: 1090px){
+
+	.b-menu-logo{
+		display: none;
+	}
+	.b-menu.transform ul{
+	    -webkit-transform: none; 
+	    -moz-transform: none;
+	    -ms-transform: none;
+	    -o-transform: none;
+	    transform: none;
+	}
+	.b-menu ul{
+	}
+		.b-menu li,
+		.b-menu.transform li{
+			margin-right: 12px;
+		}
+	.b-country-list{
+
+	}
+		.b-country-item{
+			width: calc(100%/3 - 16px);
+			height: 383px;
+		}
+		.b-country-list.square .b-country-item{
+			height: 302px;
+		}
+		.b-country-item.wide{
+
+		}
+		.b-country-slider{
+			width: calc(100%/3*2 - 9px);
+		}
+	.b-mailing-cont {
+	    padding: 34px 46px 52px 46px;
+	}
+	.b-footer-contacts {
+	    width: 260px;
+	}
+	.b-categories .b-country-list{
+
+	}
+		.b-categories .b-country-item{
+			width: calc(100%/3 - 24px);
+		}
+	.b-feedback-text{
+	    padding-left: 0;
+	}
+
+	.adv-main-left {
+	    vertical-align: top;
+	}
+
+}
+
+@media screen and (max-width: 1024px){
+	
+	.b-3-back {
+	    height: 780px;
+	    background-size: 1100px;
+	    /*bottom: 140px;*/
+	}
+	.b-3-woman {
+	    max-width: 630px;
+	    left: -160px;
+	}
+	.b-3-content-top {
+	    padding-top: 102px;
+	    padding-bottom: 110px;
+	}
+	.b-3-text {
+	    width: 406px;
+	}
+	.b-3-content-bottom {
+	    padding: 46px 60px 53px 60px;
+	}
+	.b-statistics-item{
+		text-align: center;
+	}
+		.b-statistics-item-top {
+		    margin-bottom: 14px;
+		}
+		.b-statistics-item span {
+		    margin-top: -5px;
+		    padding-top: 0;
+		    left: 0;
+		}
+		.b-statistics-item img {
+			left: 0;
+		    display: block;
+		    margin: 0 auto;
+		}
+		.b-statistics-item p {
+		    padding: 0 8px;
+		    text-align: center;
+		}
+	.b-article-list{
+		margin-bottom: 20px;
+	}
+		.b-article-item{
+			width: calc(100%/3 - 19px);
+			margin-right: 24px;
+			margin-bottom: 24px;
+		}
+		.b-article-item:nth-child(4n){
+			margin-right: 24px;
+		}
+		.b-article-item:nth-child(3n){
+			margin-right: 0;
+		}
+	.b-card{
+		width: calc(100%/4 - 20px);
+	}
+	.b-feedback-text,
+	.b-feedback.b-feedback-shadow .b-feedback-text{
+	    max-width: 510px;
+	    padding-top: 42px;
+	}
+		.b-feedback-text h2,
+		.b-feedback.b-feedback-shadow .b-feedback-text h2{
+		    font-size: 42px;
+		    line-height: 50px;
+		}
+		.b-feedback .b-5-manager,
+		.b-feedback.b-feedback-shadow .b-5-manager{
+		    width: 365px;
+		    height: 635px;
+		}
+	.b-country-adv-img{
+		height: 200px;
+	}
+	.b-footer-item.column-1,
+	.b-footer-item.column-2 {
+	    margin-right: 30px;
+	}
+	.social-item {
+	    margin-right: 6px;
+	}
+	.b-copyright{
+		display: block;
+	}
+	.b-5-text {
+	    padding-left: 0;
+	    max-width: 446px;
+	}
+	.b-mailing-form input[type=text] {
+	    width: 100%;
+	    margin-bottom: 24px;
+	}
+	.b-mailing-form .b-btn-submit{
+		width: 100%;
+	}
+	.b-mailing-form .b-checkbox{
+		margin-top: 24px;
+	}
+
+}
+
+@media screen and (max-width: 920px){
+
+	.b-footer-item.column-3{
+		display: none;
+	}
+	.b-footer-item.column-1{
+	    margin-right: 60px;
+	}
+	.b-5-manager{
+	    width: 365px;
+	    height: 635px;
+	}
+	.b-5-text {
+	    padding-top: 63px;
+	    padding-bottom: 100px;
+	}
+	.b-reviews{
+
+	}
+		.b-review-list{
+
+		}
+			.b-review-item{
+				width: calc(50% - 20px);
+			}
+
+			.b-review-item:nth-child(3n){
+				margin-right: 24px;
+			}
+			.b-review-item:nth-child(2n){
+				margin-right: 0;
+			}
+				.b-review-item p {
+				    margin-bottom: 12px;
+				}
+}
+
+@media screen and (max-width: 850px){
+
+	.b-country-list{
+
+	}
+		.b-country-item{
+			width: calc(50% - 12px);
+		}
+		.b-country-item.wide{
+
+		}
+		.b-country-slider{
+			width: 100%;
+			margin-right: 0;
+		}
+	.b-4-item h3 {
+	    font-size: 28px;
+	    line-height: 36px;
+	    margin-bottom: 14px;
+	}
+	.b-4-item p {
+	    font-size: 18px;
+	    line-height: 28px;
+	}
+	.b-mailing-cont h2 {
+	    font-size: 38px;
+	    line-height: 48px;
+	}
+}

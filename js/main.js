@@ -2,10 +2,17 @@ $(document).ready(function(){
 
     var isDesktop = false,
         isTablet = false,
-        isMobile = false;
+        isMobile = false,
+        rowCountry = 0,
+        countCards = 0,
+        countOperators = $(".b-operators-list .b-operators-item").length,
+        arrCards = [],
+        arrOperators = [],
+        arrActiveCards = [],
+        cardTimer = undefined;
 
     function resize(){
-       if( typeof( window.innerWidth ) == 'number' ) {
+        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
             myHeight = window.innerHeight;
         } else if( document.documentElement && ( document.documentElement.clientWidth || 
@@ -17,25 +24,29 @@ $(document).ready(function(){
             myHeight = document.body.clientHeight;
         }
 
-        if( myWidth > 1020 ){
+        if( myWidth > 1024 ){
             isDesktop = true;
             isTablet = false;
             isMobile = false;
-            rowCountry = 4;
         }else if( myWidth > 767 ){
             isDesktop = false;
             isTablet = true;
             isMobile = false;
-            rowCountry = 4;
         }else{
             isDesktop = false;
             isTablet = false;
             isMobile = true;
+        }
+
+        if( myWidth > 1090 ){
+            rowCountry = 4;
+        }else if( myWidth > 850 ){
+            rowCountry = 3;
+        }else{
             rowCountry = 2;
         }
 
-        var rowCountry = 4,
-            nextRow = 0;
+        var nextRow = 0;
         $(".no-margin").removeClass("no-margin");
         $(".b-popular .b-country-list .b-country-item").each(function() {
             if($(this).parents(".b-country-slider").length){
@@ -48,6 +59,19 @@ $(document).ready(function(){
                 nextRow = 0;
             }
         });
+
+        var checkCards = countCards;
+        if( myWidth > 1024 ){
+            countCards = 6;
+        }else if( myWidth > 767 ){
+            countCards = 4;
+        }else{
+            countCards = 3;
+        }
+        if(countCards != checkCards){//если количество карточек изменилось
+            reinitCards();
+        }
+
     }
     $(window).resize(resize);
     resize();
@@ -89,15 +113,11 @@ $(document).ready(function(){
     });
 
     var scene = document.getElementById('coin-parallax');
-    if(scene){
+    if(scene && !isMobile){
         var parallax = new Parallax(scene);
     }
 
-    var arrCards = [],
-        arrOperators = [],
-        arrActiveCards = [],
-        countCards = 6,
-        countOperators = $(".b-operators-list .b-operators-item").length;
+    // ==========flip-cards==========
 
     function randomCards() {
         var rand = Math.floor(Math.random() * countCards);
@@ -115,6 +135,26 @@ $(document).ready(function(){
         }
         shuffleArray(arrOperators);
     }
+    function createCards() {
+        var $template = $(".b-card-template"),
+            $cont = $(".b-card-list");
+        for (var i = 0; i < countCards; i++) {
+            var $item = $template.clone().removeClass("b-card-template");
+            $item.appendTo($cont);
+
+            var nextOperator = getNextOperator();
+            var $flip = $item.find(".flip-card-front");
+            var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+            $nextOperator.clone().appendTo($flip);
+            arrActiveCards.push(nextOperator);
+
+            nextOperator = getNextOperator();
+            $flip = $item.find(".flip-card-back");
+            $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+            $nextOperator.clone().appendTo($flip);
+        }
+    }
+    // ==========
     function shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
@@ -123,7 +163,6 @@ $(document).ready(function(){
             array[j] = temp;
         }
     }
-
     function getNextCard() {
         var next = arrCards[0];
         arrCards.splice(0, 1);
@@ -136,54 +175,56 @@ $(document).ready(function(){
         arrOperators.push(next);
         return next;
     }
-
-    function initCards() {
-        randomCards();
-        randomOperators();
-        $(".b-card").each(function(){
-            var nextOperator = getNextOperator();
-            var $cont = $(this).find(".flip-card-front");
-            var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
-            $nextOperator.clone().appendTo($cont);
-            arrActiveCards.push(nextOperator);
-
-            nextOperator = getNextOperator();
-            $cont = $(this).find(".flip-card-back");
-            $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
-            $nextOperator.clone().appendTo($cont);
-        });
-    }
-
-    if(countOperators > 0){
+    // ==========
+    function reinitCards() {
+        if(cardTimer){
+            clearInterval(cardTimer);
+        }
+        arrActiveCards = [];
+        arrOperators = [];
+        arrCards = [];
+        $(".b-card-list .b-card").remove();
         initCards();
-        var cardTimer = setInterval(function() {
-            var nextCard = getNextCard(),
-                nextOperator = getNextOperator();
-            while(arrActiveCards.indexOf(nextOperator) != -1){
-                nextOperator = getNextOperator();
-            }
-            var $nextCard = $(".b-card:eq("+nextCard+")");
-            var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
-            if($nextCard.hasClass("flipped")){
-                //заменить front
-                var $cont = $nextCard.find(".flip-card-front");
-                $cont.find(".b-operators-item").remove();
-                $nextOperator.clone().appendTo($cont);
-                setTimeout(function() {
-                    $nextCard.removeClass("flipped");
-                }, 800);
-            }else{
-                //заменить back
-                var $cont = $nextCard.find(".flip-card-back");
-                $cont.find(".b-operators-item").remove();
-                $nextOperator.clone().appendTo($cont);
-                setTimeout(function() {
-                    $nextCard.addClass("flipped");
-                }, 800);
-            }
-            arrActiveCards[nextCard] = nextOperator;
-        }, 1000);
     }
+    function initCards() {
+        if(countOperators > 0){
+
+            randomCards();
+            randomOperators();
+
+            createCards();
+
+            cardTimer = setInterval(function() {
+                var nextCard = getNextCard(),
+                    nextOperator = getNextOperator();
+                while(arrActiveCards.indexOf(nextOperator) != -1){
+                    nextOperator = getNextOperator();
+                }
+                var $nextCard = $(".b-card-list .b-card:eq("+nextCard+")");
+                var $nextOperator = $(".b-operators-list .b-operators-item:eq("+nextOperator+")");
+                if($nextCard.hasClass("flipped")){
+                    //заменить front
+                    var $cont = $nextCard.find(".flip-card-front");
+                    $cont.find(".b-operators-item").remove();
+                    $nextOperator.clone().appendTo($cont);
+                    setTimeout(function() {
+                        $nextCard.removeClass("flipped");
+                    }, 800);
+                }else{
+                    //заменить back
+                    var $cont = $nextCard.find(".flip-card-back");
+                    $cont.find(".b-operators-item").remove();
+                    $nextOperator.clone().appendTo($cont);
+                    setTimeout(function() {
+                        $nextCard.addClass("flipped");
+                    }, 800);
+                }
+                arrActiveCards[nextCard] = nextOperator;
+            }, 1000);
+        }
+    }
+
+    // ====================
 
     $('.b-country-slider').slick({
         dots: true,
@@ -395,7 +436,7 @@ $(document).ready(function(){
         });
     }
 
-    function countriFind() {
+    function countryFind() {
         var country = $(".b-tourvisor-calendar").attr("data-country");
         $(".b-tourvisor-hidden .TVCalendarCountyList .TVCalendarRow").each(function() {
             if($(this).find(".TVCalendarCountryValue").text() == country){
@@ -429,12 +470,12 @@ $(document).ready(function(){
                     $(".b-tourvisor-hidden .TVCalendar .TVCalShowAll").click();
                     var waitCountryLoad = setInterval(function(){
                         if($(".b-tourvisor-hidden .TVCalendar .TVCalShowAll.TVExpanded").length){
-                            countriFind();
+                            countryFind();
                             clearInterval(waitCountryLoad);
                         }
                     }, 10);
                 }else{
-                    countriFind();
+                    countryFind();
                 }
                 clearInterval(waitTourvisorHidden);
             }
