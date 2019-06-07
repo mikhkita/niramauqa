@@ -145,6 +145,12 @@ div.TVOrderHotelStar:before{
 .icon-shop:before {
   content: "\e911";
 }
+.icon-close:before {
+  content: "\e914";
+}
+.icon-menu:before {
+  content: "\e915";
+}
 
 html,
 body {
@@ -489,7 +495,7 @@ b{
 		position: relative;
 		z-index: 5;
 		text-align: center;
-		width: 731px;
+		max-width: 731px;
 		margin: 0 auto;
 	}
 		.b-head-text{
@@ -657,7 +663,6 @@ b{
 
 .b-statistics{
 	margin-bottom: 96px;
-	overflow: hidden;
 }
 	.b-statistics-item{
 		float: left;
@@ -737,46 +742,17 @@ b{
 			border-radius: 5px;
 			overflow: hidden;
 		}
-
-.b-country-slider .slick-dots {
-	width: auto;
-	text-align: right;
-    bottom: 26px;
-    right: 26px;
-}
-.slick-dots li{
-	width: 20px;
-	height: 20px;
-	margin: 0 2px;
-}
-.slick-dots li button{
-	width: 20px;
-	height: 20px;
-	padding: 6px;
-}
-
-.slick-dots li button:before{
-    content: '';
-	position: absolute;
-	top: 6px;
-	left: 6px;
-	width: 8px;
-	height: 8px;
-    font-size: 0;
-    background-color: #FFF;
-    border-radius: 100px;
-    opacity: 0.5;
-}
-
-.slick-dots li:hover button:before{
-    background-color: #FFF;
-    opacity: 0.7;
-}
-
-.slick-dots li.slick-active button:before{
-    background-color: #FFF;
-    opacity: 1;
-}
+			.b-country-slider .slick-dots {
+				width: auto;
+				text-align: right;
+			    bottom: 26px;
+			    right: 26px;
+			}
+			.b-country-slider .slick-dots li button:before,
+			.b-country-slider .slick-dots li:hover button:before,
+			.b-country-slider .slick-dots li.slick-active button:before{
+			    background-color: #FFF;
+			}
 
 			.b-country-item .blackout,
 			.b-country-item .blackout-full{
@@ -1009,6 +985,9 @@ b{
 				padding-top: 206px;
 				padding-bottom: 268px;
 			}
+				.b-3-cloud{
+					display: none;
+				}
 				.b-3-woman{
 					max-width: 1000px;
 					position: absolute;
@@ -2306,134 +2285,6 @@ ul.b-breadcrumbs {
 				.b-filter .b-checkbox label{
 					display: inline-block;
 				}
-			.b-range{
-
-			}
-				.b-range-top{
-					margin-bottom: 20px;
-				}
-					.b-range-top h3{
-						float: left;
-						margin-bottom: 0;
-					}
-					.toggle-valuta{
-						padding-top: 4px;
-						float: right;
-					}
-						.valuta-rub{
-							display: inline-block;
-							vertical-align: top;
-							font-family: 'Gilroy-Medium';
-							color: #000;
-							line-height: 18px;
-						}
-						.toggle{
-							position: relative;
-							display: inline-block;
-							vertical-align: top;
-							width: 38px;
-							height: 18px;
-							border: 2px solid #C1CEDF;
-							border-radius: 100px;
-							margin: 0 4px;
-							cursor: pointer;
-						}
-						.toggle:hover{
-							border: 2px solid rgba(237,116,8,0.5);
-						}
-							.toggle-btn{
-								position: absolute;
-								top: -2px;
-								left: -2px;
-								width: 18px;
-								height: 18px;
-								background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
-								border-radius: 100px;
-								-webkit-transition: transform 150ms ease-out;
-								   -moz-transition: transform 150ms ease-out;
-								    -ms-transition: transform 150ms ease-out;
-								   	 -o-transition: transform 150ms ease-out;
-										transition: transform 150ms ease-out;
-							}
-							.toggle.active .toggle-btn{
-								-webkit-transform: translateX(20px);
-								-moz-transform: translateX(20px);
-								-ms-transform: translateX(20px);
-								-o-transform: translateX(20px);
-								transform: translateX(20px);
-							}
-						.valuta-dollar{
-							display: inline-block;
-							vertical-align: top;
-							font-family: 'Gilroy-Medium';
-							color: #000;
-							line-height: 18px;
-						}
-				.b-range-slider{
-
-				}
-					.slider-range{
-						margin-bottom: 18px;
-					}
-					.range-inputs{
-
-					}
-						.range-from{
-							float: left;
-							width: 98px;
-							font-size: 16px;
-							line-height: 19px;
-							color: #000;
-							padding: 6px 11px;
-							border: 2px solid #C1CEDF;
-							border-radius: 4px;
-						}
-						.range-to{
-							float: right;
-							width: 98px;
-							font-size: 16px;
-							line-height: 19px;
-							color: #000;
-							padding: 6px 11px;
-							border: 2px solid #C1CEDF;
-							border-radius: 4px;
-						}
-						.ui-slider .ui-slider-handle {
-							display: block;
-						    width: 18px;
-						    height: 18px;
-						    cursor: pointer;
-						    border-radius: 100px;
-						    border: 0;
-						}
-						.ui-widget-content .ui-state-default{
-							top: -7px;
-							background: linear-gradient(180deg, #FFBD73 0%, #ED7408 100%);
-						}
-						.ui-widget-content .ui-state-default:before{
-							content: " ";
-							position: absolute;
-							top: 5px;
-							left: 5px;
-							width: 8px;
-							height: 8px;
-							background-color: #FFF;
-							border-radius: 100px;
-						}
-						.ui-widget-header {
-						    background: #C1CEDF;
-						}
-						.ui-slider-horizontal {
-							height: 5px;
-						}
-						.ui-widget.ui-widget-content {
-							border: 1px solid #C1CEDF;
-							margin-left: 8px;
-							margin-right: 8px;
-						}
-						.ui-slider-horizontal .ui-slider-range {
-						    
-						}
 
 	.b-tourvisor-nav{
 		margin-top: 24px;
@@ -2740,6 +2591,42 @@ input{
     position: absolute;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+/*======slick======*/
+
+.slick-dots li{
+	width: 20px;
+	height: 20px;
+	margin: 0 2px;
+}
+.slick-dots li button{
+	width: 20px;
+	height: 20px;
+	padding: 6px;
+}
+
+.slick-dots li button:before{
+    content: '';
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 8px;
+	height: 8px;
+    font-size: 0;
+    background-color: #ED7408;
+    border-radius: 100px;
+    opacity: 0.5;
+}
+
+.slick-dots li:hover button:before{
+    background-color: #ED7408;
+    opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before{
+    background-color: #ED7408;
+    opacity: 1;
 }
 
 @media screen and (min-width: 768px){
@@ -3377,6 +3264,7 @@ div.TVSearchButton:after {
 
 }
 .TVSRBodyContainer .b-search-subscribe.b-mailing-cont{
+	width: 100%;
 	box-sizing: border-box;
 	padding: 36px 50px;
 }
@@ -3460,6 +3348,8 @@ div.TVSearchButton:after {
 		width: 100%;
 	}
 		.b-search-pay-content{
+			position: relative;
+			z-index: 2;
 			max-width: 497px;
 		}
 			.b-search-pay-content h2{
@@ -3477,7 +3367,7 @@ div.TVSearchButton:after {
 			}
 		.b-search-pay img{
 			position: absolute;
-			top: 10px;
+			bottom: -15px;
     		right: -17px;
 			height: 238px;
 			width: 395px;
@@ -4653,7 +4543,7 @@ div.TVModalContainer{
 			color: #FFF;
 		}
 		div.TVClosePopup:before{
-			/*font-family: 'icomoon' !important;
+			font-family: 'icomoon' !important;
 			speak: none;
 			font-style: normal;
 			font-weight: normal;
@@ -4662,9 +4552,9 @@ div.TVModalContainer{
 			line-height: 1;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			content: "\e905";
+			content: "\e914";
 			font-size: 20px;
-			line-height: 40px;*/
+			line-height: 40px;
 		}
 		div.TVCatHotelReviewBlock{
 			background: #F8f8f8;
@@ -5023,7 +4913,7 @@ div.TVModalContainer{
 					div.TVOrderRequestForm .TVBigInput:nth-child(3){
 						margin-right: 0px;
 					}
-						div.TVBigInput input,
+						div.TVOrderRequestBlock input,
 						div.TVOrderRequestBlock textarea{
 							padding: 0px;
 							box-shadow: none;
@@ -5043,13 +4933,7 @@ div.TVModalContainer{
 						div.TVComboBox.TVInvalidInput .TVTextBox{
 							border-color: #E7165A;
 						}
-						div.TVBigInput input::-webkit-input-placeholder {
-							color: #FFF;
-						}
-						div.TVOrderRequestBlock textarea:-moz-placeholder {
-							color: #FFF;
-						}
-						div.TVBigInput input:focus{
+						div.TVOrderRequestBlock input:focus{
 							border-bottom-color: #FF912A;
 						}
 						div.TVOrderRequestBlock textarea{
@@ -5329,5 +5213,11 @@ div.TVFOComplicatedPrice .TVFOToPayPrice{
 }
 .b-tourvisor-with-filter .TVSideFilterForm.TVTheme2 .TVLocationButton{
 	width: 16%;
+}
+
+div.TVBigInput input,
+div.TVOrderInputBlock .TVPromoInput input,
+div.TVOrderRequestBlock textarea{
+	font-family: "Gilroy-Regular" !important;
 }
 

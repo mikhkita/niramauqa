@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 body {
 	min-width: 750px;
@@ -94,6 +95,168 @@ body {
 .b-4-item:nth-child(3n) p{
      padding: 0; 
 }
+div.TVHotelStar {
+    margin-right: 12px;
+}
+.b-tourvisor-header div.TVMainFilterButton,
+.b-tourvisor-with-filter div.TVMainFilterButton{
+	box-sizing: border-box;
+	max-height: 100px;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry,
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates{
+    width: 25%;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVNights{
+	width: 14%;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists{
+	width: 16%;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVSearchButton{
+    width: calc(20% - 8px);
+}
+.b-tourvisor-calendar-cont .TVCalDiagramItem {
+    width: 2.2%;
+    margin: 0 0.5%;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVLocationButton,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry{
+	width: 20%;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVDates{
+    width: 18%;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVNights{
+	width: 14%;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVTourists{
+	width: 14%;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVSearchButton{
+    width: calc(14% - 8px);
+    margin-top: 10px;
+}
+
+.b-tourvisor-with-filter div.TVResultTheme2 {
+    width: calc(100% - 330px);
+    margin-left: 24px;
+}
+.TVSRBodyContainer .b-subscribe-form input {
+    margin-bottom: 24px;
+    width: calc(50% - 8px);
+}
+.TVSRBodyContainer .b-subscribe-form input:nth-child(2){
+	margin-right: 0;
+}
+.TVSRBodyContainer .b-subscribe-form .b-checkbox {
+    margin-top: 24px;
+}
+.b-search-pay img {
+    right: -77px;
+}
+.b-search-pay-content {
+    max-width: 387px;
+}
+
+div.TVModalContainer{width: calc(100% - 16px) !important;}
+		div.TVOrderWindow{width: 100% !important;}
+				div.TVOrderTourParams{right: auto;bottom: -50px;left: 0px;}
+				div.TVOrderShareBlock{right: 83px;bottom: -60px;}
+			div.TVOrderHotelBlock{padding-top: 71px;}
+				div.TVOrderHotelName{max-width: calc(100% - 44px);width: 100%;}
+					div.TVOrderTourDetail{display: inline-block;width: 69%;}
+						div.TVOrderTourDetailColumn1{width: 40%;}
+						div.TVOrderTourDetailColumn2{width: 50%;}
+		div.TVClosePopup{right: 20px;top: 19px;color: #FFF;}
+					div.TVDescrHotelUpButton{margin-left: 241px;}
+div.TVCatAboutHotelBlock{width: 65%;box-sizing: border-box;}
+div.TVCatAboutHotelRightSidebar{
+	width: 35%;
+	box-sizing: border-box;
+}
+div.TVCatAboutHotelBlock .TVSimpleSlidePic{
+	height: 300px;
+}
+div.TVCatHotelPicturesBlock ul{
+	width: calc(100% + 11px);
+}
+	div.TVCatHotelPicturesBlock li{width: 56px;height: 48px;}
+div.TVCatNavMap{
+	display: none;
+}
+div.TVOrderHeader .TVOrderIncludePrice{
+	width: calc(50% - 12px);
+	padding: 0px;
+	margin-right: 24px;
+}
+div.TVOrderHeader .TVOrderIncludeAvia{
+	width: calc(50% - 12px);
+}
+div.TVOnlyChecked{
+	display: none !important;
+}
+div.TVFOPayBlock {
+    margin-left: 30px;
+}
+
+div.TVFOFlyTitleBlock {
+    display: inline-block;
+    width: 50%;
+    margin-top: 16px;
+    box-sizing: border-box;
+}
+div.TVFOFlyTitleBlock.TVFORight {
+    margin-left: 0px;
+    padding-left: 7px;
+}
+div.TVFOFlyBlock {
+    width: calc(50% - 8px);
+}
+div.TVFOFlyBlock.TVFORight{
+	margin-left: 14px;
+}
+div.TVFlySelected.TVFlyItem {
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+div.TVFORight .TVFlyItem{
+	margin-left: 0;
+}
+div.TVFlyDescBlock {
+    margin-left: 26px;
+}
+div.TVFlyDetailBlock {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+}
+div.TVFlyAirBlock {
+    text-align: center;
+    margin-bottom: 12px;
+}
+div.TVOFPasportNum>input {
+    width: 102px;
+}
+div.TVFORow1 {
+    width: 33%;
+    box-sizing: border-box;
+    padding-right: 40px;
+    padding-left: 10px;
+    margin-right: 0;
+    margin-left: 0;
+}
+div.TVFORow2 {
+    width: 33%;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+div.TVFORow3 {
+    width: 33%;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
 
 @media screen and (max-width: 1210px){
 
@@ -131,6 +294,9 @@ body {
 	}
 	.b-feedback.b-feedback-shadow .b-feedback-text{
 	    padding-left: 32px;
+	}
+	div.TVHotelStar {
+	    margin-right: 6px;
 	}
 	
 }
@@ -187,6 +353,36 @@ body {
 
 	.adv-main-left {
 	    vertical-align: top;
+	}
+
+	.b-tourvisor-with-filter div.TVMainFilter{
+		white-space: normal;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVLocationButton,
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry{
+		width: 50%;
+		border-bottom: 1px solid #ddd;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry:after{
+		display: none;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVDates{
+	    width: 25%;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVNights{
+		width: 25%;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVTourists{
+		width: 25%;
+	}
+	.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVSearchButton{
+	    width: calc(25% - 8px);
+	}
+	.b-search-pay img {
+	    display: none;
+	}
+	.b-search-pay-content {
+	    max-width: 100%;
 	}
 
 }
@@ -290,6 +486,24 @@ body {
 	.b-mailing-form .b-checkbox{
 		margin-top: 24px;
 	}
+	div.TVTheme2 .TVOptionStars {
+	    padding-top: 11px;
+	}
+	div.TVHotelStar {
+	    width: 20px;
+	    height: 20px;
+	    margin-right: 8px;
+	}
+	div.TVTheme2 .TVHotelStar:before {
+	    font-size: 20px;
+	}
+	div.TVTheme2 .TVHotelStar.TVImageActive:before {
+	    font-size: 20px;
+	}
+	.b-tourvisor-calendar-cont .TVCalDiagramDate {
+	    margin-top: 14px;
+	    font-size: 14px;
+	}
 
 }
 
@@ -328,6 +542,54 @@ body {
 				.b-review-item p {
 				    margin-bottom: 12px;
 				}
+	.b-categories-item p {
+	    font-size: 18px;
+	    line-height: 18px;
+	}
+	
+	.b-tourvisor-header div.TVMainFilter{
+		white-space: normal;
+	}
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry,
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates{
+	    width: 50%;
+	    border-bottom: 1px solid #ddd;
+	}
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates:after{
+		display: none;
+	}
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVNights,
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists{
+		 width: 33%;
+	}
+	.b-tourvisor-header div.TVWideForm.TVTheme2 .TVSearchButton{
+	    width: 33%;
+	    margin-top: 10px;
+	}
+
+	div.TVTheme2 .TVOptionStars {
+	    padding-top: 12px;
+	}
+	div.TVHotelStar {
+	    width: 18px;
+	    height: 18px;
+	    margin-right: 5px;
+	}
+	div.TVTheme2 .TVHotelStar:before {
+	    font-size: 18px;
+	}
+	div.TVTheme2 .TVHotelStar.TVImageActive:before {
+	    font-size: 18px;
+	}
+	div.TVFORow1 {
+	    width: 50%;
+	}
+	div.TVFORow2 {
+	    width: 50%;
+	}
+	div.TVFORow3 {
+	    width: 50%;
+	}
 }
 
 @media screen and (max-width: 850px){
@@ -342,6 +604,7 @@ body {
 
 		}
 		.b-country-slider{
+			float: none;
 			width: 100%;
 			margin-right: 0;
 		}
@@ -358,4 +621,64 @@ body {
 	    font-size: 38px;
 	    line-height: 48px;
 	}
+	.b-3-text {
+	    width: 336px;
+	}
+	.b-3-text p {
+	    font-size: 32px;
+	    line-height: 46px;
+	}
+	.b-3-text p b {
+	    font-size: 36px;
+	    line-height: 46px;
+	}
+	.b-5-text {
+	    max-width: 390px;
+	    padding-bottom: 80px;
+	}
+	.b-5-text h2 {
+	    font-size: 42px;
+	    line-height: 50px;
+	}
+	.b-5-text > p {
+	    font-size: 18px;
+	    line-height: 28px;
+	    margin-bottom: 40px;
+	}
+	.b-5-text .b-btn .btn-regular {
+	    font-size: 16px;
+	}
+	.b-5-manager {
+	    width: 335px;
+	    height: 550px;
+	}
+	.b-5-name {
+	    right: 18px;
+	    padding: 20px 20px 18px 20px;
+	}
+	.b-feedback-back {
+	    height: 604px;
+	    background-position: 58% 50%;
+	    background-size: 1420px;
+	}
+	.b-feedback .b-5-manager,
+	.b-feedback.b-feedback-shadow .b-5-manager {
+	    width: 295px;
+	    height: 512px;
+	}
+	.b-5-manager, .b-feedback .b-5-manager {
+	    right: -16px;
+	}
+	.b-5-name{
+		box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+	}
+	.b-5-name p {
+	    font-size: 20px;
+	    line-height: 28px;
+	}
+	.b-5-name small {
+	    font-size: 14px;
+	    line-height: 14px;
+	}
+
 }

@@ -46,20 +46,6 @@ $(document).ready(function(){
             rowCountry = 2;
         }
 
-        var nextRow = 0;
-        $(".no-margin").removeClass("no-margin");
-        $(".b-popular .b-country-list .b-country-item").each(function() {
-            if($(this).parents(".b-country-slider").length){
-                nextRow = 2;
-            }else{
-                nextRow++;
-            }
-            if(nextRow >= rowCountry){
-                $(this).addClass("no-margin");
-                nextRow = 0;
-            }
-        });
-
         var checkCards = countCards;
         if( myWidth > 1024 ){
             countCards = 6;
@@ -70,6 +56,79 @@ $(document).ready(function(){
         }
         if(countCards != checkCards){//если количество карточек изменилось
             reinitCards();
+        }
+
+        $(".no-margin").removeClass("no-margin");
+        if(isMobile){
+            if(!$('.b-statistics-slider').hasClass("slick-initialized")){
+                $('.b-statistics-slider').not('.slick-initialized').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 600,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                });
+            }
+            if(!$('b-country-wrap').length){
+                $('.b-popular .b-country-list > .b-country-item').wrapAll('<div class="b-country-wrap"></div>');
+            }
+            if(!$('.b-country-wrap').hasClass("slick-initialized")){
+                $('.b-country-wrap').not('.slick-initialized').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    speed: 600,
+                });
+            }
+            if(!$('.b-4-slider').hasClass("slick-initialized")){
+                $('.b-4-slider').not('.slick-initialized').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 600,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                });
+            }
+        }else{
+            var nextRow = 0;
+            $(".b-popular .b-country-list .b-country-item").each(function() {
+                if($(this).parents(".b-country-slider").length){
+                    nextRow = 2;
+                }else{
+                    nextRow++;
+                }
+                if(nextRow >= rowCountry){
+                    $(this).addClass("no-margin");
+                    nextRow = 0;
+                }
+            });
+            if($('.b-statistics-slider').hasClass("slick-initialized")){
+                $('.b-statistics-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.b-statistics-slider').slick('unslick');
+                },100);
+            }
+            if($('.b-country-wrap').hasClass("slick-initialized")){
+                $('.b-country-wrap').slick('unslick');
+                setTimeout(function(){
+                    $('.b-country-wrap').slick('unslick');
+                },100);
+                $('.b-country-wrap').unwrap();
+            }
+            if($('.b-4-slider').hasClass("slick-initialized")){
+                $('.b-4-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.b-4-slider').slick('unslick');
+                },100);
+            }
         }
 
     }
