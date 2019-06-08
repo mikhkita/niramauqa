@@ -406,48 +406,54 @@
 	<div class="b b-reviews">
 		<div class="b-block">
 			<h2 class="b-title">Отзывы туристов, которые доверились нам</h2>
-			<div class="b-review-list">
+			<div class="b-review-list b-review-slider">
 				<div class="b-review-item">
-					<div class="b-review-top">
-						<div class="b-review-img-cont">
-							<div class="b-review-img" style="background-image: url('i/review-1.jpg')"></div>
+					<div class="b-review-cont">
+						<div class="b-review-top">
+							<div class="b-review-img-cont">
+								<div class="b-review-img" style="background-image: url('i/review-1.jpg')"></div>
+							</div>
+							<div class="b-review-name">
+								<h3>Верноника Павлова</h3>
+								<div class="b-review-date">24 февраля 2019</div>
+								<div class="b-review-tour">Тур на Пхукет</div>
+							</div>
 						</div>
-						<div class="b-review-name">
-							<h3>Верноника Павлова</h3>
-							<div class="b-review-date">24 февраля 2019</div>
-							<div class="b-review-tour">Тур на Пхукет</div>
-						</div>
+						<p>Хотелось бы выразить огромную благодарность ЦТ "Аквамарин" за незабываемый отдых в Тайланде! Уже не первый раз прибегаем к услугам данного турагенства и каждый раз остаемся довольны! Отдельную благодарность хотелось бы выразить менеджеру Александре!</p>
+						<a href="#" class="read-more dashed">Читать полностью</a>
 					</div>
-					<p>Хотелось бы выразить огромную благодарность ЦТ "Аквамарин" за незабываемый отдых в Тайланде! Уже не первый раз прибегаем к услугам данного турагенства и каждый раз остаемся довольны! Отдельную благодарность хотелось бы выразить менеджеру Александре!</p>
-					<a href="#" class="read-more dashed">Читать полностью</a>
 				</div>
 				<div class="b-review-item">
-					<div class="b-review-top">
-						<div class="b-review-img-cont">
-							<div class="b-review-img" style="background-image: url('i/review-2.jpg')"></div>
+					<div class="b-review-cont">
+						<div class="b-review-top">
+							<div class="b-review-img-cont">
+								<div class="b-review-img" style="background-image: url('i/review-2.jpg')"></div>
+							</div>
+							<div class="b-review-name">
+								<h3>Сергей Михайлов</h3>
+								<div class="b-review-date">24 февраля 2019</div>
+								<div class="b-review-tour">Тур на Пхукет</div>
+							</div>
 						</div>
-						<div class="b-review-name">
-							<h3>Сергей Михайлов</h3>
-							<div class="b-review-date">24 февраля 2019</div>
-							<div class="b-review-tour">Тур на Пхукет</div>
-						</div>
+						<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане. Получили море позитива.</p>
+						<a href="#" class="read-more dashed">Читать полностью</a>
 					</div>
-					<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане. Получили море позитива.</p>
-					<a href="#" class="read-more dashed">Читать полностью</a>
 				</div>
 				<div class="b-review-item">
-					<div class="b-review-top">
-						<div class="b-review-img-cont">
-							<div class="b-review-img" style="background-image: url('i/review-3.jpg')"></div>
+					<div class="b-review-cont">
+						<div class="b-review-top">
+							<div class="b-review-img-cont">
+								<div class="b-review-img" style="background-image: url('i/review-3.jpg')"></div>
+							</div>
+							<div class="b-review-name">
+								<h3>Анна Виноградова</h3>
+								<div class="b-review-date">24 февраля 2019</div>
+								<div class="b-review-tour">Тур на Пхукет</div>
+							</div>
 						</div>
-						<div class="b-review-name">
-							<h3>Анна Виноградова</h3>
-							<div class="b-review-date">24 февраля 2019</div>
-							<div class="b-review-tour">Тур на Пхукет</div>
-						</div>
+						<p>Спасибо за организованный вами отдых! Все было незабываемо... и отель очень понравился, особенно в Рояле, где мы жили красиво, чисто и вкусно, а персонал очень приветливый и доброжелательный.</p>
+						<a href="#" class="read-more dashed">Читать полностью</a>
 					</div>
-					<p>Спасибо за организованный вами отдых! Все было незабываемо... и отель очень понравился, особенно в Рояле, где мы жили красиво, чисто и вкусно, а персонал очень приветливый и доброжелательный.</p>
-					<a href="#" class="read-more dashed">Читать полностью</a>
 				</div>
 			</div>
 			<div class="center">
@@ -485,7 +491,21 @@
 				<div id="vk_groups"></div>
 			</div>
 			<script type="text/javascript">
-				VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
+				var myWidth = 0;
+				if( typeof( window.innerWidth ) == 'number' ) {
+		            myWidth = window.innerWidth;
+		        } else if( document.documentElement && ( document.documentElement.clientWidth || 
+		        document.documentElement.clientHeight ) ) {
+		            myWidth = document.documentElement.clientWidth;
+		        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+		            myWidth = document.body.clientWidth;
+		        }
+
+		        if(myWidth > 767){
+		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
+		        }else{
+		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "200", no_cover: 1}, 56008470);
+		        }
 			</script>
 		</div>
 	</div>
@@ -493,7 +513,7 @@
 	<div class="b b-articles">
 		<div class="b-block">
 			<h2 class="b-title">Последние статьи</h2>
-			<div class="b-article-list">
+			<div class="b-article-list b-article-slider">
 				<a href="#" class="b-article-item">
 					<div class="b-article-top">
 						<div class="b-article-img" style="background-image: url('i/article-1.jpg')"></div>
@@ -508,7 +528,7 @@
 						<div class="blackout"></div>
 						<h3>Худшие отели Турции или как испортить себе отдых</h3>
 					</div>
-					<p>Выбирать отель нужно правильно. Заветные цифры 4* или 5* на вывеске отеля не означают, что отдых пройдет хорошо и с приятными впечатлениями. Выбирать ...</p>
+					<p>Выбирать отель нужно правильно. Заветные цифры 4* или 5* на вывеске отеля не означают, что отдых пройдет хорошо и с приятными впечатлениями. Выбирать ... </p>
 				</a>
 				<a href="#" class="b-article-item">
 					<div class="b-article-top">

@@ -17,13 +17,31 @@ h2.b-title{
 	margin-bottom: 50px;
 }
 
+.b-menu{
+	display: none;
+}
+
 .b-head{
 	background-position: 0% 50%;
-	padding-bottom: 90px;
+	padding-top: 20px;
+	padding-bottom: 100px;
 }
+	.b-head-text {
+	    max-width: 405px;
+	    margin: 0 auto 50px auto;
+	}
+		.b-head-text br{
+			display: none;
+		}
 .b-statistics-item{
 	text-align: center;
 }
+	.b-statistics-item img{
+		height: 82px;
+	}
+	.b-statistics-item span{
+		padding-top: 22px;
+	}
 .b-statistics-item-top {
     margin-bottom: 4px;
 }
@@ -48,7 +66,7 @@ h2.b-title{
     	width: calc(100% + 24px);
 	}
 	.b-country-wrap .slick-dots{
-		bottom: -35px;
+		bottom: -55px;
 	}
 	.b-country-item{
 		width: calc(50% - 12px);
@@ -61,7 +79,7 @@ h2.b-title{
 		margin: 0;
 	}
 .b-3 {
-    margin-bottom: 87px;
+    margin-bottom: 67px;
 }
 .b-3-content-bottom{
 	padding: 50px 24px;
@@ -95,7 +113,7 @@ h2.b-title{
 }
 .b-3-content-top {
     padding-top: 100px;
-    padding-bottom: 456px;
+    padding-bottom: 452px;
 }
 .b-3-back {
     position: absolute;
@@ -133,13 +151,13 @@ h2.b-title{
 			padding: 0;
 		}
 		.b-4-slider .slick-dots{
-			bottom: -45px;
+			bottom: -55px;
 		}
 .b-5-text {
-    padding-top: 43px;
+    padding-top: 87px;
     padding-left: 0;
     max-width: 400px;
-    padding-bottom: 100px;
+    padding-bottom: 83px;
 }
 	.b-5-text h2 {
 	    font-size: 40px;
@@ -155,8 +173,116 @@ h2.b-title{
 		padding: 20px 42px 21px 42px;
 	}
 	.b-5-manager {
-	    width: 305px;
-	    height: 500px;
-	    background-image: url(../i/b-5-woman.jpg);
-	    right: -50px;
+	    width: 318px;
+		height: 520px;
+		right: -85px;
 	}
+.b-5-name{
+	display: none;
+}
+.b-reviews{
+	margin-bottom: 57px;
+}
+	.b-reviews h2{
+		margin-bottom: 40px;
+	}
+	.b-review-list{
+		margin-bottom: 98px;
+	}
+		.b-review-item{
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+			.b-review-cont{
+				max-width: 410px;
+				margin: 0 auto;
+			}
+	.b-review-slider .slick-dots{
+		bottom: -55px;
+	}
+.b-mailing{
+	margin-bottom: 60px;
+}
+	.b-mailing-cont {
+	    padding: 34px 24px 38px 24px;
+	}
+		.b-mailing-cont h2 {
+		    font-size: 32px;
+		    line-height: 40px;
+		}
+		.b-mailing-form .b-btn-submit {
+		    width: 236px;
+		    min-width: 236px;
+		    padding: 24px 22px 25px 22px;
+		}
+		.b-mailing-form input[type=text] {
+		    margin-right: 20px;
+	    	width: calc(100% - 262px);
+		}
+			.b-mailing-form .b-checkbox p {
+			    font-size: 13px;
+			}
+		.b-widget-vk {
+		    float: none;
+		    height: 200px;
+		    margin-top: 24px;
+		}
+.b-articles {
+    margin-bottom: 60px;
+}
+	.b-article-list{
+		margin-bottom: 90px;
+	}
+	.b-article-slider{
+		margin-left: -24px;
+    	width: calc(100% + 48px);
+	}
+		.b-article-item{
+			width: 100%;
+			margin: 0 12px;
+		}
+		/*.b-article-item:nth-child(4n){
+			margin-right: 0;
+		}*/
+		.b-article-slider .slick-dots{
+			bottom: -50px;
+		}
+.b-card{
+	width: calc(100%/3 - 16px);
+	margin-right: 20px;
+}
+.b-tour-operators {
+    padding: 40px 0 70px 0;
+    margin-bottom: 50px;
+}
+	.b-tour-operators h2{
+		margin-bottom: 35px;
+	}
+.b-seo {
+    margin-bottom: 60px;
+}
+	.b-seo-two-blocks .first {
+	    margin-right: 0;
+	    margin-bottom: 32px;
+	}
+	.b-seo-two-blocks .seo-block {
+	    width: 100%;
+	}
+	.b-seo h2 {
+		text-align: left;
+	    margin-bottom: 16px;
+	}
+	.b-seo-separator {
+	    margin: 32px 0 24px 0;
+	}
+	.b-seo .center{
+		text-align: left;
+	}
+.b-footer-item.column-1 {
+    margin-right: 24px;
+}
+.b-footer-item.column-2,
+.b-footer-item.column-3{
+    display: none;
+}

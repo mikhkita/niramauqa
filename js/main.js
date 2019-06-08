@@ -93,10 +93,32 @@ $(document).ready(function(){
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 600,
-                    //autoplay: true,
+                    autoplay: true,
                     autoplaySpeed: 3000,
                 });
             }
+            if(!$('.b-review-slider').hasClass("slick-initialized")){
+                $('.b-review-slider').not('.slick-initialized').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 600,
+                });
+            }
+            if(!$('.b-article-slider').hasClass("slick-initialized")){
+                $('.b-article-slider').not('.slick-initialized').slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    speed: 600,
+                    adaptiveHeight: true
+                });
+            }
+            
         }else{
             var nextRow = 0;
             $(".b-popular .b-country-list .b-country-item").each(function() {
@@ -127,6 +149,18 @@ $(document).ready(function(){
                 $('.b-4-slider').slick('unslick');
                 setTimeout(function(){
                     $('.b-4-slider').slick('unslick');
+                },100);
+            }
+            if($('.b-review-slider').hasClass("slick-initialized")){
+                $('.b-review-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.b-review-slider').slick('unslick');
+                },100);
+            }
+            if($('.b-article-slider').hasClass("slick-initialized")){
+                $('.b-article-slider').slick('unslick');
+                setTimeout(function(){
+                    $('.b-article-slider').slick('unslick');
                 },100);
             }
         }
