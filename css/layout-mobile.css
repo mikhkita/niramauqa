@@ -43,12 +43,16 @@ h2.b-title{
 	    width: 100%;
 	    margin-right: 0;
 	}
+	.b-country-wrap{
+		margin-left: -12px;
+    	width: calc(100% + 24px);
+	}
 	.b-country-wrap .slick-dots{
 		bottom: -35px;
 	}
 	.b-country-item{
 		width: calc(50% - 12px);
-		margin-right: 24px;
+		margin: 0 12px;
 	}
 	.b-country-list.square .b-country-item{
 
@@ -112,14 +116,25 @@ h2.b-title{
 .coin-1, .coin-2 {
     position: absolute;
 }
-.b-4-item{
-	text-align: center;
+.b-4-slider{
+    margin-left: -24px;
+    width: calc(100% + 48px);
 }
-	.b-4-item p{
-		padding: 0;
-		max-width: 410px;
-		margin: 0 auto;
+	.b-4-item{
+		width: 100%;
+		margin-right: 0;
 	}
+		.b-4-item p{
+			padding: 0;
+			max-width: 410px;
+			margin: 0 auto;
+		}
+		.b-4-item:nth-child(3n) p{
+			padding: 0;
+		}
+		.b-4-slider .slick-dots{
+			bottom: -45px;
+		}
 .b-5-text {
     padding-top: 43px;
     padding-left: 0;

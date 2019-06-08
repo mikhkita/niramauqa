@@ -1056,9 +1056,13 @@ b{
 			padding: 0 22px;
 		}
 			.b-4-icon{
+				text-align: center;
 				height: 150px;
 				margin-bottom: 24px;
 			}
+				.b-4-icon img{
+					display: inline-block;
+				}
 			.b-4-item h3{
 				max-width: 275px;
 				margin: 0 auto;
@@ -1072,7 +1076,7 @@ b{
 				font-size: 20px;
 				line-height: 30px;
 			}
-		#coin-parallax{
+		.coin-parallax{
 			position: relative;
 			width: 137px;
 			height: 143px;

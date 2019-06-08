@@ -93,7 +93,7 @@ $(document).ready(function(){
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 600,
-                    autoplay: true,
+                    //autoplay: true,
                     autoplaySpeed: 3000,
                 });
             }
