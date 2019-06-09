@@ -295,11 +295,16 @@ h2.b-title{
 		text-align: left;
 	}
 .b-footer-item.column-1 {
-    margin-right: 24px;
+    margin-right: 0;
+    width: 42%;
 }
 .b-footer-item.column-2,
 .b-footer-item.column-3{
     display: none;
+}
+.b-footer-contacts {
+	padding-left: 16px;
+    width: 58%;
 }
 .b-footer-bottom-left {
     max-width: 320px;

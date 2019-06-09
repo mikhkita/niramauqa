@@ -475,9 +475,6 @@ div.TVFORow3 {
 	.b-footer-item.column-2 {
 	    margin-right: 30px;
 	}
-	.social-item {
-	    margin-right: 6px;
-	}
 	.b-copyright{
 		display: block;
 	}
@@ -576,6 +573,10 @@ div.TVFORow3 {
 	    margin-top: 10px;
 	}
 
+	div.TVWideForm.TVTheme2 .TVStars {
+	    width: 18%;
+	    margin-right: 1%;
+	}
 	div.TVTheme2 .TVOptionStars {
 	    padding-top: 12px;
 	}
