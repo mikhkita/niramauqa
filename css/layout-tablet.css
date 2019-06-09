@@ -389,6 +389,15 @@ div.TVFORow3 {
 
 @media screen and (max-width: 1024px){
 	
+	.b-menu{
+		display: none;
+	}
+	.b-menu-mobile {
+	    display: block;
+	}
+	.b-head{
+		padding-top: 40px;
+	}
 	.b-3-back {
 	    height: 780px;
 	    background-size: 1100px;

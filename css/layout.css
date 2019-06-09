@@ -493,9 +493,15 @@ b{
 			}
 		.b-menu-mobile{
 			display: none;
+			margin-top: 40px;
 			float: right;
 			cursor: pointer;
 		}
+			.b-menu-button{
+				margin-right: 10px;
+		    	line-height: 27px;
+		    	display: inline-block;
+			}
 			.b-menu-mobile .icon-menu:before{
 				font-size: 21px;
 				color: #FFF;
@@ -1130,7 +1136,7 @@ b{
 			}
 
 .b-5{
-
+	overflow: hidden;
 }
 	.b-5-text{
 		position: relative;
@@ -1155,15 +1161,26 @@ b{
 		.b-5-text .b-btn .btn-regular{
 			font-size: 18px;
 		}
+	.b-5-window{
+		display: none;
+		width: 425px;
+	    height: 273px;
+	    background-image: url(../i/b-5-window.jpg);
+	    background-size: cover;
+	    position: absolute;
+	    bottom: 283px;
+    	right: -170px;
+    	z-index: 1;
+	}
 	.b-5-manager{
 		width: 410px;
 	    height: 705px;
-	    background-image: url(../i/b-5-woman.jpg);
+	    background-image: url(../i/b-5-woman.png);
 	    background-size: cover;
 	    position: absolute;
 	    bottom: 0;
     	right: 148px;
-    	z-index: 1;
+    	z-index: 2;
 	}
 		.b-5-name{
 			position: absolute;
@@ -1700,12 +1717,7 @@ b{
 		.b-footer-bottom-left{
 			display: inline-block;
 		}
-			.b-copyright{
-				display: inline-block;
-				vertical-align: top;
-				margin-top: 10px;
-				margin-right: 100px;
-			}
+			.b-copyright,
 			.b-footer-politics{
 				display: inline-block;
 				vertical-align: top;
@@ -1724,6 +1736,10 @@ b{
 		    background-image: url(../i/visa-master.jpg);
 		    background-repeat: no-repeat;
 		    background-size: 154px;
+		}
+		.b-footer-top .visa-master{
+			margin-top: 27px;
+			display: none;
 		}
 		.b-redder{
 			margin-top: 2px;

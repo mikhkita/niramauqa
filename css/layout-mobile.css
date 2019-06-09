@@ -40,14 +40,8 @@ h2.b-title{
 	    margin-right: 26px;
 	}
 	.b-menu-mobile {
-	    margin-top: 40px;
 	    display: block;
 	}
-		.b-menu-button{
-			margin-right: 10px;
-	    	line-height: 27px;
-	    	display: inline-block;
-		}
 		.b-head-feedback {
 		    padding-top: 36px;
 		}
@@ -195,6 +189,9 @@ h2.b-title{
 		height: 520px;
 		right: -85px;
 	}
+	.b-5-window{
+		display: block;
+	}
 .b-5-name{
 	display: none;
 }
@@ -304,3 +301,34 @@ h2.b-title{
 .b-footer-item.column-3{
     display: none;
 }
+.b-footer-bottom-left {
+    max-width: 320px;
+    margin-right: 24px;
+}
+.b-redder {
+    margin-top: 0;
+}
+	.b-redder span{
+		display: block;
+	}
+.b-copyright{
+	margin-top: 0;
+	margin-right: 0;
+}
+.b-footer-politics{
+	margin-top: 14px;
+	margin-right: 0;
+}
+.b-redder-logo {
+    margin-top: 6px;
+    margin-left: 0;
+}
+.b-footer-top{
+	margin-bottom: 32px;
+}
+	.b-footer-top .visa-master{
+		display: inline-block;
+	}
+	.b-footer-bottom .visa-master{
+		display: none;
+	}
