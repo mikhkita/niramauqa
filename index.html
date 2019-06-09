@@ -23,674 +23,684 @@
 	<script src="https://vk.com/js/api/openapi.js?160" type="text/javascript"></script>
 </head>
 <body>
-	
-	<div class="b-menu clearfix">
-		<div class="b-block">
-			<a href="/" class="b-menu-logo"></a>
-			<ul>
-				<li><a href="#">Горящие туры</a></li>
-				<li><a href="#">Отдых в России</a></li>
-				<li><a href="#">Специальные туры</a></li>
-				<li><a href="#">Визы</a></li>
-				<li><a href="#" class="active">О компании</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<a href="#" class="b-search-tours">
-				<p>
-					<span class="desktop">Перейти в поиск туров</span>
-					<span class="tablet">Поиск туров</span>
-				</p>
-				<span class="icon-next"></span>
-			</a>
-		</div>
+
+	<div id="panel-menu" class="panel-menu slideout-menu">
+		<h2>Меню</h2>
 	</div>
 
-	<div class="b b-head" style="background-image: url('i/head.jpg')">
-		<div class="b-block">
-			<div class="b-head-top">
-				<a href="/" class="b-logo"></a>
-				<div class="b-head-feedback">
-					<a href="tel:+74722400200" class="b-head-phone">+7 (4722) 400-200</a><br>
-					<a href="#" class="dashed">Заказать звонок</a>
-				</div>
-			</div>
-			<div class="b-head-content">
-				<h1>Туры из Белгорода<br>по цене туроператора</h1>
-				<p class="b-head-text">Стоимость тура у нас равна стоимости тура у туропреатора. <br>Вы не платите нам за подбор и оформление.</p>
-				<div class="center">
-					<a href="#" class="b-btn b-btn-orange">
-						<p class="btn-bold">Рассчитать стоимость</p>
-						<p class="btn-regular">вашего лучшего тура</p>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="b-head-gradient"></div>
-		<div class="b-head-white"></div>
-	</div>
-
-	<div class="b-statistics">
-		<div class="b-block clearfix">
-			<div class="b-statistics-list b-statistics-slider">
-				<div class="b-statistics-item statistics-1">
-					<div class="b-statistics-item-top">
-						<img class="anim fadeLeft delay100" data-cont=".b-statistics" src="i/count-country.png">
-						<span class="anim fadeRight delay400" data-cont=".b-statistics">стран</span>
-					</div>
-					<p class="anim fadeDown delay700" data-cont=".b-statistics">в которых мы бывали сами</p>
-				</div>
-				<div class="b-statistics-item statistics-2">
-					<div class="b-statistics-item-top">
-						<img class="anim fadeLeft delay100" src="i/count-hotel.png">
-						<span class="anim fadeRight delay400">отелей</span>
-					</div>
-					<p class="anim fadeDown delay700">мы посетили и проверили лично</p>
-				</div>
-				<div class="b-statistics-item statistics-3">
-					<div class="b-statistics-item-top">
-						<img class="anim fadeLeft delay100" src="i/count-tourist.png">
-						<span class="anim fadeRight delay400">туристов</span>
-					</div>
-					<p class="anim fadeDown delay700">в год доверяют нам свой отдых</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-popular">
-		<div class="b-block">
-			<h2 class="b-title">Популярные направления</h2>
-			<div class="b-country-list clearfix">
-				
-				<div class="b-country-slider">
-					<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
-						<div class="blackout"></div>
-						<div class="blackout-full"></div>
-						<div class="content">
-							<div class="b-country-cont">
-								<div class="b-country-info">
-									<h3>Экскурсионные туры по Европе</h3>
-									<p>Экскурсионные туры во Францию, Испанию, Италию, Чехию, Швейцарию, Норвегию, Венгрию по доступной цене, никого не оставят равнодушным.</p>
-								</div>
-								<span class="b-btn-tr">Подобрать туры</span>
-							</div>
-						</div>
-					</a>
-					<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
-						<div class="blackout"></div>
-						<div class="blackout-full"></div>
-						<div class="content">
-							<div class="b-country-cont">
-								<div class="b-country-info">
-									<h3>Вы не платите за нашу работу</h3>
-									<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – </p>
-								</div>
-								<span class="b-btn-tr">Подобрать туры</span>
-							</div>
-						</div>
-					</a>
-					<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
-						<div class="blackout"></div>
-						<div class="blackout-full"></div>
-						<div class="content">
-							<div class="b-country-cont">
-								<div class="b-country-info">
-									<h3>Вся рутина остается за нами</h3>
-									<p>Расслабьтесь и получайте удовольствие. Все документы, подбор отеля, покупка билетов – наша работа. Вам остается только не забыть паспорт.</p>
-								</div>
-								<span class="b-btn-tr">Подобрать туры</span>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
-					<div class="blackout"></div>
-					<div class="blackout-full"></div>
-					<div class="content">
-						<div class="b-country-cont">
-							<div class="b-country-info">
-								<div class="info-left">
-									<p class="visa">Виза по прилете</p>
-									<h3>Китай</h3>
-									<p class="price">Туры от 18 000 руб.</p>
-								</div>
-								<div class="info-right">
-									<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
-									<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
-								</div>
-							</div>
-							<span class="b-btn-tr">Подобрать туры</span>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="center">
-				<a href="#" class="b-btn b-btn-blue one-line">
-					<p class="btn-bold">Все направления</p>
+	<div id="panel-page" class="slideout-panel">
+		<div class="b-menu clearfix">
+			<div class="b-block">
+				<a href="/" class="b-menu-logo"></a>
+				<ul>
+					<li><a href="#">Горящие туры</a></li>
+					<li><a href="#">Отдых в России</a></li>
+					<li><a href="#">Специальные туры</a></li>
+					<li><a href="#">Визы</a></li>
+					<li><a href="#" class="active">О компании</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<a href="#" class="b-search-tours">
+					<p>
+						<span class="desktop">Перейти в поиск туров</span>
+						<span class="tablet">Поиск туров</span>
+					</p>
+					<span class="icon-next"></span>
 				</a>
 			</div>
 		</div>
-	</div>
 
-	<div class="b b-3">
-		<div class="b-3-back"></div>
-		<div class="b-block">
-			<div class="b-3-content">
-				<div class="b-3-content-top clearfix">
-					<img class="b-3-cloud" src="i/cloud.svg">
-					<img class="b-3-woman" src="i/b-3-woman.png">
-					<div class="b-3-text">
-						<p><b>Я давно мечтаю<br>об отпуске!</b><br>Но где мне взять<br>путевку подешевле?</p>
+		<div class="b b-head" style="background-image: url('i/head.jpg')">
+			<div class="b-block">
+				<div class="b-head-top">
+					<a href="/" class="b-logo"></a>
+					<div class="b-head-feedback">
+						<a href="tel:+74722400200" class="b-head-phone">+7 (4722) 400-200</a><br>
+						<a href="#" class="dashed">Заказать звонок</a>
+					</div>
+					<div class="b-menu-mobile">
+						<span class="b-menu-button icon-menu"></span>
+						<p>Меню</p>
 					</div>
 				</div>
-				<div class="b-3-content-bottom">
-					<p>Турагентство <b>«Аквамарин»</b> занимается подбором и продажей туров <b>по цене туроператоров</b></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-4">
-		<div class="b-block">
-			<h2>Что это значит?</h2>
-			<div class="b-4-list b-4-slider clearfix">
-				<div class="b-4-item">
-					<div class="b-4-icon">
-						<div id="coin-parallax" class="coin-parallax">
-							<div data-depth="0.6" class="coin-1">
-								<img src="i/coin-1.svg">
-							</div>
-							<div data-depth="-0.4" class="coin-2">
-								<img src="i/coin-2.svg">
-							</div>
-							<img class="main-img" src="i/svg-icon-1.svg">
-						</div>
-					</div>
-					<h3>1. Вы не платите за нашу работу</h3>
-					<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – <b>за вас это делает туроператор.</b></p>
-				</div>
-				<div class="b-4-item">
-
-					<div class="b-4-icon">
-<svg width="162px" height="143px" viewBox="0 0 162 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Главная-страница" transform="translate(-875.000000, -3282.000000)">
-            <g id="customer-problems" transform="translate(320.000000, 3282.000000)">
-                <g id="Group-27" transform="translate(434.000000, 0.000000)">
-                    <g id="sun-umbrella" transform="translate(121.000000, 0.000000)">
-                        <path d="M81,120.917308 L108.961163,50.6127904 C110.13114,47.671028 113.459377,46.2365 116.394888,47.408969 C119.330398,48.581438 120.761877,51.9167631 119.5919,54.8585255 L92.8887228,122 L81,120.917308 Z" id="Path" fill="#90A4AE"></path>
-                        <path d="M91.9957368,60.0099218 C91.9985789,60.0033073 92.0014211,59.9966927 92.0042632,59.9900782 C92.0014211,59.9903932 91.9985789,59.9910231 91.9960526,59.9913381 L91.9957368,60.0099218 Z" id="Path" fill="#FFF9C5"></path>
-                        <path d="M115.46579,48.4049223 C112.587909,47.2441698 109.325012,48.6640496 108.178003,51.5767278 L101,69.8023259 C102.828905,70.098069 104.647914,70.6031794 106.438781,71.325794 C108.229648,72.0480956 109.900217,72.9472172 111.424201,74 L118.60004,55.7803481 C119.746739,52.8673569 118.343672,49.5656748 115.46579,48.4049223 Z" id="Path" fill="#000000" opacity="0.1"></path>
-                        <path d="M126.60632,23 L105.442245,25.2634971 L92,40.8409794 L92.002215,60.6085604 L92.0117079,60.6047821 C92.0107586,60.6069861 92.0098093,60.6095049 92.0085436,60.6117089 C97.8789451,59.5270313 104.415114,60.0959754 110.741807,62.6050599 C117.028314,65.0980868 122.138968,69.1238309 125.648488,73.8885411 L125.709875,74 L136.766558,63.1072546 L138,35.9263979 L126.60632,23 Z" id="Path" fill="#FFF9C5"></path>
-                        <path d="M146,133.020775 C138.331499,120.911397 112.359415,112 81.4995274,112 C50.6405853,112 24.669446,120.910774 17,133.01953 L21.308412,133.020775 L30.658375,138.944277 L40.489746,140 L47.4184917,136.045396 L58.4165207,132.082701 L64.3184939,133.665974 L76.8744825,140 L85.1560854,138.680346 L95.8418924,134.741616 L103.589158,132.346631 L113.473458,134.741616 L121.487892,140 L134.31105,138.416727 L146,133.020775 Z" id="Path" fill="#FFCA28"></path>
-                        <path d="M135.191344,138 L146,133.019787 C138.317632,120.911289 112.298583,112 81.382893,112 C74.2746514,112 67.4268023,112.472127 61,113.34449 C92.8916099,116.950958 119.56527,125.994829 135.191344,138 Z" id="Path" fill="#000000" opacity="0.1"></path>
-                        <path d="M160.957268,134.975145 C153.36746,129.674952 143.558739,129.674952 135.968931,134.975145 C129.999448,139.14369 122.285316,139.14369 116.315201,134.975145 C108.725394,129.674952 98.9166726,129.674952 91.326865,134.975145 C85.3573817,139.14369 77.6429338,139.14369 71.673135,134.975145 C64.0833274,129.674952 54.2746063,129.674952 46.6847987,134.975145 C40.7149999,139.14369 33.0008675,139.14369 27.0310688,134.975145 C19.4412612,129.674952 9.63254005,129.674952 2.04273245,134.975145 C0.956626028,135.733475 0.673266479,137.255011 1.40974887,138.373337 C2.14623126,139.491664 3.62424476,139.783105 4.71003564,139.025099 C10.6795189,134.856554 18.3939668,134.856229 24.3637656,139.025099 C31.9538887,144.324967 41.7626098,144.324967 49.3521019,139.025099 C55.3215851,134.856554 63.0360331,134.856229 69.0058318,139.025099 C76.595955,144.324967 86.4046761,144.324967 93.9941682,139.025099 C99.9636514,134.856554 107.678099,134.856229 113.647898,139.025099 C117.44296,141.675033 121.79275,143 126.142224,143 C130.491698,143 134.841488,141.675033 138.636234,139.025099 C144.605718,134.856554 152.320166,134.856554 158.289964,139.025099 C159.376386,139.783755 160.853769,139.491664 161.590251,138.373337 C162.326734,137.255336 162.043374,135.7338 160.957268,134.975145 Z" id="Path" fill="#1EB8E8"></path>
-                        <g id="Group" transform="translate(58.000000, 19.000000)" fill="#EF495B">
-                            <path d="M33.950795,41.1788571 C30.4352795,36.397235 25.2921988,32.3557788 18.9590124,29.8585806 C12.6226584,27.360129 6.07565217,26.7945069 0.197347826,27.8759263 C0.197347826,27.8759263 28.721236,-11.9717604 68.5924658,3.74846083 C68.5924658,3.74846083 47.6834161,9.28090323 33.9488944,41.2020461 L33.950795,41.1788571 Z" id="Path"></path>
-                            <path d="M67.7093106,54.4889954 C73.5860311,53.4100829 80.129236,53.9763318 86.4627391,56.47353 C92.7990932,58.9719816 97.9447081,63.0159447 101.459273,67.8010138 C101.459273,67.8010138 108.463062,19.4683687 68.5918323,3.7478341 C68.5918323,3.7478341 79.9217516,21.9912627 67.6950559,54.5065438 L67.7093106,54.4889954 Z" id="Path"></path>
-                        </g>
-                        <g id="Group-sun">
-                            <path d="M26.9045581,9.73654335 C25.5988256,9.73654335 24.5404884,8.68401156 24.5404884,7.38613873 L24.5404884,2.65786127 C24.5404884,1.3596763 25.5991395,0.307456647 26.9045581,0.307456647 C28.2099767,0.307456647 29.2686279,1.35998844 29.2686279,2.65786127 L29.2686279,7.38613873 C29.2686279,8.6843237 28.2099767,9.73654335 26.9045581,9.73654335 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M40.8940116,15.498 C40.2890233,15.498 39.6840349,15.268578 39.2225233,14.809422 C38.299186,13.891422 38.299186,12.4031445 39.2225233,11.4851445 L42.5852791,8.14182659 C43.5086163,7.22382659 45.0055465,7.22382659 45.9285698,8.14182659 C46.851907,9.05982659 46.851907,10.548104 45.9285698,11.466104 L42.565814,14.809422 C42.1039884,15.268578 41.499,15.498 40.8940116,15.498 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M51.4444186,29.4069017 L46.6889651,29.4069017 C45.3832326,29.4069017 44.3248953,28.3543699 44.3248953,27.0564971 C44.3248953,25.7586243 45.3835465,24.7060925 46.6889651,24.7060925 L51.4444186,24.7060925 C52.7501512,24.7060925 53.8084884,25.7586243 53.8084884,27.0564971 C53.8084884,28.3543699 52.7501512,29.4069017 51.4444186,29.4069017 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M44.2567674,46.6591214 C43.6517791,46.6591214 43.0464767,46.4296994 42.5852791,45.9705434 L39.2225233,42.6272254 C38.299186,41.7092254 38.299186,40.220948 39.2225233,39.302948 C40.1458605,38.384948 41.6427907,38.384948 42.565814,39.302948 L45.9285698,42.6462659 C46.851907,43.5642659 46.851907,45.0525434 45.9285698,45.9705434 C45.4667442,46.4293873 44.8620698,46.6591214 44.2567674,46.6591214 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M26.9045581,53.8049133 C25.5988256,53.8049133 24.5404884,52.7523815 24.5404884,51.4545087 L24.5404884,46.7262312 C24.5404884,45.4280462 25.5991395,44.3758266 26.9045581,44.3758266 C28.2099767,44.3758266 29.2686279,45.4283584 29.2686279,46.7262312 L29.2686279,51.4545087 C29.2686279,52.7530058 28.2099767,53.8049133 26.9045581,53.8049133 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M9.55172093,46.6591214 C8.94673256,46.6591214 8.34174419,46.4296994 7.88023256,45.9705434 C6.95689535,45.0525434 6.95689535,43.5642659 7.88023256,42.6462659 L11.2426744,39.302948 C12.1660116,38.384948 13.6629419,38.384948 14.5859651,39.302948 C15.5093023,40.220948 15.5093023,41.7092254 14.5859651,42.6272254 L11.2235233,45.9705434 C10.7620116,46.4293873 10.1570233,46.6591214 9.55172093,46.6591214 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M7.11983721,29.4069017 L2.36406977,29.4069017 C1.05833721,29.4069017 0,28.3543699 0,27.0564971 C0,25.7586243 1.05865116,24.7060925 2.36406977,24.7060925 L7.11983721,24.7060925 C8.42556977,24.7060925 9.48390698,25.7586243 9.48390698,27.0564971 C9.48390698,28.3543699 8.42556977,29.4069017 7.11983721,29.4069017 Z" id="Path" fill="#FF9800"></path>
-                            <path d="M12.9144767,15.498 C12.3094884,15.498 11.7045,15.268578 11.2429884,14.809422 L7.88023256,11.4664162 C6.95689535,10.5484162 6.95689535,9.06013873 7.88023256,8.14213873 C8.80356977,7.22413873 10.3005,7.22413873 11.2235233,8.14213873 L14.5859651,11.4854566 C15.5093023,12.4034566 15.5093023,13.8917341 14.5859651,14.8097341 C14.1247674,15.268578 13.5194651,15.498 12.9144767,15.498 Z" id="Path" fill="#FF9800"></path>
-                            <circle id="Oval" fill="#FFCA28" cx="27" cy="27" r="13"></circle>
-                            <animateTransform attributeName="transform"
-					        	type="rotate"
-					            from="0 27 27"
-					            to="360 27 27"
-					            begin="0s"
-					            dur="6s"
-					            repeatCount="indefinite"
-					        />
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
-					</div>
-
-					<h3>2. Вся рутина остается за нами</h3>
-					<p><b>Расслабьтесь и получайте удовольствие.</b> Все документы, подбор отеля, покупка билетов – наша работа. Вам остается только не забыть паспорт.</p>
-				</div>
-				<div class="b-4-item">
-					<div class="b-4-icon">
-						<img src="i/svg-icon-3.svg">
-					</div>
-					<h3>3. В сети 24 часа 7 дней в неделю</h3>
-					<p>Кроме того, что все будет тщательно спланировано, мы всегда на связи. Так что все возникшие хлопоты <b>будут только нашими хлопотами.</b></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-5">
-		<div class="b-block">
-			<div class="b-5-text">
-				<h2>Доверьте нам ваш лучший отдых!</h2>
-				<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане.</p>
-				<a href="#" class="b-btn b-btn-orange">
-					<p class="btn-bold">Подберите мне тур</p>
-					<p class="btn-regular">Хочу довериться профессионалам</p>
-				</a>
-			</div>
-			<div class="b-5-manager">
-				<div class="b-5-name">
-					<p><b>Анастасия Волочкова</b></p>
-					<small>Менеджер по туризму «Аквамарин»</small>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-tourvisor">
-		<div class="b-head-gradient"></div>
-		<div class="b-block gradient-after">
-			<h2 class="b-title white">Или подберите тур самостоятельно</h2>
-			<div class="tv-search-form tv-moduleid-189840"></div>
-			<div class="center">
-				<a href="#" class="b-btn b-btn-orange one-line">
-					<p class="btn-bold">Найти туры</p>
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-reviews">
-		<div class="b-block">
-			<h2 class="b-title">Отзывы туристов, которые доверились нам</h2>
-			<div class="b-review-list b-review-slider">
-				<div class="b-review-item">
-					<div class="b-review-cont">
-						<div class="b-review-top">
-							<div class="b-review-img-cont">
-								<div class="b-review-img" style="background-image: url('i/review-1.jpg')"></div>
-							</div>
-							<div class="b-review-name">
-								<h3>Верноника Павлова</h3>
-								<div class="b-review-date">24 февраля 2019</div>
-								<div class="b-review-tour">Тур на Пхукет</div>
-							</div>
-						</div>
-						<p>Хотелось бы выразить огромную благодарность ЦТ "Аквамарин" за незабываемый отдых в Тайланде! Уже не первый раз прибегаем к услугам данного турагенства и каждый раз остаемся довольны! Отдельную благодарность хотелось бы выразить менеджеру Александре!</p>
-						<a href="#" class="read-more dashed">Читать полностью</a>
-					</div>
-				</div>
-				<div class="b-review-item">
-					<div class="b-review-cont">
-						<div class="b-review-top">
-							<div class="b-review-img-cont">
-								<div class="b-review-img" style="background-image: url('i/review-2.jpg')"></div>
-							</div>
-							<div class="b-review-name">
-								<h3>Сергей Михайлов</h3>
-								<div class="b-review-date">24 февраля 2019</div>
-								<div class="b-review-tour">Тур на Пхукет</div>
-							</div>
-						</div>
-						<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане. Получили море позитива.</p>
-						<a href="#" class="read-more dashed">Читать полностью</a>
-					</div>
-				</div>
-				<div class="b-review-item">
-					<div class="b-review-cont">
-						<div class="b-review-top">
-							<div class="b-review-img-cont">
-								<div class="b-review-img" style="background-image: url('i/review-3.jpg')"></div>
-							</div>
-							<div class="b-review-name">
-								<h3>Анна Виноградова</h3>
-								<div class="b-review-date">24 февраля 2019</div>
-								<div class="b-review-tour">Тур на Пхукет</div>
-							</div>
-						</div>
-						<p>Спасибо за организованный вами отдых! Все было незабываемо... и отель очень понравился, особенно в Рояле, где мы жили красиво, чисто и вкусно, а персонал очень приветливый и доброжелательный.</p>
-						<a href="#" class="read-more dashed">Читать полностью</a>
-					</div>
-				</div>
-			</div>
-			<div class="center">
-				<a href="#" class="b-btn b-btn-blue one-line">
-					<p class="btn-bold">Оставить отзыв</p>
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="b b-mailing">
-		<div class="b-block">
-			<div class="b-mailing-cont">
-				<div class="b-head-gradient"></div>
-				<div class="gradient-after">
-					<h2>Подпишитесь на нашу рассылку!</h2>
-					<p class="mailing-text">Будьте в курсе о новых акциях, клёвых отелях, горящих турах и лучших предложениях недели!</p>
-					<form class="b-mailing-form" method="post" action="">
-						<input type="text" name="email" placeholder="Ваш e-mail" required>
-						<a href="#" class="b-btn b-btn-orange one-line b-btn-submit ajax">
-							<p class="btn-bold">Подписаться</p>
+				<div class="b-head-content">
+					<h1>Туры из Белгорода<br>по цене туроператора</h1>
+					<p class="b-head-text">Стоимость тура у нас равна стоимости тура у туропреатора. <br>Вы не платите нам за подбор и оформление.</p>
+					<div class="center">
+						<a href="#" class="b-btn b-btn-orange">
+							<p class="btn-bold">Рассчитать стоимость</p>
+							<p class="btn-regular">вашего лучшего тура</p>
 						</a>
-						<div class="b-checkbox">
-							<input id="checkbox-politics-1" type="checkbox" name="politics" checked required>
-							<label for="checkbox-politics-1">
-								<div class="b-checked icon-checked"></div>
-								<p>Заполняя форму вы подтверждаете <a href="#" target="_blank">согласие на обработку персональных данных.</a></p>
-							</label>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
-			<!-- VK Widget -->
-			<div class="b-widget-vk">
-				<div id="vk_groups"></div>
-			</div>
-			<script type="text/javascript">
-				var myWidth = 0;
-				if( typeof( window.innerWidth ) == 'number' ) {
-		            myWidth = window.innerWidth;
-		        } else if( document.documentElement && ( document.documentElement.clientWidth || 
-		        document.documentElement.clientHeight ) ) {
-		            myWidth = document.documentElement.clientWidth;
-		        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-		            myWidth = document.body.clientWidth;
-		        }
-
-		        if(myWidth > 767){
-		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
-		        }else{
-		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "200", no_cover: 1}, 56008470);
-		        }
-			</script>
+			<div class="b-head-gradient"></div>
+			<div class="b-head-white"></div>
 		</div>
-	</div>
 
-	<div class="b b-articles">
-		<div class="b-block">
-			<h2 class="b-title">Последние статьи</h2>
-			<div class="b-article-list b-article-slider">
-				<a href="#" class="b-article-item">
-					<div class="b-article-top">
-						<div class="b-article-img" style="background-image: url('i/article-1.jpg')"></div>
+		<div class="b-statistics">
+			<div class="b-block clearfix">
+				<div class="b-statistics-list b-statistics-slider mobile-slider">
+					<div class="b-statistics-item statistics-1">
+						<div class="b-statistics-item-top">
+							<img class="anim fadeLeft delay100" data-cont=".b-statistics" src="i/count-country.png">
+							<span class="anim fadeRight delay400" data-cont=".b-statistics">стран</span>
+						</div>
+						<p class="anim fadeDown delay700" data-cont=".b-statistics">в которых мы бывали сами</p>
+					</div>
+					<div class="b-statistics-item statistics-2">
+						<div class="b-statistics-item-top">
+							<img class="anim fadeLeft delay100" src="i/count-hotel.png">
+							<span class="anim fadeRight delay400">отелей</span>
+						</div>
+						<p class="anim fadeDown delay700">мы посетили и проверили лично</p>
+					</div>
+					<div class="b-statistics-item statistics-3">
+						<div class="b-statistics-item-top">
+							<img class="anim fadeLeft delay100" src="i/count-tourist.png">
+							<span class="anim fadeRight delay400">туристов</span>
+						</div>
+						<p class="anim fadeDown delay700">в год доверяют нам свой отдых</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-popular">
+			<div class="b-block">
+				<h2 class="b-title">Популярные направления</h2>
+				<div class="b-country-list clearfix">
+					
+					<div class="b-country-slider">
+						<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
+							<div class="blackout"></div>
+							<div class="blackout-full"></div>
+							<div class="content">
+								<div class="b-country-cont">
+									<div class="b-country-info">
+										<h3>Экскурсионные туры по Европе</h3>
+										<p>Экскурсионные туры во Францию, Испанию, Италию, Чехию, Швейцарию, Норвегию, Венгрию по доступной цене, никого не оставят равнодушным.</p>
+									</div>
+									<span class="b-btn-tr">Подобрать туры</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
+							<div class="blackout"></div>
+							<div class="blackout-full"></div>
+							<div class="content">
+								<div class="b-country-cont">
+									<div class="b-country-info">
+										<h3>Вы не платите за нашу работу</h3>
+										<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – </p>
+									</div>
+									<span class="b-btn-tr">Подобрать туры</span>
+								</div>
+							</div>
+						</a>
+						<a href="#" class="b-country-item wide" style="background-image: url('i/country-wide.jpg')">
+							<div class="blackout"></div>
+							<div class="blackout-full"></div>
+							<div class="content">
+								<div class="b-country-cont">
+									<div class="b-country-info">
+										<h3>Вся рутина остается за нами</h3>
+										<p>Расслабьтесь и получайте удовольствие. Все документы, подбор отеля, покупка билетов – наша работа. Вам остается только не забыть паспорт.</p>
+									</div>
+									<span class="b-btn-tr">Подобрать туры</span>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
 						<div class="blackout"></div>
-						<h3>Отдых на Сейшелах - хорошие отели для отдыха</h3>
-					</div>
-					<p>Сейшельские острова – сказочные живописные уголки Индийского океана, идеальные для романти-ческого отдыха вдвоем. ... </p>
-				</a>
-				<a href="#" class="b-article-item">
-					<div class="b-article-top">
-						<div class="b-article-img" style="background-image: url('i/article-2.jpg')"></div>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
 						<div class="blackout"></div>
-						<h3>Худшие отели Турции или как испортить себе отдых</h3>
-					</div>
-					<p>Выбирать отель нужно правильно. Заветные цифры 4* или 5* на вывеске отеля не означают, что отдых пройдет хорошо и с приятными впечатлениями. Выбирать ... </p>
-				</a>
-				<a href="#" class="b-article-item">
-					<div class="b-article-top">
-						<div class="b-article-img" style="background-image: url('i/article-3.jpg')"></div>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
 						<div class="blackout"></div>
-						<h3>Города и курорты Чехии</h3>
-					</div>
-					<p>После приобретения тура в Чехию из Белгорода, следует заблаговременно определить какие именно достоприме-чательности, города и курорты …</p>
-				</a>
-				<a href="#" class="b-article-item">
-					<div class="b-article-top">
-						<div class="b-article-img" style="background-image: url('i/article-4.jpg')"></div>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
 						<div class="blackout"></div>
-						<h3>Какой курорт ОАЭ выбрать для отдыха</h3>
-					</div>
-					<p>Выбирая отдых в ОАЭ - это прекрасная возможность познакомиться с историей динамично развивающегося государства, а также получить массу удовольствий и …</p>
-				</a>
-			</div>
-			<div class="center">
-				<a href="#" class="b-btn b-btn-blue one-line">
-					<p class="btn-bold">Все статьи</p>
-				</a>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="b-country-item" style="background-image: url('i/country-1.jpg')">
+						<div class="blackout"></div>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="b-country-item" style="background-image: url('i/country-2.jpg')">
+						<div class="blackout"></div>
+						<div class="blackout-full"></div>
+						<div class="content">
+							<div class="b-country-cont">
+								<div class="b-country-info">
+									<div class="info-left">
+										<p class="visa">Виза по прилете</p>
+										<h3>Китай</h3>
+										<p class="price">Туры от 18 000 руб.</p>
+									</div>
+									<div class="info-right">
+										<div class="air-t"><span class="icon icon-sun"></span><p>+28</p></div>
+										<div class="water-t"><span class="icon icon-wave"></span><p>+19</p></div>
+									</div>
+								</div>
+								<span class="b-btn-tr">Подобрать туры</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="center">
+					<a href="#" class="b-btn b-btn-blue one-line">
+						<p class="btn-bold">Все направления</p>
+					</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="b b-tour-operators">
-		<div class="b-head-gradient"></div>
-		<div class="b-block gradient-after">
-			<h2 class="b-title white">Туры от официальных туроператоров</h2>
-			<div class="b-card flip-card b-card-template">
-				<div class="flip-card-inner">
-					<div class="flip-card-front"></div>
-					<div class="flip-card-back"></div>
-				</div>
-			</div>
-			<div class="b-card-list clearfix">
-	
-			</div>
-			<div class="b-operators-list" style="display: none;">
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-3.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-4.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-5.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/visa-master.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/country-1.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/country-2.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/article-1.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/article-2.jpg')"></div>
-				</div>
-				<div class="b-operators-item">
-					<div class="b-img" style="background-image: url('i/article-3.jpg')"></div>
+		<div class="b b-3">
+			<div class="b-3-back"></div>
+			<div class="b-block">
+				<div class="b-3-content">
+					<div class="b-3-content-top clearfix">
+						<img class="b-3-cloud" src="i/cloud.svg">
+						<img class="b-3-woman" src="i/b-3-woman.png">
+						<div class="b-3-text">
+							<p><b>Я давно мечтаю<br>об отпуске!</b><br>Но где мне взять<br>путевку подешевле?</p>
+						</div>
+					</div>
+					<div class="b-3-content-bottom">
+						<p>Турагентство <b>«Аквамарин»</b> занимается подбором и продажей туров <b>по цене туроператоров</b></p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="b-seo b-text">
-		<div class="b-block">
-			<div class="b-seo-content">
-				<div class="b-seo-two-blocks">
-					<div class="seo-block first">
-						<h2 class="with-icon"><span class="seo-icon seo-icon-coin"></span>Заголовок первого блока</h2>
-						<p>Идейные соображения высшего порядка, а также укрепление и развитие структуры представляет собой интересный эксперимент проверки дальнейших направлений развития. Товарищи! укрепление и развитие структуры влечет за собой процесс внедрения и модернизации новых предложений. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание направлений прогрессивного развития. Товарищи! начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки новых предложений.</p>
+		<div class="b b-4">
+			<div class="b-block">
+				<h2>Что это значит?</h2>
+				<div class="b-4-list b-4-slider mobile-slider clearfix">
+					<div class="b-4-item">
+						<div class="b-4-icon">
+							<div id="coin-parallax" class="coin-parallax">
+								<div data-depth="0.6" class="coin-1">
+									<img src="i/coin-1.svg">
+								</div>
+								<div data-depth="-0.4" class="coin-2">
+									<img src="i/coin-2.svg">
+								</div>
+								<img class="main-img" src="i/svg-icon-1.svg">
+							</div>
+						</div>
+						<h3>1. Вы не платите за нашу работу</h3>
+						<p>Стоимость тура у нас равна стоимости тура у туроператора. Вы не платите нам за подбор и оформление тура – <b>за вас это делает туроператор.</b></p>
 					</div>
-					<div class="seo-block second">
-						<h2 class="with-icon"><span class="seo-icon seo-icon-gift"></span>Заголовок второго блока с иконкой</h2>
-						<p>Равным образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.<br><br>Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют определения и уточнения форм развития.</p>
-					</div>
-				</div>
-				<div class="b-seo-separator"></div>
-				<div class="seo-block center">
-					<h2>Заголовок третьего блока без иконки</h2>
-					<p>Товарищи! укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Товарищи! укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. </p>
-				</div>
-			</div>
-		</div>
-	</div>
+					<div class="b-4-item">
 
-	<div class="b b-footer">
-		<div class="b-block">
-			<div class="b-footer-top clearfix">
-				<div class="b-footer-item column-1">
-					<a href="/" class="b-footer-logo"></a>
-					<div class="b-social clearfix">
-						<div class="left social-item">
-							<a href="https://vk.com" class="icon-vk" target="_blank">Вконтакте</a>
+						<div class="b-4-icon">
+	<svg width="162px" height="143px" viewBox="0 0 162 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	        <g id="Главная-страница" transform="translate(-875.000000, -3282.000000)">
+	            <g id="customer-problems" transform="translate(320.000000, 3282.000000)">
+	                <g id="Group-27" transform="translate(434.000000, 0.000000)">
+	                    <g id="sun-umbrella" transform="translate(121.000000, 0.000000)">
+	                        <path d="M81,120.917308 L108.961163,50.6127904 C110.13114,47.671028 113.459377,46.2365 116.394888,47.408969 C119.330398,48.581438 120.761877,51.9167631 119.5919,54.8585255 L92.8887228,122 L81,120.917308 Z" id="Path" fill="#90A4AE"></path>
+	                        <path d="M91.9957368,60.0099218 C91.9985789,60.0033073 92.0014211,59.9966927 92.0042632,59.9900782 C92.0014211,59.9903932 91.9985789,59.9910231 91.9960526,59.9913381 L91.9957368,60.0099218 Z" id="Path" fill="#FFF9C5"></path>
+	                        <path d="M115.46579,48.4049223 C112.587909,47.2441698 109.325012,48.6640496 108.178003,51.5767278 L101,69.8023259 C102.828905,70.098069 104.647914,70.6031794 106.438781,71.325794 C108.229648,72.0480956 109.900217,72.9472172 111.424201,74 L118.60004,55.7803481 C119.746739,52.8673569 118.343672,49.5656748 115.46579,48.4049223 Z" id="Path" fill="#000000" opacity="0.1"></path>
+	                        <path d="M126.60632,23 L105.442245,25.2634971 L92,40.8409794 L92.002215,60.6085604 L92.0117079,60.6047821 C92.0107586,60.6069861 92.0098093,60.6095049 92.0085436,60.6117089 C97.8789451,59.5270313 104.415114,60.0959754 110.741807,62.6050599 C117.028314,65.0980868 122.138968,69.1238309 125.648488,73.8885411 L125.709875,74 L136.766558,63.1072546 L138,35.9263979 L126.60632,23 Z" id="Path" fill="#FFF9C5"></path>
+	                        <path d="M146,133.020775 C138.331499,120.911397 112.359415,112 81.4995274,112 C50.6405853,112 24.669446,120.910774 17,133.01953 L21.308412,133.020775 L30.658375,138.944277 L40.489746,140 L47.4184917,136.045396 L58.4165207,132.082701 L64.3184939,133.665974 L76.8744825,140 L85.1560854,138.680346 L95.8418924,134.741616 L103.589158,132.346631 L113.473458,134.741616 L121.487892,140 L134.31105,138.416727 L146,133.020775 Z" id="Path" fill="#FFCA28"></path>
+	                        <path d="M135.191344,138 L146,133.019787 C138.317632,120.911289 112.298583,112 81.382893,112 C74.2746514,112 67.4268023,112.472127 61,113.34449 C92.8916099,116.950958 119.56527,125.994829 135.191344,138 Z" id="Path" fill="#000000" opacity="0.1"></path>
+	                        <path d="M160.957268,134.975145 C153.36746,129.674952 143.558739,129.674952 135.968931,134.975145 C129.999448,139.14369 122.285316,139.14369 116.315201,134.975145 C108.725394,129.674952 98.9166726,129.674952 91.326865,134.975145 C85.3573817,139.14369 77.6429338,139.14369 71.673135,134.975145 C64.0833274,129.674952 54.2746063,129.674952 46.6847987,134.975145 C40.7149999,139.14369 33.0008675,139.14369 27.0310688,134.975145 C19.4412612,129.674952 9.63254005,129.674952 2.04273245,134.975145 C0.956626028,135.733475 0.673266479,137.255011 1.40974887,138.373337 C2.14623126,139.491664 3.62424476,139.783105 4.71003564,139.025099 C10.6795189,134.856554 18.3939668,134.856229 24.3637656,139.025099 C31.9538887,144.324967 41.7626098,144.324967 49.3521019,139.025099 C55.3215851,134.856554 63.0360331,134.856229 69.0058318,139.025099 C76.595955,144.324967 86.4046761,144.324967 93.9941682,139.025099 C99.9636514,134.856554 107.678099,134.856229 113.647898,139.025099 C117.44296,141.675033 121.79275,143 126.142224,143 C130.491698,143 134.841488,141.675033 138.636234,139.025099 C144.605718,134.856554 152.320166,134.856554 158.289964,139.025099 C159.376386,139.783755 160.853769,139.491664 161.590251,138.373337 C162.326734,137.255336 162.043374,135.7338 160.957268,134.975145 Z" id="Path" fill="#1EB8E8"></path>
+	                        <g id="Group" transform="translate(58.000000, 19.000000)" fill="#EF495B">
+	                            <path d="M33.950795,41.1788571 C30.4352795,36.397235 25.2921988,32.3557788 18.9590124,29.8585806 C12.6226584,27.360129 6.07565217,26.7945069 0.197347826,27.8759263 C0.197347826,27.8759263 28.721236,-11.9717604 68.5924658,3.74846083 C68.5924658,3.74846083 47.6834161,9.28090323 33.9488944,41.2020461 L33.950795,41.1788571 Z" id="Path"></path>
+	                            <path d="M67.7093106,54.4889954 C73.5860311,53.4100829 80.129236,53.9763318 86.4627391,56.47353 C92.7990932,58.9719816 97.9447081,63.0159447 101.459273,67.8010138 C101.459273,67.8010138 108.463062,19.4683687 68.5918323,3.7478341 C68.5918323,3.7478341 79.9217516,21.9912627 67.6950559,54.5065438 L67.7093106,54.4889954 Z" id="Path"></path>
+	                        </g>
+	                        <g id="Group-sun">
+	                            <path d="M26.9045581,9.73654335 C25.5988256,9.73654335 24.5404884,8.68401156 24.5404884,7.38613873 L24.5404884,2.65786127 C24.5404884,1.3596763 25.5991395,0.307456647 26.9045581,0.307456647 C28.2099767,0.307456647 29.2686279,1.35998844 29.2686279,2.65786127 L29.2686279,7.38613873 C29.2686279,8.6843237 28.2099767,9.73654335 26.9045581,9.73654335 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M40.8940116,15.498 C40.2890233,15.498 39.6840349,15.268578 39.2225233,14.809422 C38.299186,13.891422 38.299186,12.4031445 39.2225233,11.4851445 L42.5852791,8.14182659 C43.5086163,7.22382659 45.0055465,7.22382659 45.9285698,8.14182659 C46.851907,9.05982659 46.851907,10.548104 45.9285698,11.466104 L42.565814,14.809422 C42.1039884,15.268578 41.499,15.498 40.8940116,15.498 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M51.4444186,29.4069017 L46.6889651,29.4069017 C45.3832326,29.4069017 44.3248953,28.3543699 44.3248953,27.0564971 C44.3248953,25.7586243 45.3835465,24.7060925 46.6889651,24.7060925 L51.4444186,24.7060925 C52.7501512,24.7060925 53.8084884,25.7586243 53.8084884,27.0564971 C53.8084884,28.3543699 52.7501512,29.4069017 51.4444186,29.4069017 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M44.2567674,46.6591214 C43.6517791,46.6591214 43.0464767,46.4296994 42.5852791,45.9705434 L39.2225233,42.6272254 C38.299186,41.7092254 38.299186,40.220948 39.2225233,39.302948 C40.1458605,38.384948 41.6427907,38.384948 42.565814,39.302948 L45.9285698,42.6462659 C46.851907,43.5642659 46.851907,45.0525434 45.9285698,45.9705434 C45.4667442,46.4293873 44.8620698,46.6591214 44.2567674,46.6591214 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M26.9045581,53.8049133 C25.5988256,53.8049133 24.5404884,52.7523815 24.5404884,51.4545087 L24.5404884,46.7262312 C24.5404884,45.4280462 25.5991395,44.3758266 26.9045581,44.3758266 C28.2099767,44.3758266 29.2686279,45.4283584 29.2686279,46.7262312 L29.2686279,51.4545087 C29.2686279,52.7530058 28.2099767,53.8049133 26.9045581,53.8049133 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M9.55172093,46.6591214 C8.94673256,46.6591214 8.34174419,46.4296994 7.88023256,45.9705434 C6.95689535,45.0525434 6.95689535,43.5642659 7.88023256,42.6462659 L11.2426744,39.302948 C12.1660116,38.384948 13.6629419,38.384948 14.5859651,39.302948 C15.5093023,40.220948 15.5093023,41.7092254 14.5859651,42.6272254 L11.2235233,45.9705434 C10.7620116,46.4293873 10.1570233,46.6591214 9.55172093,46.6591214 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M7.11983721,29.4069017 L2.36406977,29.4069017 C1.05833721,29.4069017 0,28.3543699 0,27.0564971 C0,25.7586243 1.05865116,24.7060925 2.36406977,24.7060925 L7.11983721,24.7060925 C8.42556977,24.7060925 9.48390698,25.7586243 9.48390698,27.0564971 C9.48390698,28.3543699 8.42556977,29.4069017 7.11983721,29.4069017 Z" id="Path" fill="#FF9800"></path>
+	                            <path d="M12.9144767,15.498 C12.3094884,15.498 11.7045,15.268578 11.2429884,14.809422 L7.88023256,11.4664162 C6.95689535,10.5484162 6.95689535,9.06013873 7.88023256,8.14213873 C8.80356977,7.22413873 10.3005,7.22413873 11.2235233,8.14213873 L14.5859651,11.4854566 C15.5093023,12.4034566 15.5093023,13.8917341 14.5859651,14.8097341 C14.1247674,15.268578 13.5194651,15.498 12.9144767,15.498 Z" id="Path" fill="#FF9800"></path>
+	                            <circle id="Oval" fill="#FFCA28" cx="27" cy="27" r="13"></circle>
+	                            <animateTransform attributeName="transform"
+						        	type="rotate"
+						            from="0 27 27"
+						            to="360 27 27"
+						            begin="0s"
+						            dur="6s"
+						            repeatCount="indefinite"
+						        />
+	                        </g>
+	                    </g>
+	                </g>
+	            </g>
+	        </g>
+	    </g>
+	</svg>
 						</div>
-						<div class="left social-item">
-							<a href="https://www.instagram.com" class="icon-instagram" target="_blank">Facebook</a>
+
+						<h3>2. Вся рутина остается за нами</h3>
+						<p><b>Расслабьтесь и получайте удовольствие.</b> Все документы, подбор отеля, покупка билетов – наша работа. Вам остается только не забыть паспорт.</p>
+					</div>
+					<div class="b-4-item">
+						<div class="b-4-icon">
+							<img src="i/svg-icon-3.svg">
 						</div>
-						<div class="left social-item">
-							<a href="https://facebook.com" class="icon-facebook" target="_blank">Twitter</a>
-						</div>
-						<div class="left social-item">
-							<a href="https://t.me" class="icon-telegram" target="_blank">Telegram</a>
-						</div>
+						<h3>3. В сети 24 часа 7 дней в неделю</h3>
+						<p>Кроме того, что все будет тщательно спланировано, мы всегда на связи. Так что все возникшие хлопоты <b>будут только нашими хлопотами.</b></p>
 					</div>
 				</div>
-				<div class="b-footer-item column-2">
-					<h2>Туры</h2>
-					<ul>
-						<li><a href="#">Визы</a></li>
-						<li><a href="#">Морские круизы</a></li>
-						<li><a href="#">Экскурсионные туры </a></li>
-						<li><a href="#">Автобусные туры </a></li>
-						<li><a href="#">Поиск тура</a></li>
-					</ul>
-				</div>
-				<div class="b-footer-item column-3">
-					<h2>О компании</h2>
-					<ul>
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Клубная карта</a></li>
-						<li><a href="#">Подарочный сертификат</a></li>
-						<li><a href="#">Рассрочка 0% </a></li>
-						<li><a href="#">Акции и скидки!</a></li>
-					</ul>
-				</div>
-				<div class="b-footer-item b-footer-contacts">
-					<div class="b-footer-phone">
-						<a href="tel:+74722400200">+7 (4722) 400-200</a><br>
-						<a href="tel:+79611710990">+7-961-171-09-90</a>	
-					</div>
-					<p>Белгород, Богдана&nbsp;Хмельницкого, 137Т, ТЦ&nbsp;"МегаГринн", 2А&nbsp;этаж </p>
-					<p><b>Время работы:</b><br>Ежедневно с&nbsp;10:00&nbsp;до&nbsp;22:00</p>
-				</div>
-			</div>
-			<div class="b-footer-bottom">
-				<div class="b-footer-bottom-left">
-					<div class="b-copyright">© 2008-2019 Аквамарин. Все права защищены</div>
-					<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
-				</div>
-				<div class="visa-master"></div>
-				<div class="b-redder">Разработка стайта:<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a></div>
 			</div>
 		</div>
+
+		<div class="b b-5">
+			<div class="b-block">
+				<div class="b-5-text">
+					<h2>Доверьте нам ваш лучший отдых!</h2>
+					<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане.</p>
+					<a href="#" class="b-btn b-btn-orange">
+						<p class="btn-bold">Подберите мне тур</p>
+						<p class="btn-regular">Хочу довериться профессионалам</p>
+					</a>
+				</div>
+				<div class="b-5-manager">
+					<div class="b-5-name">
+						<p><b>Анастасия Волочкова</b></p>
+						<small>Менеджер по туризму «Аквамарин»</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-tourvisor">
+			<div class="b-head-gradient"></div>
+			<div class="b-block gradient-after">
+				<h2 class="b-title white">Или подберите тур самостоятельно</h2>
+				<div class="tv-search-form tv-moduleid-189840"></div>
+				<div class="center">
+					<a href="#" class="b-btn b-btn-orange one-line">
+						<p class="btn-bold">Найти туры</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-reviews">
+			<div class="b-block">
+				<h2 class="b-title">Отзывы туристов, которые доверились нам</h2>
+				<div class="b-review-list b-review-slider mobile-slider">
+					<div class="b-review-item">
+						<div class="b-review-cont">
+							<div class="b-review-top">
+								<div class="b-review-img-cont">
+									<div class="b-review-img" style="background-image: url('i/review-1.jpg')"></div>
+								</div>
+								<div class="b-review-name">
+									<h3>Верноника Павлова</h3>
+									<div class="b-review-date">24 февраля 2019</div>
+									<div class="b-review-tour">Тур на Пхукет</div>
+								</div>
+							</div>
+							<p>Хотелось бы выразить огромную благодарность ЦТ "Аквамарин" за незабываемый отдых в Тайланде! Уже не первый раз прибегаем к услугам данного турагенства и каждый раз остаемся довольны! Отдельную благодарность хотелось бы выразить менеджеру Александре!</p>
+							<a href="#" class="read-more dashed">Читать полностью</a>
+						</div>
+					</div>
+					<div class="b-review-item">
+						<div class="b-review-cont">
+							<div class="b-review-top">
+								<div class="b-review-img-cont">
+									<div class="b-review-img" style="background-image: url('i/review-2.jpg')"></div>
+								</div>
+								<div class="b-review-name">
+									<h3>Сергей Михайлов</h3>
+									<div class="b-review-date">24 февраля 2019</div>
+									<div class="b-review-tour">Тур на Пхукет</div>
+								</div>
+							</div>
+							<p>Спасибо огромное девушкам с турагенства Аквамарин, в короткий срок подобрали нам недорогой тур в Тайланд, отель отличный, завтраки достойные, можно сказать как в ресторане. Получили море позитива.</p>
+							<a href="#" class="read-more dashed">Читать полностью</a>
+						</div>
+					</div>
+					<div class="b-review-item">
+						<div class="b-review-cont">
+							<div class="b-review-top">
+								<div class="b-review-img-cont">
+									<div class="b-review-img" style="background-image: url('i/review-3.jpg')"></div>
+								</div>
+								<div class="b-review-name">
+									<h3>Анна Виноградова</h3>
+									<div class="b-review-date">24 февраля 2019</div>
+									<div class="b-review-tour">Тур на Пхукет</div>
+								</div>
+							</div>
+							<p>Спасибо за организованный вами отдых! Все было незабываемо... и отель очень понравился, особенно в Рояле, где мы жили красиво, чисто и вкусно, а персонал очень приветливый и доброжелательный.</p>
+							<a href="#" class="read-more dashed">Читать полностью</a>
+						</div>
+					</div>
+				</div>
+				<div class="center">
+					<a href="#" class="b-btn b-btn-blue one-line">
+						<p class="btn-bold">Оставить отзыв</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-mailing">
+			<div class="b-block">
+				<div class="b-mailing-cont">
+					<div class="b-head-gradient"></div>
+					<div class="gradient-after">
+						<h2>Подпишитесь на нашу рассылку!</h2>
+						<p class="mailing-text">Будьте в курсе о новых акциях, клёвых отелях, горящих турах и лучших предложениях недели!</p>
+						<form class="b-mailing-form" method="post" action="">
+							<input type="text" name="email" placeholder="Ваш e-mail" required>
+							<a href="#" class="b-btn b-btn-orange one-line b-btn-submit ajax">
+								<p class="btn-bold">Подписаться</p>
+							</a>
+							<div class="b-checkbox">
+								<input id="checkbox-politics-1" type="checkbox" name="politics" checked required>
+								<label for="checkbox-politics-1">
+									<div class="b-checked icon-checked"></div>
+									<p>Заполняя форму вы подтверждаете <a href="#" target="_blank">согласие на обработку персональных данных.</a></p>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- VK Widget -->
+				<div class="b-widget-vk">
+					<div id="vk_groups"></div>
+				</div>
+				<script type="text/javascript">
+					var myWidth = 0;
+					if( typeof( window.innerWidth ) == 'number' ) {
+			            myWidth = window.innerWidth;
+			        } else if( document.documentElement && ( document.documentElement.clientWidth || 
+			        document.documentElement.clientHeight ) ) {
+			            myWidth = document.documentElement.clientWidth;
+			        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+			            myWidth = document.body.clientWidth;
+			        }
+
+			        if(myWidth > 767){
+			        	VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
+			        }else{
+			        	VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "200", no_cover: 1}, 56008470);
+			        }
+				</script>
+			</div>
+		</div>
+
+		<div class="b b-articles">
+			<div class="b-block">
+				<h2 class="b-title">Последние статьи</h2>
+				<div class="b-article-list b-article-slider mobile-slider">
+					<a href="#" class="b-article-item">
+						<div class="b-article-top">
+							<div class="b-article-img" style="background-image: url('i/article-1.jpg')"></div>
+							<div class="blackout"></div>
+							<h3>Отдых на Сейшелах - хорошие отели для отдыха</h3>
+						</div>
+						<p>Сейшельские острова – сказочные живописные уголки Индийского океана, идеальные для романти-ческого отдыха вдвоем. ... </p>
+					</a>
+					<a href="#" class="b-article-item">
+						<div class="b-article-top">
+							<div class="b-article-img" style="background-image: url('i/article-2.jpg')"></div>
+							<div class="blackout"></div>
+							<h3>Худшие отели Турции или как испортить себе отдых</h3>
+						</div>
+						<p>Выбирать отель нужно правильно. Заветные цифры 4* или 5* на вывеске отеля не означают, что отдых пройдет хорошо и с приятными впечатлениями. Выбирать ... </p>
+					</a>
+					<a href="#" class="b-article-item">
+						<div class="b-article-top">
+							<div class="b-article-img" style="background-image: url('i/article-3.jpg')"></div>
+							<div class="blackout"></div>
+							<h3>Города и курорты Чехии</h3>
+						</div>
+						<p>После приобретения тура в Чехию из Белгорода, следует заблаговременно определить какие именно достоприме-чательности, города и курорты …</p>
+					</a>
+					<a href="#" class="b-article-item">
+						<div class="b-article-top">
+							<div class="b-article-img" style="background-image: url('i/article-4.jpg')"></div>
+							<div class="blackout"></div>
+							<h3>Какой курорт ОАЭ выбрать для отдыха</h3>
+						</div>
+						<p>Выбирая отдых в ОАЭ - это прекрасная возможность познакомиться с историей динамично развивающегося государства, а также получить массу удовольствий и …</p>
+					</a>
+				</div>
+				<div class="center">
+					<a href="#" class="b-btn b-btn-blue one-line">
+						<p class="btn-bold">Все статьи</p>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-tour-operators">
+			<div class="b-head-gradient"></div>
+			<div class="b-block gradient-after">
+				<h2 class="b-title white">Туры от официальных туроператоров</h2>
+				<div class="b-card flip-card b-card-template">
+					<div class="flip-card-inner">
+						<div class="flip-card-front"></div>
+						<div class="flip-card-back"></div>
+					</div>
+				</div>
+				<div class="b-card-list clearfix">
+		
+				</div>
+				<div class="b-operators-list" style="display: none;">
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-1.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-2.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-3.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-4.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-5.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/operator-6.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/visa-master.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/country-1.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/country-2.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/article-1.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/article-2.jpg')"></div>
+					</div>
+					<div class="b-operators-item">
+						<div class="b-img" style="background-image: url('i/article-3.jpg')"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="b-seo b-text">
+			<div class="b-block">
+				<div class="b-seo-content">
+					<div class="b-seo-two-blocks">
+						<div class="seo-block first">
+							<h2 class="with-icon"><span class="seo-icon seo-icon-coin"></span>Заголовок первого блока</h2>
+							<p>Идейные соображения высшего порядка, а также укрепление и развитие структуры представляет собой интересный эксперимент проверки дальнейших направлений развития. Товарищи! укрепление и развитие структуры влечет за собой процесс внедрения и модернизации новых предложений. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание направлений прогрессивного развития. Товарищи! начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки новых предложений.</p>
+						</div>
+						<div class="seo-block second">
+							<h2 class="with-icon"><span class="seo-icon seo-icon-gift"></span>Заголовок второго блока с иконкой</h2>
+							<p>Равным образом рамки и место обучения кадров требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.<br><br>Значимость этих проблем настолько очевидна, что укрепление и развитие структуры требуют определения и уточнения форм развития.</p>
+						</div>
+					</div>
+					<div class="b-seo-separator"></div>
+					<div class="seo-block center">
+						<h2>Заголовок третьего блока без иконки</h2>
+						<p>Товарищи! укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Товарищи! укрепление и развитие структуры требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="b b-footer">
+			<div class="b-block">
+				<div class="b-footer-top clearfix">
+					<div class="b-footer-item column-1">
+						<a href="/" class="b-footer-logo"></a>
+						<div class="b-social clearfix">
+							<div class="left social-item">
+								<a href="https://vk.com" class="icon-vk" target="_blank">Вконтакте</a>
+							</div>
+							<div class="left social-item">
+								<a href="https://www.instagram.com" class="icon-instagram" target="_blank">Facebook</a>
+							</div>
+							<div class="left social-item">
+								<a href="https://facebook.com" class="icon-facebook" target="_blank">Twitter</a>
+							</div>
+							<div class="left social-item">
+								<a href="https://t.me" class="icon-telegram" target="_blank">Telegram</a>
+							</div>
+						</div>
+					</div>
+					<div class="b-footer-item column-2">
+						<h2>Туры</h2>
+						<ul>
+							<li><a href="#">Визы</a></li>
+							<li><a href="#">Морские круизы</a></li>
+							<li><a href="#">Экскурсионные туры </a></li>
+							<li><a href="#">Автобусные туры </a></li>
+							<li><a href="#">Поиск тура</a></li>
+						</ul>
+					</div>
+					<div class="b-footer-item column-3">
+						<h2>О компании</h2>
+						<ul>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Клубная карта</a></li>
+							<li><a href="#">Подарочный сертификат</a></li>
+							<li><a href="#">Рассрочка 0% </a></li>
+							<li><a href="#">Акции и скидки!</a></li>
+						</ul>
+					</div>
+					<div class="b-footer-item b-footer-contacts">
+						<div class="b-footer-phone">
+							<a href="tel:+74722400200">+7 (4722) 400-200</a><br>
+							<a href="tel:+79611710990">+7-961-171-09-90</a>	
+						</div>
+						<p>Белгород, Богдана&nbsp;Хмельницкого, 137Т, ТЦ&nbsp;"МегаГринн", 2А&nbsp;этаж </p>
+						<p><b>Время работы:</b><br>Ежедневно с&nbsp;10:00&nbsp;до&nbsp;22:00</p>
+					</div>
+				</div>
+				<div class="b-footer-bottom">
+					<div class="b-footer-bottom-left">
+						<div class="b-copyright">© 2008-2019 Аквамарин. Все права защищены</div>
+						<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
+					</div>
+					<div class="visa-master"></div>
+					<div class="b-redder">Разработка стайта:<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="b-menu-overlay" id="b-menu-overlay" style="display: none;"></div>
 	</div>
-	
 	
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
@@ -738,6 +748,7 @@
 	<script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="js/slideout.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

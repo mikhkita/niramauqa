@@ -23,7 +23,12 @@
 	<script src="https://vk.com/js/api/openapi.js?160" type="text/javascript"></script>
 </head>
 <body>
-	
+
+<div id="panel-menu" class="panel-menu slideout-menu">
+	<h2>Меню</h2>
+</div>
+
+<div id="panel-page" class="slideout-panel">
 	<div class="b-menu clearfix">
 		<div class="b-block">
 			<a href="/" class="b-menu-logo"></a>
@@ -46,6 +51,10 @@
 				<div class="b-head-feedback">
 					<a href="tel:+74722400200" class="b-head-phone">+7 (4722) 400-200</a><br>
 					<a href="#" class="dashed">Заказать звонок</a>
+				</div>
+				<div class="b-menu-mobile">
+					<span class="b-menu-button icon-menu"></span>
+					<p>Меню</p>
 				</div>
 			</div>
 			<div class="b-head-content">
@@ -612,7 +621,8 @@
 			</div>
 		</div>
 	</div>
-	
+	<div class="b-menu-overlay" id="b-menu-overlay" style="display: none;"></div>
+</div>		
 	
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
@@ -715,6 +725,7 @@
 	<script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="js/slideout.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

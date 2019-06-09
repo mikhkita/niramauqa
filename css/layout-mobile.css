@@ -33,6 +33,24 @@ h2.b-title{
 		.b-head-text br{
 			display: none;
 		}
+	.b-logo {
+	    width: 155px;
+	    height: 106px;
+	    background-size: 155px;
+	    margin-right: 26px;
+	}
+	.b-menu-mobile {
+	    margin-top: 40px;
+	    display: block;
+	}
+		.b-menu-button{
+			margin-right: 10px;
+	    	line-height: 27px;
+	    	display: inline-block;
+		}
+		.b-head-feedback {
+		    padding-top: 36px;
+		}
 .b-statistics-item{
 	text-align: center;
 }
