@@ -1,3 +1,5 @@
+var clickToggle = false;
+
 $(document).ready(function(){
 
     var isDesktop = false,
@@ -612,6 +614,316 @@ $(document).ready(function(){
         return false;
     });
 
+    function bindSearchForm(){
+        // Клик по полю с выбором города
+        $(".TVlocation, .TVDepFilter .TVTextBox").on("click", function(){
+            if( !clickToggle ){
+                $("a[href='#b-filter-city']").click();
+                renderCities();
+                clickToggleTrue();
+            }
+        });
+
+        // Клик по полю с выбором страны
+        $(".TVCountry").on("click", function(){
+            if( !clickToggle ){
+                $("a[href='#b-filter-country']").click();
+                renderCountries();
+                clickToggleTrue();
+            }
+        });
+        
+        // Клик по полю с выбором дат вылета
+        $(".TVDates").on("click", function(){
+            if( !clickToggle ){
+                if( !$(".b-for-datepicker .tv_content").length ){
+                    $(".b-for-datepicker").html($(".TVDataPicker .tv_content"));
+                }
+                $("a[href='#b-filter-dates']").click();
+
+                setTimeout(function(){
+                    $(".tv_dtp_left_button").click();
+                    $(".tv_dtp_right_button").click();
+                },200);
+                renderDates();
+                bindDates();
+                clickToggleTrue();
+            }
+        });
+
+        // Клик по полю с выбором количества дней
+        $(".TVNights").on("click", function(){
+            if( !clickToggle ){
+                $("a[href='#b-filter-nights']").click();
+                renderNights();
+                bindNights();
+                clickToggleTrue();
+            }
+        });
+
+        // Клик по полю с выбором количества человек
+        $(".TVTourists").on("click", function(){
+            if( !clickToggle ){
+                $("a[href='#b-filter-tourists']").click();
+                renderTourists();
+                bindTourists();
+                clickToggleTrue();
+            }
+        });
+
+        bindMoreFilters();
+    }
+
+    function renderCities(){
+        $(".b-popup-city-list").html("");
+
+        $(".TVLocationPanel .TVTableListBox .TVListBoxItem").each(function(){
+            var col = $(this).parents(".TVCol").index(),
+                row = $(this).parents(".TVTableBoxItem").index(),
+                item = $(this).index(),
+                className = ($(this).hasClass("TVDisabled"))?"class='disabled'":"",
+                clickEvent = ($(this).hasClass("TVDisabled"))?("onclick='return false;'"):("onclick='chooseCity(\""+col+"\", \""+row+"\", \""+item+"\"); return false;'");
+
+            $(".b-popup-city-list").append("<li><a href='#' "+className+" "+clickEvent+">"+$(this).text()+"</a></li>");
+        });
+    }
+
+    function renderCountries(){
+        $(".b-popup-country-list").html("");
+
+        $(".TVChooseCountry .TVOtherCountries .TVListBoxItem, .TVChooseCountry .TVSimpleCountry .TVListBoxItem").each(function(){
+            var col = $(this).parents(".TVListBox").index() - ( ($(this).parents(".TVSimpleCountry").length)?1:0 ),
+                item = $(this).index();
+            $(".b-popup-country-list").append("<li><a href='#' onclick='chooseCountry(\""+col+"\", \""+item+"\"); return false;'>"+$(this).text()+"</a></li>");
+        });
+    }
+
+    function renderHotels(){
+        if( !$(".b-for-hotels .TVHotel").length ){
+            $(".b-for-hotels").html($(".TVSearch .TVHotel"));
+        }
+    }
+
+    function renderNights(){
+        // $(".b-nights-table").html($(".tv_dtp_calendar").html());
+        var fromTo = $(".TVNights").text().split(" - ");
+        renderNightsRange(fromTo[0], fromTo[1]);
+    }
+
+    function renderTourists(){
+        if( !$(".b-tourists-popup .tv_content").length ){
+            $(".b-tourists-popup").append($(".TVTouristDrop .tv_content"));
+            //добавить свои селекты
+            $(".TVChildAge").each(function(){
+                var $select = $(".b-select-age #child-"+($(this).index()+1));
+                $(this).append($select);
+            });
+        }
+    }
+
+    function renderNightsRange(from, to){
+        $(".b-nights-table td").removeClass("active").removeClass("selected");
+        $(".b-nights-popup .b-from-to .b-from, .b-nights-popup .b-from-to .b-to").text("");
+        if( typeof to != "undefined" ){
+            from = from*1;
+            to = to*1;
+
+            to = (to - from > 14)?(from + 14):to;
+
+            to = (from - to > 14)?(from - 14):to;
+
+            if( to < from ){
+                var tmp = from;
+                from = to;
+                to = tmp;
+            }
+
+            $(".b-nights-popup .b-from-to .b-from").text(from);
+            $(".b-nights-popup .b-from-to .b-to").text(to);
+
+            for (var i = from + 1; i < to; i++) {
+                $(".b-nights-table td:contains(#" + i + "#)").addClass("selected");
+            }
+
+            $(".b-nights-table td:contains(#"+from+"#), .b-nights-table td:contains(#"+to+"#)").addClass("active");
+        }else{
+            $(".b-nights-popup .b-from-to .b-from").text(from);
+            $(".b-nights-table td:contains(#"+from+"#)").addClass("active");
+        }
+    }
+
+    function renderDates(){
+        var from = $(".TVDates").text().split(" - ").shift(),
+            to = $(".TVDates").text().split(" - ").pop();
+
+        $(".b-dates-popup .b-from-to .b-from").text(from);
+        $(".b-dates-popup .b-from-to .b-to").text(to);
+    }
+
+    function bindRegions(){
+        $(".b-regions-popup .b-btn").bind("click", function(){
+            $.fancybox.close();
+
+            renderHotels();
+
+            $("a[href='#b-filter-hotels']").click();
+
+            bindHotels();
+
+            return false;
+        });
+    }
+
+    function bindHotels(){
+        $(".b-hotels-popup .b-btn").bind("click", function(){
+            $.fancybox.close();
+
+            return false;
+        });
+    }
+
+    function bindNights(){
+        $(".b-nights-table td, .b-nights-popup .b-btn").unbind("touchend");
+        $(".b-nights-table td").unbind("touchend");
+
+        $(".b-nights-table td").bind("touchend", function(){
+            if( $(".b-nights-table td.active").length == 1 ){
+                var from = $(".b-nights-table td.active").text().replace(/\D+/g,"");
+                renderNightsRange(from, $(this).text().replace(/\D+/g,""));
+            }else{
+                renderNightsRange($(this).text().replace(/\D+/g,""));
+            }
+        });
+
+        $(".b-nights-popup .b-btn").bind("click", function(){
+            $(".b-nights-table td.active").each(function(){
+                $(".tv_drop_panel.TVTable.TVChooseDrop .tv_dtp_calendar tr").eq($(this).parents("tr").index()).find("td").eq($(this).index()).click();
+            });
+
+            $.fancybox.close();
+
+            return false;
+        });
+    }
+
+    function bindTourists(){
+        $("body").on("change", ".TVChildAge .b-select select", function(){
+            $(this).parents(".TVChildAge").find(".TVTextBoxContent").text($(this).val()).attr("title", $(this).val());
+        });
+        $(".b-tourists-popup .TVTheme2Button").bind("click", function(){
+            $.fancybox.close();
+            return false;
+        });
+    }
+
+    function bindDates(){
+        $(".b-dates-popup .b-btn").bind("click", function(){
+            $.fancybox.close();
+            return false;
+        });
+    }
+
+    $("body").on("touchend", ".tv_available_days", function(){
+        setTimeout(renderDates, 100);
+    });
+
+    if( isMobile ){
+        var locint = setInterval(function(){
+            if( $(".tv-search-form.tv-loaded .TVlocation").length ){
+                bindSearchForm();
+                clearInterval(locint);
+            }
+        }, 1000);
+
+    }
+
+    var blockedDetail = false;
+    function bindDetailPopup(){
+        if( !blockedDetail ){
+            blockedDetail = true;
+
+            var hotInterval = setInterval(function(){
+                if( $(".TVOrderHotelName").text() != "" ){
+                    $(".TVOrderHotelName").html($(".TVOrderHotelName").html().replace(/\&nbsp\;/gi, ' '));
+
+                    $(".TVSimpleImageSlider").after($(".TVCatHotelReviewBlock"));
+                    $(".TVCatHotelReviewBlock").after($(".TVCatHotelTypeBlock"));
+
+                    if( !$(".b-info-btn-cont").length ){
+                        $(".TVOrderContinue").after("<div class='b-info-btn-cont'><a href='#' class='b-info-btn'>Вернуться к описанию отеля</a></div>");
+                    }else{
+                        $(".b-info-btn-cont").hide();
+                    }
+
+                    $(".TVSimpleImageSlider").touch();
+
+                    $(".TVSimpleImageSlider").on("swipeLeft", function(){
+                        $(".TVSNavRight").click();
+                    });
+                    $(".TVSimpleImageSlider").on("swipeRight", function(){
+                        $(".TVSNavLeft").click();
+                    });
+                    $(".TVContractLink").replaceWith("<a href='/politics/' class='TVContractLink' target='_blank'></a>");
+                    clearInterval(hotInterval);
+                }
+            }, 10);
+
+            $("a[href='#b-detail-popup']").click();
+
+            setTimeout(function(){
+                blockedDetail = false;
+            },50);
+        }
+    }
+
+    if( isMobile ){
+        var blocked3 = false,
+            blockedTimeout3;
+
+        $("body").on("click", ".TVHotButton", function(){
+            blocked3 = true;
+
+            clearTimeout(blockedTimeout3);
+            blockedTimeout3 = setTimeout(function(){
+                blocked3 = false;
+            },50);
+        });
+
+        if( $(".b-content .tv-hot-tours").length ){
+            setInterval(function(){
+                if( $(".TVHotItem:not(.binded)").length ){
+                    $(".TVHotItem:not(.binded)").on("click", function(e){
+                        var $this = $(this);
+                        setTimeout(function(){
+                            if( !blocked3 ){
+                                $this.find(".TVHotButton").click();
+
+                                bindDetailPopup();
+                            }
+                        }, 10);
+                    }).addClass("binded");
+                }
+            },300);
+        }
+
+        $("body").on("click", "div.TVTem2PriceContainer table tr, .TVTem2Name", function(e){
+            bindDetailPopup();
+        });
+
+        var detailInterval = setInterval(function(){
+            if( $(".TVModalContainer .TVOrderWindow").length ){
+                $("#b-detail-popup .b-for-detail").html($(".TVModalContainer .TVOrderWindow"));
+                clearInterval(detailInterval);
+            }
+        },100);
+
+        $("body").on("click", ".b-info-btn", function(){
+            $(".TVCatNavDesc").click();
+
+            $(".b-info-btn-cont").hide();
+        });
+    }
+
     // // Первая анимация элементов в слайде
     // $(".b-step-slide[data-slick-index='0'] .slider-anim").addClass("show");
 
@@ -647,3 +959,112 @@ $(document).ready(function(){
 	// });
 
 });
+
+function chooseCity(col, row, item){
+    $(".TVLocationPanel .TVTableListBox .TVCol").eq(col).find(".TVTableBoxItem").eq(row).find(".TVListBoxItem").eq(item).click();
+    $.fancybox.close();
+}
+function chooseCountry(col, item){
+    $(".TVOtherCountries .TVListBox, .TVSimpleCountry .TVListBox").eq(col).find(".TVListBoxItem").eq(item).click();
+    $.fancybox.close();
+}
+function scrollDropPanel(){
+    if( !isMobile ){
+        var rules = {
+            ".TVLocationPanel" : ".TVLocationButton, .TVlocation",
+            ".TVCountryCombo" : ".TVCountry",
+            ".TVDataPicker" : ".TVDates",
+            ".TVChooseDrop" : ".TVNights",
+            ".TVTouristDrop" : ".TVTourists",
+            ".TVSearch.TVTable" : "div.TVMiniForm.TVTheme2 div.TVSmartBox .TVArrow",
+            ".TVSearch .TVDetailPanel" : "div.TVTheme2 .TVSmartBox .TVChoose"
+        }
+        if( $(".tv-search-form.tv-loaded").length ){
+            for( var i in rules ){
+                if( $(i).length && !$(i).hasClass("TVHide") ){
+                    $(rules[i]).click();
+                    $(rules[i]).click();
+                    break;
+                }
+            }
+        }
+    }
+}
+function clickToggleTrue(){
+    clickToggle = true;
+
+    setTimeout(function(){
+        clickToggle = false;
+    }, 50);
+}
+function bindMoreFilters(){
+    $(".TVRating .TVOptionSelector").unbind("click");
+    $(".TVRating .TVOptionSelector").bind("click", function(){
+        if( !clickToggle ){
+            renderRating();
+            $("a[href='#b-filter-rating']").click();
+            clickToggleTrue();
+        }
+    });
+
+    $(".TVMeal .TVOptionSelector").unbind("click");
+    $(".TVMeal .TVOptionSelector").bind("click", function(){
+        if( !clickToggle ){
+            renderMeal();
+            $("a[href='#b-filter-meal']").click();
+            clickToggleTrue();
+        }
+    });
+
+    $(".TVRegionHotel .TVOptionSelector").unbind("click");
+    $(".TVRegionHotel .TVOptionSelector").bind("click", function(){
+        if( !clickToggle ){
+            renderResort();
+            bindResort();
+            $("a[href='#b-filter-resort']").click();
+            clickToggleTrue();
+        }
+    });
+}
+function renderRating(){
+    $(".b-popup-rating-list").html("");
+
+    $(".tv_drop_panel:not(.TVHide) .TVListBoxItem").each(function(){
+        var $this = $(this);
+        $(".b-popup-rating-list").append("<li><a href='#' id='rating-"+$(this).index()+"'>"+$(this).text()+"</a></li>");
+        $("#rating-"+$(this).index()).click(function(){
+            $this.click();
+
+            $.fancybox.close();
+            return false;
+        });
+    });
+}
+
+function renderMeal(){
+    $(".b-popup-meal-list").html("");
+
+    $(".tv_drop_panel:not(.TVHide) .TVListBoxItem").each(function(){
+        var $this = $(this);
+        $(".b-popup-meal-list").append("<li><a href='#' id='meal-"+$(this).index()+"'>"+$(this).text()+"</a></li>");
+        $("#meal-"+$(this).index()).click(function(){
+            $this.click();
+
+            $.fancybox.close();
+            return false;
+        });
+    });
+}
+
+function renderResort(){
+    if( !$(".b-resort-popup .tv_content").length ){
+        $(".b-resort-popup").append($(".TVSearchCmbPanel .tv_content"));
+        
+    }
+}
+function bindResort() {
+    $(".b-resort-popup .TVTheme2Button").bind("click", function(){
+        $.fancybox.close();
+        return false;
+    });
+}

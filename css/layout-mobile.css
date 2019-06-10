@@ -337,3 +337,263 @@ h2.b-title{
 	.b-footer-bottom .visa-master{
 		display: none;
 	}
+
+.fancybox-slide div.b-popup{
+	max-width: calc(100% - 48px);
+	width: 720px;
+}
+.b-choose-list li{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tv_drop_panel{
+	display: none !important;
+}
+.b-tourvisor div.TVMainFilter{
+	white-space: normal;
+}
+.b-tourvisor div.TVMainFilterButton{
+	box-sizing: border-box;
+	padding: 31px 23px 14px;
+	max-height: 100px;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVCountry,
+.b-tourvisor div.TVWideForm.TVTheme2 .TVDates,
+.b-tourvisor div.TVWideForm.TVTheme2 .TVNights,
+.b-tourvisor div.TVWideForm.TVTheme2 .TVTourists{
+    width: 50%;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVDates:after,
+.b-tourvisor div.TVWideForm.TVTheme2 .TVTourists:after{
+	display: none;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVCountry:before,
+.b-tourvisor div.TVWideForm.TVTheme2 .TVDates:before{
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 23px;
+	width: calc(100% - 46px);
+	height: 1px;
+	background-color: #D8D8D8;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVStars{
+	width: calc(50% - 12px);
+	margin-right: 24px;
+	margin-bottom: 16px;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVRegionHotel{
+	width: calc(50% - 12px);
+	margin-bottom: 16px;
+	margin-right: 0;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVMeal{
+    width: calc(50% - 12px);
+    margin-right: 24px;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVRating{
+    width: calc(50% - 12px);
+    margin-right: 0;
+}
+.b-tourvisor div.TVWideForm.TVTheme2 .TVHoteltype{
+	display: none;
+}
+
+div.TVDataPicker{
+
+}
+	div.tv_dtp_header{
+
+	}
+		div.TVNavButton{width: 10%;text-align: center;}
+			div.tv_dtp_left_button{float: none;width: 26px;display: inline-block;vertical-align: top;}
+			div.tv_dtp_right_button{float: none;display: inline-block;vertical-align: top;width: 16px;}
+				div.tv_dtp_left_button:before,
+				div.tv_dtp_right_button:before{
+
+				}
+				div.tv_dtp_left_button:hover:before,
+				div.tv_dtp_right_button:hover:before{
+
+				}
+				div.tv_dtp_left_button:before{
+
+				}
+				div.tv_dtp_right_button:before{
+
+				}
+		div.tv_dtpk_left_separator,
+		div.tv_dtpk_right_separator{
+
+		}
+			div.tv_calendar_header{
+			    font-size: 16px;
+			    width: 80% !important;
+			    color: #434343;
+			    font-family: "Gilroy-Regular";
+			    margin-top: 0px;
+			    margin-bottom: 4px;
+			}
+			div.tv_calendar_header + .tv_dtpk_left_separator + div.tv_calendar_header{
+				display: none;
+			}
+	div.tv_dtp_table{width: 100%;}
+	div.TVDataPicker div.tv_dtp_calendar{
+
+	}
+	div.tv_dtp_calendar{
+		width: 100% !important;
+		margin-bottom: -10px;
+	}
+	div.tv_dtp_table.tv_dtp_margin_left{
+		display: none;
+	}
+		div.tv_dtp_table table{width: 100%;margin-bottom: 16px;}
+
+		td.tv_selected_date.tv_last_date,
+		td.tv_selected_date.tv_last_date:hover,
+		td.tv_selected_date.tv_start_date,
+		td.tv_selected_date.tv_start_date:hover{
+			background-color: rgba(255,145,42,1);
+		}
+
+		td.tv_selected_date.tv_start_date,
+		td.tv_selected_date:hover.tv_start_date{
+			background-color: rgba(255,145,42,1);
+		}
+
+		td.tv_available_days:hover {
+		    background-color: rgba(255,145,42,0.25);
+		}
+
+		td.tv_selected_date,
+		td.tv_selected_date:hover{
+			background-color: rgba(255,145,42,0.25);
+		}
+		div.tv_dtp_footer{margin-bottom: 16px;display: none;}
+		div.tv_dtp_footer:after{
+
+		}
+		div.tv_dtp_footer .tv_hint{
+
+		}
+div.tv_fly_available_price{
+	display: none;
+}
+div.tv_dtp_calendar .TVLabel {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Gilroy-Regular";
+}
+div.tv_calendar_header + .tv_calendar_header {
+    display: none;
+}
+div.tv_dtp_calendar td{
+	font-family: "Gilroy-Regular";
+	vertical-align: middle;
+}
+
+.b-tourists-popup .TVAdults{
+    height: 52px !important;
+}
+.b-tourists-popup .TVChildren{
+	height: 45px !important;
+}
+.b-tourists-popup .TVChildren .TVChildImage1 {
+    margin-left: 11px;
+}
+.b-tourists-popup .TVLabel.TVBoxLabel.TVNoChildren {
+    position: static;
+    right: auto;
+    top: auto;
+    margin-bottom: 4px;
+}
+.b-tourists-popup .TVChildAge {
+    margin-left: 0;
+    margin-right: 9px;
+}
+.b-tourists-popup .TVChildAge .TVTextBox{
+	display: none;
+}
+
+/*==========*/
+
+.b-tourvisor-header div.TVMainFilter{
+	white-space: normal;
+}
+.b-tourvisor-header div.TVMainFilterButton{
+	box-sizing: border-box;
+	padding: 31px 23px 14px;
+	max-height: 100px;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry,
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates{
+	width: 50%;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVNights,
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists{
+    width: calc(100%/3);
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates:after,
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVTourists:after{
+	display: none;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVCountry:before,
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVDates:before{
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 23px;
+	width: calc(100% - 46px);
+	height: 1px;
+	background-color: #D8D8D8;
+}
+.b-tourvisor-header div.TVWideForm.TVTheme2 .TVSearchButton{
+	width: calc(100%/3 - 24px);
+	margin-top: 8px;
+}
+
+/*==========*/
+
+.b-tourvisor-with-filter div.TVMainFilter{
+	white-space: normal;
+}
+.b-tourvisor-with-filter div.TVMainFilterButton{
+	box-sizing: border-box;
+	padding: 31px 23px 14px;
+	max-height: 100px;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVLocationButton,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVDates,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVNights,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVTourists{
+	width: 50%;
+}
+
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry:after,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVNights:after{
+	display: none;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVLocationButton:before,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVCountry:before,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVDates:before,
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVNights:before{
+	content: " ";
+	position: absolute;
+	bottom: 0;
+	left: 23px;
+	width: calc(100% - 46px);
+	height: 1px;
+	background-color: #D8D8D8;
+}
+.b-tourvisor-with-filter div.TVSideFilterForm.TVTheme2 .TVSearchButton{
+	width: calc(100%/2 - 46px);
+    margin-top: 8px;
+    margin-left: 23px;
+}
+
+

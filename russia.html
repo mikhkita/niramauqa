@@ -308,6 +308,7 @@
 							<a href="https://facebook.com" class="icon-facebook" target="_blank">Twitter</a>
 						</div>
 					</div>
+					<div class="visa-master"></div>
 				</div>
 				<div class="b-footer-item column-2">
 					<h2>Туры</h2>
@@ -344,7 +345,10 @@
 					<a href="#" class="b-footer-politics">Политика обработки персональных данных</a>
 				</div>
 				<div class="visa-master"></div>
-				<div class="b-redder">Разработка стайта:<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a></div>
+				<div class="b-redder">
+					<span>Разработка стайта:</span>
+					<a href="http://redder.pro/" class="b-redder-logo" target="_blank"></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -352,6 +356,219 @@
 </div>		
 	
 	<div style="display:none;">
+
+		<!-- <a href="#b-detail-popup" class="fancy"></a>
+		<div class="b-popup b-detail-popup" id="b-detail-popup">
+			<div class="b-for-detail">
+				
+			</div>
+		</div> -->
+
+		<a href="#b-filter-city" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-city-popup" id="b-filter-city">
+			<h3>Город вылета</h3>
+			<ul class="b-choose-list b-popup-city-list">
+				
+			</ul>
+		</div>
+
+		<a href="#b-filter-country" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-country-popup" id="b-filter-country">
+			<h3>Выбор страны</h3>
+			<ul class="b-choose-list b-popup-country-list">
+				
+			</ul>
+		</div>
+
+		<!-- <a href="#b-filter-regions" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-regions-popup" id="b-filter-regions">
+			<h3>Выбор курорта</h3>
+			<div class="b-for-regions">
+				
+			</div>
+			<div class="center">
+				<a href="#" class="b-btn b-btn-orange one-line">
+					<p class="btn-bold">Перейти к выбору отеля</p>
+				</a>
+			</div>
+		</div>
+
+		<a href="#b-filter-hotels" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-hotels-popup" id="b-filter-hotels">
+			<h3>Выбор отеля</h3>
+			<div class="b-for-hotels">
+				
+			</div>
+			<div class="center">
+				<a href="#" class="b-btn b-btn-orange one-line">
+					<p class="btn-bold">Выбрать</p>
+				</a>
+			</div>
+		</div> -->
+
+		<a href="#b-filter-nights" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-nights-popup" id="b-filter-nights">
+			<h3>Количество ночей</h3>
+			<div class="b-from-to">
+				<div class="b-from">10</div>
+				<div class="b-separator">-</div>
+				<div class="b-to">23</div>
+			</div>
+			<table cellpadding="0" cellspacing="0" class="b-nights-table">
+				<tr>
+					<td><span>#</span>1<span>#</span></td>
+					<td><span>#</span>2<span>#</span></td>
+					<td><span>#</span>3<span>#</span></td>
+					<td><span>#</span>4<span>#</span></td>
+					<td><span>#</span>5<span>#</span></td>
+					<td><span>#</span>6<span>#</span></td>
+					<td><span>#</span>7<span>#</span></td>
+				</tr>
+				<tr>
+					<td><span>#</span>8<span>#</span></td>
+					<td><span>#</span>9<span>#</span></td>
+					<td><span>#</span>10<span>#</span></td>
+					<td><span>#</span>11<span>#</span></td>
+					<td><span>#</span>12<span>#</span></td>
+					<td><span>#</span>13<span>#</span></td>
+					<td><span>#</span>14<span>#</span></td>
+				</tr>
+				<tr>
+					<td><span>#</span>15<span>#</span></td>
+					<td><span>#</span>16<span>#</span></td>
+					<td><span>#</span>17<span>#</span></td>
+					<td><span>#</span>18<span>#</span></td>
+					<td><span>#</span>19<span>#</span></td>
+					<td><span>#</span>20<span>#</span></td>
+					<td><span>#</span>21<span>#</span></td>
+				</tr>
+				<tr>
+					<td><span>#</span>22<span>#</span></td>
+					<td><span>#</span>23<span>#</span></td>
+					<td><span>#</span>24<span>#</span></td>
+					<td><span>#</span>25<span>#</span></td>
+					<td><span>#</span>26<span>#</span></td>
+					<td><span>#</span>27<span>#</span></td>
+					<td><span>#</span>28<span>#</span></td>
+				</tr>
+			</table>
+			<div class="center">
+				<a href="#" class="b-btn b-btn-orange one-line">
+					<p class="btn-bold">Применить</p>
+				</a>
+			</div>
+		</div>
+
+		<a href="#b-filter-tourists" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-tourists-popup" id="b-filter-tourists">
+			<h3>Количество человек</h3>
+
+			<div class="b-select-age" style="display: none;">
+				<div class="b-select" id="child-1">
+					<select name="child-1">
+						<option value="< 2 лет">< 2 лет</option>
+						<option value="2 года" selected>2 года</option>
+						<option value="3 года">3 года</option>
+						<option value="4 года">4 года</option>
+						<option value="5 лет">5 лет</option>
+						<option value="6 лет">6 лет</option>
+						<option value="7 лет">7 лет</option>
+						<option value="8 лет">8 лет</option>
+						<option value="9 лет">9 лет</option>
+						<option value="10 лет">10 лет</option>
+						<option value="11 лет">11 лет</option>
+						<option value="12 лет">12 лет</option>
+						<option value="13 лет">13 лет</option>
+						<option value="14 лет">14 лет</option>
+						<option value="15 лет">15 лет</option>
+						<option value="16 лет">16 лет</option>
+					</select>
+				</div>
+				<div class="b-select" id="child-2">
+					<select name="child-2">
+						<option value="< 2 лет">< 2 лет</option>
+						<option value="2 года" selected>2 года</option>
+						<option value="3 года">3 года</option>
+						<option value="4 года">4 года</option>
+						<option value="5 лет">5 лет</option>
+						<option value="6 лет">6 лет</option>
+						<option value="7 лет">7 лет</option>
+						<option value="8 лет">8 лет</option>
+						<option value="9 лет">9 лет</option>
+						<option value="10 лет">10 лет</option>
+						<option value="11 лет">11 лет</option>
+						<option value="12 лет">12 лет</option>
+						<option value="13 лет">13 лет</option>
+						<option value="14 лет">14 лет</option>
+						<option value="15 лет">15 лет</option>
+						<option value="16 лет">16 лет</option>
+					</select>
+				</div>
+				<div class="b-select" id="child-3">
+					<select name="child-3">
+						<option value="< 2 лет">< 2 лет</option>
+						<option value="2 года" selected>2 года</option>
+						<option value="3 года">3 года</option>
+						<option value="4 года">4 года</option>
+						<option value="5 лет">5 лет</option>
+						<option value="6 лет">6 лет</option>
+						<option value="7 лет">7 лет</option>
+						<option value="8 лет">8 лет</option>
+						<option value="9 лет">9 лет</option>
+						<option value="10 лет">10 лет</option>
+						<option value="11 лет">11 лет</option>
+						<option value="12 лет">12 лет</option>
+						<option value="13 лет">13 лет</option>
+						<option value="14 лет">14 лет</option>
+						<option value="15 лет">15 лет</option>
+						<option value="16 лет">16 лет</option>
+					</select>
+				</div>
+			</div>
+			
+		</div>
+
+		<a href="#b-filter-dates" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-dates-popup" id="b-filter-dates">
+			<h3>Даты вылета</h3>
+			<div class="b-from-to">
+				<div class="b-from">20 января</div>
+				<div class="b-separator">-</div>
+				<div class="b-to">31 января</div>
+			</div>
+			<div class="b-for-datepicker">
+				
+			</div>
+			<div class="center">
+				<a href="#" class="b-btn b-btn-orange one-line">
+					<p class="btn-bold">Применить</p>
+				</a>
+			</div>
+			<!-- <div class="b-btn-cont"><a href="#" class="b-btn b-blue-btn b-submit-btn">Применить</a></div> -->
+		</div>
+
+		<a href="#b-filter-rating" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-rating-popup" id="b-filter-rating">
+			<h3>Рейтинг отеля</h3>
+			<ul class="b-choose-list b-popup-rating-list">
+				
+			</ul>
+		</div>
+
+		<a href="#b-filter-meal" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-meal-popup" id="b-filter-meal">
+			<h3>Тип питания</h3>
+			<ul class="b-choose-list b-popup-meal-list">
+				
+			</ul>
+		</div>
+
+		<a href="#b-filter-resort" class="fancy"></a>
+		<div class="b-popup b-filter-popup b-resort-popup" id="b-filter-resort">
+			<h3>Курорт/отель</h3>
+			
+		</div>
+
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
 		<div class="b-popup" id="b-popup-1">
 			<h3>Оставьте заявку</h3>

@@ -68,6 +68,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"],
+div.b-popup .fancybox-close-small:before,
 .b-star:before, .b-star:after,
 .chosen-container-single .chosen-single div:before,
 div.TVTheme2 .TVHotelStar:before,
@@ -2723,6 +2724,129 @@ input{
     background-color: rgba(0, 0, 0, 0.25);
 }
 
+/*=====Попапы=====*/
+
+.fancybox-container {
+	font-family: "Gilroy-Regular";
+    z-index: 999999;
+}
+div.b-popup .fancybox-close-small{
+	right: 16px;
+	top: 16px;
+	width: 40px;
+	height: 40px;
+	color: #D3D3D3;
+}
+	div.b-popup .fancybox-close-small:hover{
+		color: #4A4A4A;
+	}
+	div.b-popup .fancybox-close-small:before{
+		content: "\e914";
+		font-size: 20px;
+	}
+	div.b-popup .fancybox-close-small:after{
+		display: none;
+	}
+	div.b-popup .b-btn {
+	    margin-top: 18px;
+	}
+
+div.b-popup{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 50px 70px;
+}
+	div.b-popup h3 {
+		font-family: "Gilroy-Bold";
+	    font-size: 28px;
+	    color: #282828;
+	    line-height: 32px;
+	    margin-bottom: 16px;
+	}
+.b-city-popup{
+	
+}
+.b-choose-list{
+
+}
+	.b-choose-list li{
+
+	}
+		.b-choose-list a{
+			font-family: "Gilroy-Regular";
+			font-size: 16px;
+			color: #434343;
+			padding: 8px 0px;
+			display: block;
+		}
+		.b-choose-list a.disabled{
+			color: #ccc;
+		}
+/*.tv_drop_panel{
+	display: none;
+}
+*/
+.b-from-to{
+	text-align: center;
+	margin-bottom: 24px;
+	padding-top: 10px;
+}
+.b-dates-popup .b-from-to{
+	margin-bottom: 16px;
+}
+	.b-from-to *{
+		font-size: 24px;
+		font-family: "Gilroy-Bold";
+		display: inline-block;
+	}
+	.b-from{
+
+	}
+	.b-separator{
+
+	}
+	.b-to{
+
+	}
+.b-nights-table{
+	/*border-right: 1px solid #E3E3E3;*/
+	/*border-top: 1px solid #E3E3E3;*/
+	width: 100%;
+}
+	.b-nights-table table{
+
+	}
+	.b-nights-table tr{
+
+	}
+		.b-nights-table td{
+			/*border-left: 1px solid #E3E3E3;*/
+			/*border-bottom: 1px solid #E3E3E3;*/
+			padding: 8px;
+			text-align: center;
+		}
+			.b-nights-table td span{
+				display: none;
+			}
+			.b-nights-table td.selected,
+			.b-nights-table td:active{
+			    background: rgba(0,215,212,0.2);
+			}
+			.b-nights-table td.active{
+			    background-color: #00D4D7;
+			}
+			.b-popup .b-btn-cont{
+				padding-top: 8px;
+			    padding-bottom: 8px;
+			    text-align: center;
+			}
+			.b-hotel-popup .b-btn-cont{
+				padding-top: 0px;
+			}
+				.b-popup .b-btn-cont .b-btn,{
+					color: #FFF;
+				}
+
 @media screen and (min-width: 768px){
 
 	.b-radio-list input[type="radio"] + span + label:hover:before,
@@ -5314,4 +5438,122 @@ div.TVOrderInputBlock .TVPromoInput input,
 div.TVOrderRequestBlock textarea{
 	font-family: "Gilroy-Regular" !important;
 }
+
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date.tv_last_date,
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date.tv_last_date:hover,
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date.tv_start_date,
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date.tv_start_date:hover{
+	background-color: rgba(255,145,42,1);
+}
+
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date.tv_start_date,
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date:hover.tv_start_date{
+	background-color: rgba(255,145,42,1);
+}
+
+div.tv_drop_panel .tv_dtp_calendar .tv_available_days:hover {
+    background-color: rgba(255,145,42,0.25);
+}
+
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date,
+div.tv_drop_panel .tv_dtp_calendar .tv_selected_date:hover{
+	background-color: rgba(255,145,42,0.25);
+}
+
+div.tv_drop_panel.TVDataPicker .tv_dtp_calendar .tv_dtp_header{
+	margin-bottom: 8px;
+}
+div.tv_drop_panel.TVDataPicker .tv_calendar_header {
+    text-transform: none;
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Gilroy-Bold';
+}
+
+div.tv_dtp_left_button{
+	background: transparent;
+	position: relative;
+	margin-top: 5px;
+}
+div.tv_dtp_right_button{
+	background: transparent;
+	position: relative;
+	margin-top: 5px;
+}
+	div.tv_dtp_left_button:before,
+	div.tv_dtp_right_button:before{
+		font-size: 14px;
+		line-height: 24px;
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		position: absolute;
+		color: #4A4A4A;
+		width: 24px;
+		height: 24px;
+		/* background-color: rgba(255,0,0,0.2); */
+		left: 0px;
+		top: 0px;
+	}
+	div.tv_dtp_left_button:hover:before,
+	div.tv_dtp_right_button:hover:before,
+	div.tv_drop_panel.TVDataPicker .tv_dtp_left_button:hover:before,
+	div.tv_drop_panel.TVDataPicker .tv_dtp_right_button:hover:before{
+		color: #FF912A;
+		cursor: pointer;
+	}
+	div.tv_dtp_left_button:before,
+	div.tv_drop_panel.TVDataPicker .tv_dtp_left_button:before{
+		content: "\e916";
+	}
+	div.tv_dtp_right_button:before,
+	div.tv_drop_panel.TVDataPicker .tv_dtp_right_button:before{
+		content: "\e917";
+		left: -4px;
+	}
+.b-nights-table{
+	/*border-right: 1px solid #E3E3E3;*/
+	/*border-top: 1px solid #E3E3E3;*/
+	width: 100%;
+}
+	.b-nights-table table{
+
+	}
+	.b-nights-table tr{
+
+	}
+		.b-nights-table td{
+			/*border-left: 1px solid #E3E3E3;*/
+			/*border-bottom: 1px solid #E3E3E3;*/
+			padding: 8px;
+			text-align: center;
+		}
+			.b-nights-table td span{
+				display: none;
+			}
+			.b-nights-table td.selected,
+			.b-nights-table td:active{
+			    background-color: rgba(255,145,42,0.25);
+			}
+			.b-nights-table td.active{
+			    background-color: rgba(255,145,42,1);
+			}
+			.b-popup .b-btn-cont{
+				padding-top: 8px;
+			    padding-bottom: 8px;
+			    text-align: center;
+			}
+			.b-hotel-popup .b-btn-cont{
+				padding-top: 0px;
+			}
+				.b-popup .b-btn-cont .b-btn,{
+					color: #FFF;
+				}
+
 
