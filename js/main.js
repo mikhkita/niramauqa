@@ -11,7 +11,8 @@ $(document).ready(function(){
         arrCards = [],
         arrOperators = [],
         arrActiveCards = [],
-        cardTimer = undefined;
+        cardTimer = undefined,
+        step = 16;
 
     function resize(){
         if( typeof( window.innerWidth ) == 'number' ) {
@@ -54,6 +55,7 @@ $(document).ready(function(){
 
         $(".no-margin").removeClass("no-margin");
         if(isMobile){
+            step = 4;
             if(!$('.b-statistics-slider').hasClass("slick-initialized")){
                 $('.b-statistics-slider').not('.slick-initialized').slick({
                     dots: true,
@@ -114,6 +116,7 @@ $(document).ready(function(){
             }
             
         }else{
+            step = 16;
             //удалить слайдеры
             $(".mobile-slider").each(function() {
                 if($(this).hasClass("slick-initialized")){
@@ -343,16 +346,16 @@ $(document).ready(function(){
         cssEase: 'linear'
     });
 
+    var nowShow = 0,
+        activeCategory = "";
+        
     if($('.b-categories .b-country-list').length){
         var grid = $('.b-categories .b-country-list').isotope({
             itemSelector: '.b-country-item',
             layoutMode: 'fitRows'
         });
+        reinitGrid();
     }
-    
-    var step = 4,
-        nowShow = 0,
-        activeCategory = "";
 
     $(".b-categories-item").click(function () {
         $(".b-categories-item.active").removeClass("active");

@@ -5555,5 +5555,11 @@ div.tv_dtp_right_button{
 				.b-popup .b-btn-cont .b-btn,{
 					color: #FFF;
 				}
+.b-tourvisor-with-filter .TVNewCombo .TVTurn {
+    right: 3px;
+}
+.b-tourvisor-with-filter .TVTurn {
+    transform-origin: 50% 63%;
+}
 
 

@@ -50,7 +50,7 @@
 				<a href="/" class="b-logo"></a>
 				<div class="b-head-feedback">
 					<a href="tel:+74722400200" class="b-head-phone">+7 (4722) 400-200</a><br>
-					<a href="#" class="dashed">Заказать звонок</a>
+					<a href="#b-popup-call" class="dashed fancy">Заказать звонок</a>
 				</div>
 				<div class="b-menu-mobile">
 					<span class="b-menu-button icon-menu"></span>
@@ -70,7 +70,7 @@
 					</li>
 				</ul>
 				<h1>Туры в Турцию</h1>
-				<p class="b-head-text">Это один из крупнейших подземных городов в долине<br>Каппадокия на территории </p>
+				<p class="b-head-text">Это один из крупнейших подземных городов в долине<br> Каппадокия на территории </p>
 			</div>
 			<div class="b-adv-list clearfix">
 				<div class="b-adv-item">
@@ -490,7 +490,21 @@
 				<div id="vk_groups"></div>
 			</div>
 			<script type="text/javascript">
-				VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
+				var myWidth = 0;
+				if( typeof( window.innerWidth ) == 'number' ) {
+		            myWidth = window.innerWidth;
+		        } else if( document.documentElement && ( document.documentElement.clientWidth || 
+		        document.documentElement.clientHeight ) ) {
+		            myWidth = document.documentElement.clientWidth;
+		        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+		            myWidth = document.body.clientWidth;
+		        }
+
+		        if(myWidth > 767){
+		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "288", height: "384", no_cover: 1}, 56008470);
+		        }else{
+		        	VK.Widgets.Group("vk_groups", {mode: 0, width: "auto", height: "200", no_cover: 1}, 56008470);
+		        }
 			</script>
 		</div>
 	</div>
@@ -498,7 +512,7 @@
 	<div class="b b-articles">
 		<div class="b-block">
 			<h2 class="b-title">Интересное про Турцию</h2>
-			<div class="b-article-list">
+			<div class="b-article-list b-article-slider mobile-slider">
 				<a href="#" class="b-article-item">
 					<div class="b-article-top">
 						<div class="b-article-img" style="background-image: url('i/article-1.jpg')"></div>
@@ -836,6 +850,11 @@
 		<a href="#b-filter-resort" class="fancy"></a>
 		<div class="b-popup b-filter-popup b-resort-popup" id="b-filter-resort">
 			<h3>Курорт/отель</h3>
+			
+		</div>
+
+		<div class="b-popup" id="b-popup-call">
+			<h3>Заказ обратного звонка</h3>
 			
 		</div>
 

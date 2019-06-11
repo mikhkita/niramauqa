@@ -104,6 +104,9 @@ $(document).ready(function(){
 	            	locked: true 
 	         	}
 	      	},
+	      	btnTpl : {
+                smallBtn   : '<button data-fancybox-close class="fancybox-close-small" title="Закрыть"></button>',
+            },
 			beforeShow: function(){
 				$(".fancybox-wrap").addClass("beforeShow");
 				$popup.find(".custom-field").remove();

@@ -95,7 +95,7 @@ body {
 .b-4-item:nth-child(3n) p{
      padding: 0; 
 }
-div.TVHotelStar {
+.b-tourvisor div.TVHotelStar {
     margin-right: 12px;
 }
 .b-tourvisor-header div.TVMainFilterButton,
@@ -295,7 +295,7 @@ div.TVFORow3 {
 	.b-feedback.b-feedback-shadow .b-feedback-text{
 	    padding-left: 32px;
 	}
-	div.TVHotelStar {
+	.b-tourvisor div.TVHotelStar {
 	    margin-right: 6px;
 	}
 	
@@ -495,15 +495,15 @@ div.TVFORow3 {
 	div.TVTheme2 .TVOptionStars {
 	    padding-top: 11px;
 	}
-	div.TVHotelStar {
+	.b-tourvisor div.TVHotelStar {
 	    width: 20px;
 	    height: 20px;
 	    margin-right: 8px;
 	}
-	div.TVTheme2 .TVHotelStar:before {
+	.b-tourvisor div.TVTheme2 .TVHotelStar:before {
 	    font-size: 20px;
 	}
-	div.TVTheme2 .TVHotelStar.TVImageActive:before {
+	.b-tourvisor div.TVTheme2 .TVHotelStar.TVImageActive:before {
 	    font-size: 20px;
 	}
 	.b-tourvisor-calendar-cont .TVCalDiagramDate {
@@ -580,15 +580,15 @@ div.TVFORow3 {
 	div.TVTheme2 .TVOptionStars {
 	    padding-top: 12px;
 	}
-	div.TVHotelStar {
+	.b-tourvisor div.TVHotelStar {
 	    width: 18px;
 	    height: 18px;
 	    margin-right: 5px;
 	}
-	div.TVTheme2 .TVHotelStar:before {
+	.b-tourvisor div.TVTheme2 .TVHotelStar:before {
 	    font-size: 18px;
 	}
-	div.TVTheme2 .TVHotelStar.TVImageActive:before {
+	.b-tourvisor div.TVTheme2 .TVHotelStar.TVImageActive:before {
 	    font-size: 18px;
 	}
 	div.TVFORow1 {

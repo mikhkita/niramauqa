@@ -90,6 +90,10 @@ h2.b-title{
 	.b-country-item.wide{
 		margin: 0;
 	}
+	.b-categories .b-country-item{
+		width: calc(50% - 24px);
+		margin: 12px;
+	}
 .b-3 {
     margin-bottom: 67px;
 }
@@ -338,6 +342,14 @@ h2.b-title{
 		display: none;
 	}
 
+/*===========*/
+
+.b-tourvisor-calendar {
+    padding-top: 80px;
+}
+
+/*===========*/
+
 .fancybox-slide div.b-popup{
 	max-width: calc(100% - 48px);
 	width: 720px;
@@ -494,6 +506,9 @@ div.tv_calendar_header + .tv_calendar_header {
 div.tv_dtp_calendar td{
 	font-family: "Gilroy-Regular";
 	vertical-align: middle;
+}
+.b-resort-popup div.TVTheme2Button{
+	margin-bottom: 0;
 }
 
 .b-tourists-popup .TVAdults{
