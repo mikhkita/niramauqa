@@ -5,6 +5,7 @@ $(document).ready(function(){
     var isDesktop = false,
         isTablet = false,
         isMobile = false,
+        isMobileSmall = false,
         rowCountry = 0,
         countCards = 0,
         countOperators = $(".b-operators-list .b-operators-item").length,
@@ -31,14 +32,15 @@ $(document).ready(function(){
             isDesktop = true;
             isTablet = false;
             isMobile = false;
+            isMobileSmall = false;
         }else if( myWidth > 767 ){
             isDesktop = false;
             isTablet = true;
             isMobile = false;
+            isMobileSmall = false;
         }else{
-            isDesktop = false;
-            isTablet = false;
             isMobile = true;
+            isMobileSmall = (myWidth <= 530);
         }
 
         var checkCards = countCards;
@@ -48,6 +50,7 @@ $(document).ready(function(){
             countCards = 4;
         }else{
             countCards = 3;
+            if( isMobileSmall ) countCards = 4;
         }
         if(countCards != checkCards){//если количество карточек изменилось
             reinitCards();
@@ -111,7 +114,16 @@ $(document).ready(function(){
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     speed: 600,
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
+                    responsive: [
+                        {
+                          breakpoint: 530,
+                          settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                          }
+                        },
+                      ]
                 });
             }
             
@@ -348,7 +360,7 @@ $(document).ready(function(){
 
     var nowShow = 0,
         activeCategory = "";
-        
+
     if($('.b-categories .b-country-list').length){
         var grid = $('.b-categories .b-country-list').isotope({
             itemSelector: '.b-country-item',

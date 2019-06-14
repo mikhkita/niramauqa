@@ -1725,6 +1725,9 @@ b{
 				margin-top: 10px;
 				margin-right: 100px;
 			}
+			.b-footer-politics{
+				border-bottom: 1px solid transparent;
+			}
 		.b-footer-politics:hover{
 			border-bottom: 1px solid #434343;
 		}
