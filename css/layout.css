@@ -483,38 +483,49 @@ b{
 				line-height: 20px;
 				margin-bottom: 8px;
 			}
-			.b-head-feedback a{
+			.b-head-feedback a,
+			.b-head-feedback-mobile a{
 				color: #FFF;
 			}
-			.b-head-feedback a.dashed{
+			.b-head-feedback a.dashed,
+			.b-head-feedback-mobile a.dashed{
 				border-bottom: 1px dashed #FFF;
 			}
-			.b-head-feedback a.dashed:hover{
+			.b-head-feedback a.dashed:hover,
+			.b-head-feedback-mobile a.dashed:hover{
 				border-bottom: 1px dashed transparent;
 			}
-		.b-menu-mobile{
+		.b-menu-mobile-cont{
 			display: none;
 			margin-top: 40px;
 			float: right;
-			cursor: pointer;
 		}
-			.b-menu-button{
-				margin-right: 10px;
-		    	line-height: 27px;
-		    	display: inline-block;
+			.b-menu-mobile{
+				cursor: pointer;
 			}
-			.b-menu-mobile .icon-menu:before{
-				font-size: 21px;
+				.b-menu-button{
+					margin-right: 10px;
+			    	line-height: 27px;
+			    	display: inline-block;
+				}
+				.b-menu-mobile .icon-menu:before{
+					font-size: 21px;
+					color: #FFF;
+				}
+				.b-menu-mobile p{
+					display: inline-block;
+				    vertical-align: top;
+				    padding-top: 4px;
+					color: #FFF;
+					font-family: 'Gilroy-Bold';
+					font-size: 20px;
+					line-height: 20px;
+				}
+			.b-head-feedback-mobile{
+				display: none;
 				color: #FFF;
-			}
-			.b-menu-mobile p{
-				display: inline-block;
-			    vertical-align: top;
-			    padding-top: 4px;
-				color: #FFF;
-				font-family: 'Gilroy-Bold';
-				font-size: 20px;
-				line-height: 20px;
+				margin-top: 20px;
+				text-align: right;
 			}
 
 	.b-head-content{
@@ -688,6 +699,7 @@ b{
 		}
 
 .b-statistics{
+	overflow: hidden;
 	margin-bottom: 96px;
 }
 	.b-statistics-item{

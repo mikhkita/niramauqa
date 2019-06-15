@@ -82,6 +82,15 @@ $(document).ready(function(){
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     speed: 600,
+                    responsive: [
+                        {
+                          breakpoint: 431,
+                          settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                          }
+                        },
+                      ]
                 });
             }
             if(!$('.b-4-slider').hasClass("slick-initialized")){
@@ -117,7 +126,7 @@ $(document).ready(function(){
                     adaptiveHeight: true,
                     responsive: [
                         {
-                          breakpoint: 530,
+                          breakpoint: 531,
                           settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
