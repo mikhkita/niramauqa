@@ -1097,6 +1097,36 @@ div.tv_dtp_calendar td{
 	    margin-bottom: 4px;
 	}
 
+	/*=========*/
+
+	div.TVDetailPanel .TVOptionFilterBlock.TVRegion,
+	div.TVDetailPanel .TVOptionFilterBlock.TVHotel{
+		width: 100% !important;
+		margin-left: 0;
+	}
+	div.TVDetailPanel .TVOptionFilterBlock.TVRegion{
+		margin-bottom: 16px;
+	}
+	div.TVDetailPanel .TVOptionFilterBlock.TVHotel .TVOptionCheckBox:before{
+		margin-right: 8px;
+	}
+	div.TVRegion .TVOptionListWrap {
+	    height: auto;
+	    max-height: 172px;
+	    overflow: auto;
+	}
+	div.TVHotel .TVOptionListWrap {
+	    height: auto;
+	    max-height: 230px;
+	    overflow: auto;
+	}
+	div.TVDetailPanel .TVTheme2Button{
+		position: static;
+	}
+	div.TVDetailPanel .TVHotel .TVOptionList {
+	    height: 154px;
+	}
+
 }
 
 @media screen and (max-width: 430px){

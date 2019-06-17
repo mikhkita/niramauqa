@@ -3023,6 +3023,11 @@ div.TVHoteltype .TVOptionLable:before {
 .TVRegion .TVOptionLable:before{
 	content: "Курорт/отель";
 }
+div.TVHotelInput input{
+	font-family: 'Gilroy-Regular';
+	color: #434343;
+	border-radius: 0;
+}
 
 div.TVTheme2 .TVHotelStar:before {
     content: "\e90a";
@@ -5427,16 +5432,20 @@ div.TVFOComplicatedPrice .TVFOToPayPrice{
 	padding-top: 10px;
 }
 
-.TVModalContainer input::-webkit-input-placeholder {
+.TVModalContainer input::-webkit-input-placeholder,
+.TVDetailPanel input::-webkit-input-placeholder{
 	color: #777 !important;
 }
-.TVModalContainer input:-moz-placeholder {
+.TVModalContainer input:-moz-placeholder,
+.TVDetailPanel input:-moz-placeholder{
 	color: #777 !important;
 }
-.TVModalContainer textarea::-webkit-input-placeholder {
+.TVModalContainer textarea::-webkit-input-placeholder,
+.TVDetailPanel textarea::-webkit-input-placeholder{
 	color: #777 !important;
 }
-.TVModalContainer textarea:-moz-placeholder {
+.TVModalContainer textarea:-moz-placeholder,
+.TVDetailPanel textarea:-moz-placeholder{
 	color: #777 !important;
 }
 
